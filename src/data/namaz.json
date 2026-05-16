@@ -1,0 +1,120 @@
+{
+  "module": "namaz_ogreniyorum",
+  "title": "Adım Adım Namaz Simülatörü",
+  "units": [
+    {
+      "id": "abdest_adimlari",
+      "unit_title": "1. Bölüm: Abdest Almayı Öğreniyoruz 💧",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Niyet ve Besmele",
+          "description": "'Niyet ettim Allah rızası için abdest almaya' deriz ve 'Eûzü billahi mineşşeytanirracîm, Bismillahirrahmanirrahim' diyerek başlarız.",
+          "image_src": "/images/abdest_niyet.png"
+        },
+        {
+          "step_number": 2,
+          "title": "Elleri Yıkamak",
+          "description": "Ellerimizi bileklere kadar, parmak aralarını da ovalayarak 3 kere güzelce yıkarız. 👐",
+          "image_src": "/images/abdest_eller.png"
+        },
+        {
+          "step_number": 3,
+          "title": "Ağza Su Vermek",
+          "description": "Sağ elimizle ağzımıza 3 kere su alıp çalkalarız. Dişlerimizin temiz olmasına dikkat ederiz. 🚰",
+          "image_src": "/images/abdest_agiz.png"
+        },
+        {
+          "step_number": 4,
+          "title": "Burna Su Vermek",
+          "description": "Sağ elimizle burnumuza 3 kere su çeker, sol elimizle temizleriz. 👃",
+          "image_src": "/images/abdest_burun.png"
+        },
+        {
+          "step_number": 5,
+          "title": "Yüzü Yıkamak",
+          "description": "Alnımızın saç bitiminden çenemizin altına kadar tüm yüzümüzü 3 kere yıkarız. 😊",
+          "image_src": "/images/abdest_yuz.png"
+        },
+        {
+          "step_number": 6,
+          "title": "Kolları Yıkamak",
+          "description": "Önce sağ kolumuzu, sonra sol kolumuzu dirseklerle beraber 3 kere yıkarız. 💪",
+          "image_src": "/images/abdest_kollar.png"
+        },
+        {
+          "step_number": 7,
+          "title": "Başı Meshetmek",
+          "description": "Sağ elimizin içiyle başımızın dörtte birini ıslatarak sıvazlarız (meshederiz). 💆‍♂️",
+          "image_src": "/images/abdest_bas.png"
+        },
+        {
+          "step_number": 8,
+          "title": "Kulak ve Boynu Meshetmek",
+          "description": "Ellerimizi tekrar ıslatıp kulaklarımızın içini ve arkasını, sonra da boynumuzu meshederiz. 👂",
+          "image_src": "/images/abdest_boyun.png"
+        },
+        {
+          "step_number": 9,
+          "title": "Ayakları Yıkamak",
+          "description": "Önce sağ, sonra sol ayağımızı topuklarla beraber, parmak aralarını da ovalayarak 3 kere yıkarız. 🦶",
+          "image_src": "/images/abdest_ayak.png"
+        }
+      ],
+      "quiz": {
+        "question": "Abdest alırken yüzümüzü yıkadıktan hemen sonra hangi organımızı yıkarız?",
+        "options": ["Ayaklarımızı", "Kollarımızı", "Ağzımızı", "Başımızı"],
+        "correct_answer": "Kollarımızı",
+        "xp_reward": 15
+      }
+    },
+    {
+      "id": "namaz_kilinisi",
+      "unit_title": "2. Bölüm: Namaz Kılmayı Öğreniyoruz 🤲",
+      "steps": [
+        {
+          "step_number": 1,
+          "title": "Niyet ve İftitah Tekbiri",
+          "description": "Kıbleye döneriz. Kılacağımız namaza niyet ederiz. Erkekler ellerini kulak hizasına kaldırıp 'Allahu Ekber' diyerek namaza başlar. 🕋",
+          "image_src": "/images/namaz_tekbir.png"
+        },
+        {
+          "step_number": 2,
+          "title": "Kıyam ve Kıraat",
+          "description": "Ellerimizi bağlayıp ayakta dururuz (Kıyam). Gözlerimiz secde edeceğimiz yerdedir. Burada Sübhaneke, Fatiha ve Kur'an'dan bir sure okuruz (Kıraat). 📖",
+          "image_src": "/images/namaz_kiyam.png"
+        },
+        {
+          "step_number": 3,
+          "title": "Rüku",
+          "description": "'Allahu Ekber' diyerek eğiliriz. Ellerimizi dizlerimize koyar, sırtımızı düz tutarız. 3 kere 'Sübhane Rabbiye'l-Azîm' deriz. 🙇‍♂️",
+          "image_src": "/images/namaz_ruku.png"
+        },
+        {
+          "step_number": 4,
+          "title": "Secde",
+          "description": "'Allahu Ekber' diyerek yere kapanırız. Alnımız, burnumuz, ellerimiz, dizlerimiz ve ayak uçlarımız yere değer. 3 kere 'Sübhane Rabbiye'l-A'lâ' deriz. 🙇‍♂️",
+          "image_src": "/images/namaz_secde.png"
+        },
+        {
+          "step_number": 5,
+          "title": "Kade (Oturuş)",
+          "description": "Namazın sonunda dizlerimizin üzerine otururuz. Ettahiyyatü, Salli-Barik ve Rabbena dualarını okuruz. 🤲",
+          "image_src": "/images/namaz_kade.png"
+        },
+        {
+          "step_number": 6,
+          "title": "Selam Vermek",
+          "description": "Önce sağ omzumuza, sonra sol omzumuza bakarak 'Esselâmü aleyküm ve rahmetullah' deriz ve namazı bitiririz. 🕊️",
+          "image_src": "/images/namaz_selam.png"
+        }
+      ],
+      "quiz": {
+        "question": "Namazda ayakta dururken (Kıyam) ellerimizi bağladıktan sonra ilk olarak hangi duayı okuruz?",
+        "options": ["Fatiha Suresi", "İhlas Suresi", "Sübhaneke Duası", "Ettahiyyatü Duası"],
+        "correct_answer": "Sübhaneke Duası",
+        "xp_reward": 20
+      }
+    }
+  ]
+}

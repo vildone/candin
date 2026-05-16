@@ -1,0 +1,38 @@
+# Canım Dinim — Geliştirme stack'i
+# macOS + Colima:  colima start && docker compose up --build
+
+services:
+  web:
+    build: .
+    container_name: candin-web
+    ports:
+      - "8765:8765"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - VITE_PB_URL=http://127.0.0.1:8090
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      pb:
+        condition: service_healthy
+    restart: unless-stopped
+
+  pb:
+    # PocketBase'in resmi Docker imajı yok; topluluk tarafından bakımı yapılan imajı kullanıyoruz.
+    image: ghcr.io/muchobien/pocketbase:latest
+    container_name: candin-pb
+    ports:
+      - "8090:8090"
+    volumes:
+      - pb_data:/pb_data
+      - ./pb_migrations:/pb_migrations
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8090/api/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  pb_data:

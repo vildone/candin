@@ -1,0 +1,84 @@
+{
+  "module": "sureler_ogreniyorum",
+  "title": "Sureleri Tamamla",
+  "units": [
+    {
+      "id": "fatiha_suresi",
+      "unit_title": "1. Bölüm: Fatiha Suresi 🤲",
+      "description": "Kur'an-ı Kerim'in ilk suresini adım adım tamamlayarak öğrenelim!",
+      "questions": [
+        {
+          "id": "fatiha_1",
+          "text": "Elhamdü lillâhi Rabbil ____",
+          "options": ["Alemîn", "Rahmân", "Rahîm"],
+          "correct_answer": "Alemîn",
+          "translation_hint": "Anlamı: Hamd (teşekkür), âlemlerin Rabbi olan Allah'a mahsustur.",
+          "xp_reward": 10
+        },
+        {
+          "id": "fatiha_2",
+          "text": "Errahmânir'____",
+          "options": ["Dîn", "Rahîm", "Alemîn"],
+          "correct_answer": "Rahîm",
+          "translation_hint": "Anlamı: O, Rahmân ve Rahîm'dir (Çok merhametlidir).",
+          "xp_reward": 10
+        },
+        {
+          "id": "fatiha_3",
+          "text": "Mâliki yevmid____",
+          "options": ["Dîn", "Nesta'în", "Ehad"],
+          "correct_answer": "Dîn",
+          "translation_hint": "Anlamı: Din (hesap) gününün sahibidir.",
+          "xp_reward": 10
+        },
+        {
+          "id": "fatiha_4",
+          "text": "İyyâke na'büdü ve iyyâke ____",
+          "options": ["Nesta'în", "Müstakîm", "Samed"],
+          "correct_answer": "Nesta'în",
+          "translation_hint": "Anlamı: Sadece sana ibadet eder ve sadece senden yardım dileriz.",
+          "xp_reward": 10
+        }
+      ]
+    },
+    {
+      "id": "ihlas_suresi",
+      "unit_title": "2. Bölüm: İhlas Suresi 🕋",
+      "description": "Allah'ın birliğini anlatan, kısa ama anlamı çok büyük olan İhlas Suresi!",
+      "questions": [
+        {
+          "id": "ihlas_1",
+          "text": "Kul hüvellâhü ____",
+          "options": ["Samed", "Ehad", "Yûled"],
+          "correct_answer": "Ehad",
+          "translation_hint": "Anlamı: De ki: O Allah, birdir.",
+          "xp_reward": 10
+        },
+        {
+          "id": "ihlas_2",
+          "text": "Allâhüs ____",
+          "options": ["Samed", "Ehad", "Küfüven"],
+          "correct_answer": "Samed",
+          "translation_hint": "Anlamı: Allah Samed'dir (Hiçbir şeye ihtiyacı yoktur, her şey O'na muhtaçtır).",
+          "xp_reward": 10
+        },
+        {
+          "id": "ihlas_3",
+          "text": "Lem yelid ve lem ____",
+          "options": ["Yûled", "Nesta'în", "Alemîn"],
+          "correct_answer": "Yûled",
+          "translation_hint": "Anlamı: O doğurmamıştır ve doğurulmamıştır.",
+          "xp_reward": 10
+        },
+        {
+          "id": "ihlas_4",
+          "text": "Ve lem yekün lehû küfüven ____",
+          "options": ["Ehad", "Samed", "Yûled"],
+          "correct_answer": "Ehad",
+          "translation_hint": "Anlamı: Hiçbir şey O'na denk ve benzer değildir.",
+          "xp_reward": 10
+        }
+      ]
+    }
+  ]
+}

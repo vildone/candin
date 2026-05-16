@@ -1,0 +1,60 @@
+{
+  "module": "peygamberler_tarihi",
+  "title": "Peygamberlerin Hayatı",
+  "units": [
+    {
+      "id": "hz_adem_hikayesi",
+      "unit_title": "1. Hikaye: İlk İnsan Hz. Âdem (a.s)",
+      "story_cards": [
+        {
+          "step": 1,
+          "image_src": "/images/adem_toprak.png",
+          "text": "Biliyor musun, yeryüzünde hiçbir insan yokken Allah ilk insanı, yani Hz. Âdem'i topraktan yarattı. Ona bütün isimleri ve her şeyin bilgisini öğretti. 🌍"
+        },
+        {
+          "step": 2,
+          "image_src": "/images/adem_cennet.png",
+          "text": "Hz. Âdem ve eşi Hz. Havva, başlangıçta o çok güzel, her yerinden nehirler akan Cennet'te yaşıyorlardı. Ama orada küçük bir hata yaptılar. 🌳"
+        },
+        {
+          "step": 3,
+          "image_src": "/images/adem_dua.png",
+          "text": "Hemen ellerini açıp Allah'tan özür dilediler (tövbe ettiler). Allah çok merhametli olduğu için onları affetti ve Hz. Âdem'i yeryüzüne ilk peygamber olarak gönderdi. 🤲"
+        }
+      ],
+      "quiz": {
+        "question": "Allah'ın yarattığı ilk insan ve aynı zamanda ilk peygamber kimdir?",
+        "options": ["Hz. Nuh", "Hz. Âdem", "Hz. İbrahim", "Hz. Musa"],
+        "correct_answer": "Hz. Âdem",
+        "xp_reward": 15
+      }
+    },
+    {
+      "id": "hz_muhammed_hikayesi",
+      "unit_title": "2. Hikaye: Güzel Peygamberimiz (s.a.s)",
+      "story_cards": [
+        {
+          "step": 1,
+          "image_src": "/images/mekke_kabe.png",
+          "text": "Bizim en sevdiğimiz peygamberimiz Hz. Muhammed (s.a.s), Mekke adında sıcak bir çöl şehrinde doğdu. O, çocukluğundan beri o kadar dürüsttü ki, herkes ona çok güvenirdi. 🕋"
+        },
+        {
+          "step": 2,
+          "image_src": "/images/peygamber_emin.png",
+          "text": "Hiç yalan söylemediği ve kimseyi kandırmadığı için Mekke'deki insanlar ona 'Muhammed-ül Emin' (Güvenilir Muhammed) lakabını taktılar. 🤝"
+        },
+        {
+          "step": 3,
+          "image_src": "/images/peygamber_cocuklar.png",
+          "text": "Peygamberimiz çocukları o kadar çok severdi ki, sokakta onları görünce selam verir, onlarla oyunlar oynar ve başlarını okşardı. Biz de onun gibi iyi kalpli olmalıyız! ❤️"
+        }
+      ],
+      "quiz": {
+        "question": "Peygamberimiz Hz. Muhammed'e (s.a.s) hiç yalan söylemediği ve çok dürüst olduğu için hangi lakap verilmiştir?",
+        "options": ["Son Peygamber", "Muhammed-ül Emin", "Allah'ın Elçisi", "Mekke'nin Lideri"],
+        "correct_answer": "Muhammed-ül Emin",
+        "xp_reward": 20
+      }
+    }
+  ]
+}

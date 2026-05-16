@@ -1,0 +1,62 @@
+{
+  "student_profile": {
+    "name": "Kullanıcı",
+    "avatar": "/images/avatar_hero.png",
+    "level": 3,
+    "total_xp": 450,
+    "daily_streak": 5,
+    "badges": [
+      {
+        "id": "badge_1",
+        "name": "İlk Adım",
+        "description": "Uygulamaya ilk giriş yapıldı.",
+        "icon": "🌟"
+      },
+      {
+        "id": "badge_2",
+        "name": "Harf Dedektifi",
+        "description": "Elif-Bâ'da ilk 3 harf hatasız öğrenildi.",
+        "icon": "🔍"
+      },
+      {
+        "id": "badge_3",
+        "name": "Güvenilir İnsan",
+        "description": "Peygamberimizin hayatı okundu.",
+        "icon": "🤝"
+      }
+    ]
+  },
+  "admin_dashboard": {
+    "overview": {
+      "accuracy_rate": "%85",
+      "total_time_spent": "2 Saat 15 Dakika",
+      "completed_units": 4
+    },
+    "recent_activity": [
+      {
+        "date": "2026-05-15",
+        "module": "Namaz",
+        "action": "Abdest Adımları tamamlandı.",
+        "earned_xp": 15,
+        "status": "success"
+      },
+      {
+        "date": "2026-05-15",
+        "module": "Sureler",
+        "action": "Fatiha Suresi 3. soruda hata yapıldı.",
+        "earned_xp": 0,
+        "status": "error"
+      }
+    ],
+    "weak_topics": [
+      {
+        "topic": "Tecvid Kuralları",
+        "suggestion": "Bu konuyu tekrar etmesi gerekiyor."
+      },
+      {
+        "topic": "Fatiha Suresi Anlamı",
+        "suggestion": "Kelime eşleştirmelerinde zorlandı."
+      }
+    ]
+  }
+}

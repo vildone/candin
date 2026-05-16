@@ -1,0 +1,45 @@
+{
+  "module": "kuran_elifba",
+  "title": "Harfleri Tanıyalım",
+  "lessons": [
+    {
+      "id": "harf_1",
+      "letter_arabic": "ا",
+      "letter_turkish": "Elif",
+      "visual_hook_text": "Elmanın E'si 🍎 - Elif, ince ve uzun bir çubuk gibidir.",
+      "audio_src": "/audio/elif.mp3",
+      "quiz": {
+        "question": "İnce ve uzun bir çubuk gibi olan, 'Elmanın E'si' diyerek hatırladığımız harf hangisidir?",
+        "options": ["ب", "ت", "ا", "ث"],
+        "correct_answer": "ا",
+        "xp_reward": 10
+      }
+    },
+    {
+      "id": "harf_2",
+      "letter_arabic": "ب",
+      "letter_turkish": "Be",
+      "visual_hook_text": "Beşiğin Be'si 👶 - Altında tek bir nokta var, tıpkı beşiğin altındaki tekerlek gibi!",
+      "audio_src": "/audio/be.mp3",
+      "quiz": {
+        "question": "Altında tek bir noktası olan harf hangisidir?",
+        "options": ["ت", "ا", "ث", "ب"],
+        "correct_answer": "ب",
+        "xp_reward": 10
+      }
+    },
+    {
+      "id": "harf_3",
+      "letter_arabic": "ت",
+      "letter_turkish": "Te",
+      "visual_hook_text": "Tepenin Te'si ⛰️ - Üzerinde yan yana iki nokta var. Tıpkı gülen bir yüzün gözleri gibi!",
+      "audio_src": "/audio/te.mp3",
+      "quiz": {
+        "question": "Üzerinde iki noktası olan, gülen yüze benzeyen harf hangisidir?",
+        "options": ["ث", "ت", "ب", "ا"],
+        "correct_answer": "ت",
+        "xp_reward": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+.bolt
+.DS_Store
+*.log
+pb_data

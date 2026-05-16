@@ -86,15 +86,39 @@ Proje yolu `/Volumes/King/Vibe/Canım Dinim/Candin` — Türkçe karakter içeri
 
 ---
 
-## Bu Oturumda Tamamlanan İşler (2026-05-16)
+## Tamamlanan İşler (2026-05-16)
 
 - **content_items koleksiyonu** (`pb_migrations/1715000100_content_items.js`): `module`, `item_id`, `order_index`, `data:JSON`. HANDOFF'taki 5 ayrı koleksiyon planı yerine tek koleksiyon (pragmatik karar).
-- **Seed scripti:** `scripts/seed-pb.mjs` + `npm run seed`. Idempotent (önce siler, sonra yükler). 11 satır yüklendi.
+- **Seed scripti:** `scripts/seed-pb.mjs` + `npm run seed`. Idempotent (önce siler, sonra yükler).
 - **`src/lib/pbContent.ts`:** async loader'lar — `fetchDiniUnits`, `fetchUnits`, `fetchKuranLetters`, `fetchNamazFlow`, `fetchBlankQuestions`, `fetchProphetStories`.
 - **`src/hooks/useProgress.ts`:** PB users record'unu güncelleyen `addXp/completeLesson/unlockUnit/awardBadge/registerActivity` hook'u. Streak logic'i burada.
 - **5 öğrenci sekmesi:** Dashboard, Kuran, Namaz, Sureler, Peygamberler — tamamen PB'den okuyor. Sureler doğru cevapta `addXp` ile PB'ye yazıyor. Dashboard mount'ta `registerActivity` çağırıyor.
 - **Admin Dashboard (Ebeveyn Paneli):** PB user'a bağlı. accuracyRate/totalTimeSpent/recentActivity/weakTopics henüz tracking yok → placeholder "—" ve boş listeler.
 - **Temizlik:** `src/store/userStore.ts` + `src/lib/dataFetcher.ts` silindi, `zustand` paketten çıkarıldı.
+
+## 9 Seviyeli Müfredat Geçişi (2026-05-17)
+
+- **`dini_bilgiler.json`** — NotebookLM müfredatına göre 28 ünite, 9 seviye. Her ünitede 4 flashcard + 1 quiz.
+- **`DiniUnit` tipine `level: number` eklendi** (`src/types/index.ts`).
+- **`pbContent.ts`** — `fetchDiniUnits()` artık `level` alanını dolduruyor.
+- **`auth.tsx`** — `register()` → `unlocked_units: ["s1_islam_muslim"]`.
+- **Dashboard.tsx** — Seviye bazlı accordion: 9 seviye başlığı (emoji + isim + ilerleme çubuğu), tıklanınca ünite listesi açılıyor. Kilitli seviyeler tıklanamaz.
+- **Quiz.tsx** — Seviye tamamlama bildirimi eklendi.
+- **Seed** — PB'ye 37 content_items yüklendi (28 dini bilgiler + 9 diğer).
+
+| Seviye | Konu | Ünite |
+|--------|------|-------|
+| 1 | Tanışma & Sevgi | 4 |
+| 2 | Şehadet & Tevhid | 3 |
+| 3 | Namaz & Temizlik | 4 |
+| 4 | Oruç & Zekât | 3 |
+| 5 | Peygamberimiz | 2 |
+| 6 | Kur'an & Kutsal Mekânlar | 2 |
+| 7 | İman Esasları | 4 |
+| 8 | Dua & Sureler | 3 |
+| 9 | Güzel Ahlak | 3 |
+
+---
 
 ## Sıradaki İşler (TODO)
 

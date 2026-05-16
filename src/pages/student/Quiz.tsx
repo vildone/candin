@@ -30,6 +30,7 @@ export function QuizScreen() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
+  const [levelCompleted, setLevelCompleted] = useState(false)
 
   useEffect(() => {
     let alive = true
@@ -66,7 +67,12 @@ export function QuizScreen() {
     const idx = units.findIndex((u) => u.id === unit.id)
     const next = idx >= 0 ? units[idx + 1] : undefined
     completeLesson(unit.id, xpReward)
-    if (next) unlockUnit(next.id)
+    if (next) {
+      unlockUnit(next.id)
+      if (next.level > unit.level) setLevelCompleted(true)
+    } else {
+      setLevelCompleted(true)
+    }
   }, [finished, unit, score, questions.length, units, xpReward, completeLesson, unlockUnit])
 
   if (loading) {
@@ -121,7 +127,13 @@ export function QuizScreen() {
 
   if (finished) {
     return (
-      <QuizResult score={score} total={questions.length} xpReward={xpReward} />
+      <QuizResult
+        score={score}
+        total={questions.length}
+        xpReward={xpReward}
+        levelCompleted={levelCompleted}
+        currentLevel={unit?.level ?? 1}
+      />
     )
   }
 
@@ -238,10 +250,14 @@ function QuizResult({
   score,
   total,
   xpReward,
+  levelCompleted,
+  currentLevel,
 }: {
   score: number
   total: number
   xpReward: number
+  levelCompleted: boolean
+  currentLevel: number
 }) {
   const percentage = Math.round((score / total) * 100)
   const passed = score === total
@@ -290,10 +306,26 @@ function QuizResult({
         </motion.div>
       )}
 
+      {passed && levelCompleted && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1, type: "spring", stiffness: 200 }}
+          className="mt-4 rounded-2xl border-2 border-primary bg-primary/10 px-6 py-3 text-center"
+        >
+          <p className="text-lg font-bold text-primary">
+            🎉 Seviye {currentLevel} Tamamlandı!
+          </p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {currentLevel < 9 ? `Seviye ${currentLevel + 1} açıldı!` : "Tüm seviyeleri tamamladın! Tebrikler!"}
+          </p>
+        </motion.div>
+      )}
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: levelCompleted ? 1.4 : 1 }}
         className="mt-8 w-full max-w-xs"
       >
         <Link to="/">

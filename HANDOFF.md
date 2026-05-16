@@ -122,8 +122,13 @@ Proje yolu `/Volumes/King/Vibe/Canım Dinim/Candin` — Türkçe karakter içeri
 
 ## Sıradaki İşler (TODO)
 
-### 1. Lesson + Quiz sekmelerini PB'ye bağla
-`src/pages/student/Lesson.tsx` hâlâ in-file `lessonCards` array'i kullanıyor (melekler örneği). `Quiz.tsx` da statik. İçeriği `content_items.module="dini_bilgiler"` üzerinden çek + tamamlanınca `useProgress.completeLesson(unitId, xpReward)` çağır.
+### 1. Quiz'leri çoğul soruya geçir (ÖNCELİKLİ)
+Şu an her ünitede **1 quiz sorusu** var. Gerçek eğitim için yetersiz.
+- `DiniUnit.quiz: Quiz` → `quiz: Quiz[]` (dizi) olarak değiştir.
+- `dini_bilgiler.json` içinde her üniteye **5-8 soru** ekle (farklı zorluklar).
+- `Quiz.tsx` satır 51-58: tekil `unit.quiz`'den dizi `unit.quiz` mapping'ine geç.
+- `pbContent.ts` `mapQuiz` çoğul versiyona uyarla.
+- Geçme koşulu: tüm soruları %100 doğru → `completeLesson` + `unlockUnit`.
 
 ### 2. Aktivite/zaman/accuracy tracking
 Admin Dashboard placeholder'larını gerçek veriyle doldurmak için:
@@ -132,16 +137,25 @@ Admin Dashboard placeholder'larını gerçek veriyle doldurmak için:
 - Dashboard `pb.collection("activity_log").getList(...).filter user=current` ile okusun.
 - accuracyRate = (success count) / (total) son N etkileşim.
 
-### 3. Lesson tarafında `completeLesson` + `unlockUnit`
-Quiz başarıyla bitince:
-```ts
-await completeLesson(unitId, totalXp)
-await unlockUnit(nextUnitId)
-```
-Dashboard zinciri ona göre kilit açıyor.
-
-### 4. `src/data/*.json` ne olacak?
+### 3. `src/data/*.json` ne olacak?
 Seed referansı olarak repoda kalsın. Üretimde içerik artık PB'den. Yeni içerik için seed JSON'u güncelle → `npm run seed` çalıştır.
+
+### 4. Mevcut kullanıcı migration notu
+Eski kullanıcıların `unlocked_units`'i `["iman_1"]` olarak kalıyor. Yeni müfredatta bu ID yok. Mevcut kullanıcıları güncellemek için:
+```bash
+node --input-type=module -e "
+import PocketBase from 'pocketbase';
+const pb = new PocketBase('http://localhost:8090');
+await pb.collection('_superusers').authWithPassword('EMAIL', 'PASS');
+const users = await pb.collection('users').getFullList();
+for (const u of users) {
+  if (u.unlocked_units?.includes('iman_1')) {
+    await pb.collection('users').update(u.id, { unlocked_units: ['s1_islam_muslim'] });
+    console.log('Fixed:', u.email);
+  }
+}
+"
+```
 
 ---
 

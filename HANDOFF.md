@@ -1,7 +1,7 @@
 # Candin — Oturum Devri (Handoff)
 
-**Son güncelleme:** 2026-05-16
-**Durum:** Tüm içerik ve ilerleme PB'ye taşındı. Zustand + dataFetcher kaldırıldı.
+**Son güncelleme:** 2026-05-17
+**Durum:** İçerik genişletildi — 28 ünite × 10 kart + 10 quiz = 280 kart + 280 soru, PB'de canlı.
 
 ---
 
@@ -120,27 +120,28 @@ Proje yolu `/Volumes/King/Vibe/Canım Dinim/Candin` — Türkçe karakter içeri
 
 ---
 
+## İçerik Genişletme (2026-05-17)
+
+- **`DiniUnit.quiz: Quiz` → `Quiz[]`** dönüşümü tamamlandı (`src/types/index.ts`).
+- **`pbContent.ts`** — `RawDiniUnit.quiz: RawQuiz | RawQuiz[]` backward-compat ile destekleniyor; her zaman array'e normalize edilir.
+- **`Quiz.tsx`** — tüm soruları sırayla soruyor, toplam XP = `quiz.reduce((sum, q) => sum + q.xpReward, 0)`. Geçme koşulu: tüm sorular %100 doğru.
+- **`dini_bilgiler.json`** — 28 ünitenin tamamı **10 kart + 10 soru** formatında. NotebookLM müfredatına dayalı içerik.
+- Quiz XP ödülü: soru başına 5 puan, ünite başına 50 puan toplam.
+- PB'ye 28 dini_bilgiler + 9 diğer = 37 content_items başarıyla seed edildi.
+
 ## Sıradaki İşler (TODO)
 
-### 1. Quiz'leri çoğul soruya geçir (ÖNCELİKLİ)
-Şu an her ünitede **1 quiz sorusu** var. Gerçek eğitim için yetersiz.
-- `DiniUnit.quiz: Quiz` → `quiz: Quiz[]` (dizi) olarak değiştir.
-- `dini_bilgiler.json` içinde her üniteye **5-8 soru** ekle (farklı zorluklar).
-- `Quiz.tsx` satır 51-58: tekil `unit.quiz`'den dizi `unit.quiz` mapping'ine geç.
-- `pbContent.ts` `mapQuiz` çoğul versiyona uyarla.
-- Geçme koşulu: tüm soruları %100 doğru → `completeLesson` + `unlockUnit`.
-
-### 2. Aktivite/zaman/accuracy tracking
+### 1. Aktivite/zaman/accuracy tracking
 Admin Dashboard placeholder'larını gerçek veriyle doldurmak için:
 - Yeni PB koleksiyonu `activity_log` (user, date, module, action, earned_xp, status).
 - `useProgress` her XP/completion event'inde log yazsın.
 - Dashboard `pb.collection("activity_log").getList(...).filter user=current` ile okusun.
 - accuracyRate = (success count) / (total) son N etkileşim.
 
-### 3. `src/data/*.json` ne olacak?
+### 2. `src/data/*.json` ne olacak?
 Seed referansı olarak repoda kalsın. Üretimde içerik artık PB'den. Yeni içerik için seed JSON'u güncelle → `npm run seed` çalıştır.
 
-### 4. Mevcut kullanıcı migration notu
+### 3. Mevcut kullanıcı migration notu
 Eski kullanıcıların `unlocked_units`'i `["iman_1"]` olarak kalıyor. Yeni müfredatta bu ID yok. Mevcut kullanıcıları güncellemek için:
 ```bash
 node --input-type=module -e "

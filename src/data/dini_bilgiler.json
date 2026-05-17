@@ -7,70 +7,317 @@
       "unit_title": "Seviye 1 · İslam ve Müslüman",
       "level": 1,
       "cards": [
-        "Merhaba sevgili dostum! 🌟 İnandığımız güzel dinin adı İslam'dır. İslam; sevgi, barış ve kolaylık demektir.",
-        "Bu güzel dine inanan kişilere Müslüman denir. Müslümanlar birbirini sever, yardımlaşır ve güler yüzlüdür. 🤝",
-        "İslam zor değildir, kolaylıktır. Allah her şeyi sevgiyle ve gücümüze göre ister. 💚",
+        "Merhaba sevgili dostum! 🌟 İnandığımız güzel dinin adı İslam'dır.",
+        "İslam kelimesi 'barış, esenlik ve teslimiyet' demektir. ☮️",
+        "Bu güzel dine inanan kişilere Müslüman denir. 🤝",
+        "Müslümanlar birbirini sever, yardımlaşır ve güler yüzlüdür. 😊",
+        "İslam zor değildir, kolaylıktır. Allah her şeyi gücümüze göre ister. 💚",
+        "Müslüman kötü söz söylemez, kalp kırmaz, herkese iyilik yapar. 💖",
+        "İslam tüm insanlara, tüm dünyaya gönderilmiştir. 🌍",
+        "Bir Müslüman temizliğe çok önem verir. Bedeni, kalbi ve çevresi temiz olur. ✨",
+        "İslam'da hayvanlara, bitkilere, doğaya zarar vermek yoktur. 🐦🌱",
         "Sen de Allah'ın sevgili kulu, küçük bir Müslümansın! Çok şanslısın. ✨"
       ],
-      "quiz": {
-        "question": "İslam dinine inanan kişiye ne denir?",
-        "options": ["Melek", "Müslüman", "Peygamber", "Sahabe"],
-        "correct_answer": "Müslüman",
-        "xp_reward": 20
-      }
+      "quiz": [
+        {
+          "question": "İslam dinine inanan kişiye ne denir?",
+          "options": ["Melek", "Müslüman", "Peygamber", "Sahabe"],
+          "correct_answer": "Müslüman",
+          "xp_reward": 5
+        },
+        {
+          "question": "İslam kelimesinin anlamı aşağıdakilerden hangisidir?",
+          "options": ["Savaş", "Barış ve esenlik", "Korku", "Yarışma"],
+          "correct_answer": "Barış ve esenlik",
+          "xp_reward": 5
+        },
+        {
+          "question": "İslam dini kimler için gönderilmiştir?",
+          "options": ["Sadece Araplar için", "Sadece çocuklar için", "Tüm insanlar için", "Sadece büyükler için"],
+          "correct_answer": "Tüm insanlar için",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aşağıdakilerden hangisi bir Müslüman'ın özelliğidir?",
+          "options": ["Yalan söyler", "Kalp kırar", "Yardımlaşır", "Kavga eder"],
+          "correct_answer": "Yardımlaşır",
+          "xp_reward": 5
+        },
+        {
+          "question": "İslam dini bizden nasıl bir hayat ister?",
+          "options": ["Zor ve sıkıntılı", "Kolay ve güzel", "Hep ağlamalı", "Hep yalnız"],
+          "correct_answer": "Kolay ve güzel",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bir Müslüman hayvanlara nasıl davranır?",
+          "options": ["Zarar verir", "Şefkat gösterir", "Görmezden gelir", "Korkutur"],
+          "correct_answer": "Şefkat gösterir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Müslüman'ın yüzü genelde nasıl olur?",
+          "options": ["Asık", "Güler yüzlü", "Kızgın", "Üzgün"],
+          "correct_answer": "Güler yüzlü",
+          "xp_reward": 5
+        },
+        {
+          "question": "İslam'da temizlik nasıldır?",
+          "options": ["Önemsizdir", "Sadece bayramda olur", "Çok önemlidir", "Yasaktır"],
+          "correct_answer": "Çok önemlidir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Müslümanlar başka Müslümanlarla nasıldır?",
+          "options": ["Düşman", "Kardeş", "Yabancı", "İlgisiz"],
+          "correct_answer": "Kardeş",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bir Müslüman kalp kırar mı?",
+          "options": ["Hep kırar", "Bazen kırar", "Kırmaz, sevgi yayar", "Sadece düşmanlarınkini"],
+          "correct_answer": "Kırmaz, sevgi yayar",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s1_allah_sevgisi",
       "unit_title": "Seviye 1 · Allah Sevgisi",
       "level": 1,
       "cards": [
-        "Bizi yaratan, bize göz, kulak, kalp veren Allah'tır. ❤️ Allah bizi çok sever.",
-        "Yediğimiz meyveler, içtiğimiz su, soluduğumuz hava… hepsi Allah'ın bize hediyesi. 🍎🌊",
-        "Annemizin sevgisi, babamızın şefkati de Allah'ın bir hediyesidir. 🤗",
-        "Biz de Allah'ı çok severiz. Çünkü O bize en güzel hediyeleri verendir. 💫"
+        "Bizi yaratan, bize göz, kulak, kalp veren Allah'tır. ❤️",
+        "Allah bizi çok sever. Biz de Allah'ı çoook severiz. 💖",
+        "Yediğimiz meyveler, içtiğimiz su, soluduğumuz hava… hepsi Allah'ın hediyesidir. 🍎🌊",
+        "Annemizin sevgisi, babamızın şefkati de Allah'ın bize armağanıdır. 🤗",
+        "Allah her şeyi görür ve işitir; bizi hep korur. 👁️👂",
+        "Gökyüzünü, yıldızları, ayı, güneşi yaratan Allah'tır. 🌌",
+        "Hayvanları, çiçekleri, ağaçları yaratan da Allah'tır. 🐦🌹🌳",
+        "Allah hiçbir zaman uyumaz, yorulmaz, unutmaz. ✨",
+        "Allah'ı göremeyiz ama eserlerinden onu tanırız: güneş, çiçek, sevgi… ☀️🌸",
+        "Allah bize en yakın olandır; dua ettiğimizde bizi mutlaka duyar. 🤲"
       ],
-      "quiz": {
-        "question": "Bizi yaratan ve bize her şeyi veren kimdir?",
-        "options": ["Doğa", "Allah", "Güneş", "İnsanlar"],
-        "correct_answer": "Allah",
-        "xp_reward": 20
-      }
+      "quiz": [
+        {
+          "question": "Bizi yaratan ve bize her şeyi veren kimdir?",
+          "options": ["Doğa", "Allah", "Güneş", "İnsanlar"],
+          "correct_answer": "Allah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah bizi nasıl sever?",
+          "options": ["Hiç sevmez", "Az sever", "Çok sever", "Bazen sever"],
+          "correct_answer": "Çok sever",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aşağıdakilerden hangisi Allah'ın hediyesidir?",
+          "options": ["Sadece yiyecekler", "Sadece su", "Sadece anne sevgisi", "Hepsi"],
+          "correct_answer": "Hepsi",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah uyur mu, yorulur mu?",
+          "options": ["Uyur ve yorulur", "Uyumaz ve yorulmaz", "Sadece geceleri uyur", "Sadece bayramda uyur"],
+          "correct_answer": "Uyumaz ve yorulmaz",
+          "xp_reward": 5
+        },
+        {
+          "question": "Gökteki yıldızları kim yaratmıştır?",
+          "options": ["İnsanlar", "Hayvanlar", "Allah", "Robotlar"],
+          "correct_answer": "Allah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ı nasıl tanırız?",
+          "options": ["Resmini görerek", "Eserlerinden", "Sesinden", "Hiç tanıyamayız"],
+          "correct_answer": "Eserlerinden",
+          "xp_reward": 5
+        },
+        {
+          "question": "Annemizin sevgisi nereden gelir?",
+          "options": ["Kendinden", "Komşulardan", "Allah'tan", "Televizyondan"],
+          "correct_answer": "Allah'tan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ı görebilir miyiz?",
+          "options": ["Görürüz", "Görmeyiz ama tanırız", "Geceleri görürüz", "Aynada görürüz"],
+          "correct_answer": "Görmeyiz ama tanırız",
+          "xp_reward": 5
+        },
+        {
+          "question": "Dua ettiğimizde Allah ne yapar?",
+          "options": ["Duymaz", "Geç duyar", "Mutlaka duyar", "Cevap vermez"],
+          "correct_answer": "Mutlaka duyar",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah bizi her zaman ne yapar?",
+          "options": ["Görür ve korur", "Görmez", "Unutur", "Kızar"],
+          "correct_answer": "Görür ve korur",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s1_gunluk_ifadeler",
       "unit_title": "Seviye 1 · Güzel Sözlerimiz",
       "level": 1,
       "cards": [
-        "Bir işe başlarken Bismillah deriz. 'Allah'ın adıyla başlıyorum' demektir. 🌱",
-        "Bir nimet yediğimizde Elhamdülillah deriz. 'Allah'a şükürler olsun' anlamına gelir. 🙏",
-        "Bir Müslüman'ı gördüğümüzde Selamün Aleyküm deriz. 'Allah'ın selamı üzerine olsun' demektir. 👋",
-        "Bu güzel sözler bizi Allah'a yakınlaştırır ve kalbimizi güzelleştirir. ✨"
+        "Bir işe başlarken Bismillah deriz: 'Allah'ın adıyla başlıyorum.' 🌱",
+        "Bir nimet aldığımızda Elhamdülillah deriz: 'Allah'a şükürler olsun.' 🙏",
+        "Bir Müslüman'ı gördüğümüzde Selamün Aleyküm deriz: 'Allah'ın selamı üzerine olsun.' 👋",
+        "Selamı alan kişi Aleyküm Selam der.",
+        "Güzel bir şey görünce Mâşallah deriz: 'Allah ne güzel yaratmış.' 🌷",
+        "Bir şeyi yapmaya niyetlenince İnşallah deriz: 'Allah dilerse.' ✨",
+        "Bir yanlış yaptığımızda Estağfirullah deriz: 'Allah'ım beni affet.' 💧",
+        "Şaşırınca Sübhanallah deriz: 'Allah her türlü eksiklikten uzaktır.' 🌟",
+        "Hapşıran kişiye Yerhamukallah, ona da Yehdîna ve yehdîkumullah denir. 🤧",
+        "Bu güzel sözler kalbimizi süsler ve bizi Allah'a yakınlaştırır. 💖"
       ],
-      "quiz": {
-        "question": "Bir yemeğe başlarken ne deriz?",
-        "options": ["Elhamdülillah", "Selamün Aleyküm", "Bismillah", "Maşallah"],
-        "correct_answer": "Bismillah",
-        "xp_reward": 20
-      }
+      "quiz": [
+        {
+          "question": "Bir yemeğe başlarken ne deriz?",
+          "options": ["Elhamdülillah", "Selamün Aleyküm", "Bismillah", "Mâşallah"],
+          "correct_answer": "Bismillah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Yemekten sonra ne söyleriz?",
+          "options": ["Bismillah", "Elhamdülillah", "İnşallah", "Mâşallah"],
+          "correct_answer": "Elhamdülillah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Selamün Aleyküm'ün cevabı nedir?",
+          "options": ["Hoşça kal", "Aleyküm Selam", "İyi günler", "Sağlıcakla"],
+          "correct_answer": "Aleyküm Selam",
+          "xp_reward": 5
+        },
+        {
+          "question": "Güzel bir manzara gördüğümüzde ne deriz?",
+          "options": ["Estağfirullah", "Mâşallah", "Bismillah", "Yâ Rabbi"],
+          "correct_answer": "Mâşallah",
+          "xp_reward": 5
+        },
+        {
+          "question": "'Allah dilerse' anlamına gelen söz hangisidir?",
+          "options": ["İnşallah", "Mâşallah", "Bismillah", "Elhamdülillah"],
+          "correct_answer": "İnşallah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bir hata yaptığımızda hangi sözü söyleriz?",
+          "options": ["Mâşallah", "Estağfirullah", "Selamün Aleyküm", "Bismillah"],
+          "correct_answer": "Estağfirullah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bismillah'ın anlamı nedir?",
+          "options": ["Allah'a şükür", "Allah'ın adıyla başlıyorum", "Allah dilerse", "Allah ne güzel yaratmış"],
+          "correct_answer": "Allah'ın adıyla başlıyorum",
+          "xp_reward": 5
+        },
+        {
+          "question": "Hayretle bir şeye şaşırınca ne deriz?",
+          "options": ["Sübhanallah", "Bismillah", "Selamün Aleyküm", "Aleyküm Selam"],
+          "correct_answer": "Sübhanallah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Elhamdülillah'ın anlamı nedir?",
+          "options": ["Allah'ım affet", "Allah'a şükürler olsun", "Allah'ın selamı", "Allah dilerse"],
+          "correct_answer": "Allah'a şükürler olsun",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bir Müslüman'la karşılaştığımızda ilk hangi sözü söyleriz?",
+          "options": ["Mâşallah", "Selamün Aleyküm", "Bismillah", "Estağfirullah"],
+          "correct_answer": "Selamün Aleyküm",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s1_rahman_rahim",
       "unit_title": "Seviye 1 · Allah'ın Güzel İsimleri",
       "level": 1,
       "cards": [
-        "Allah'ın çok güzel isimleri vardır. Bunlardan biri Rahman'dır: 'Bütün canlılara merhamet eden' demektir. 🌈",
-        "Bir başkası Rahîm'dir: 'Sevenlerine özellikle çok şefkat gösteren' demektir. 💝",
-        "Vedûd ise 'Çok çok seven' demektir. Allah bizi çoook sever. 💕",
-        "Allah'ın güzel isimlerini öğrenmek, O'nu daha çok sevmemize yardım eder. 🌟"
+        "Allah'ın çok güzel isimleri vardır; bunlara Esmâ-i Hüsnâ denir. 🌟",
+        "Rahman: 'Bütün canlılara merhamet eden.' 🌈",
+        "Rahîm: 'Sevenlerine özellikle çok şefkat gösteren.' 💝",
+        "Vedûd: 'Çok çok seven.' Allah bizi çoook sever. 💕",
+        "Halık: 'Yaratan.' Her şeyi O yaratır. ✨",
+        "Rezzâk: 'Rızık veren.' Yiyeceğimizi, ekmeğimizi O verir. 🍞",
+        "Şâfî: 'Şifa veren.' Hastalandığımızda iyileştirir. 💊",
+        "Selâm: 'Esenlik veren.' Bizi tehlikelerden korur. ☮️",
+        "Gaffâr: 'Çok bağışlayan.' Hatalarımızı sevgiyle affeder. 💧",
+        "Allah'ın güzel isimlerini öğrenmek O'nu daha çok sevmemizi sağlar. 🌟"
       ],
-      "quiz": {
-        "question": "'Çok çok seven' anlamına gelen Allah'ın güzel ismi hangisidir?",
-        "options": ["Rahman", "Rahîm", "Vedûd", "Selam"],
-        "correct_answer": "Vedûd",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "'Çok çok seven' anlamına gelen Allah'ın güzel ismi hangisidir?",
+          "options": ["Rahman", "Rahîm", "Vedûd", "Selâm"],
+          "correct_answer": "Vedûd",
+          "xp_reward": 5
+        },
+        {
+          "question": "'Bütün canlılara merhamet eden' anlamına gelen isim hangisidir?",
+          "options": ["Rahman", "Halık", "Gaffâr", "Şâfî"],
+          "correct_answer": "Rahman",
+          "xp_reward": 5
+        },
+        {
+          "question": "Rezzâk ismi ne demektir?",
+          "options": ["Yaratan", "Rızık veren", "Şifa veren", "Affeden"],
+          "correct_answer": "Rızık veren",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ın güzel isimlerine ne denir?",
+          "options": ["Esmâ-i Hüsnâ", "Kelime-i Şehadet", "Salavat", "Fatiha"],
+          "correct_answer": "Esmâ-i Hüsnâ",
+          "xp_reward": 5
+        },
+        {
+          "question": "Hastalandığımızda bize şifa veren Allah'ın hangi ismidir?",
+          "options": ["Selâm", "Şâfî", "Rezzâk", "Vedûd"],
+          "correct_answer": "Şâfî",
+          "xp_reward": 5
+        },
+        {
+          "question": "Halık ne anlama gelir?",
+          "options": ["Affeden", "Yaratan", "Çok seven", "Bilen"],
+          "correct_answer": "Yaratan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Gaffâr ne demektir?",
+          "options": ["Çok bağışlayan", "Çok seven", "Rızık veren", "Şifa veren"],
+          "correct_answer": "Çok bağışlayan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Selâm isminin anlamı nedir?",
+          "options": ["Esenlik veren", "Çok seven", "Rızık veren", "Yaratan"],
+          "correct_answer": "Esenlik veren",
+          "xp_reward": 5
+        },
+        {
+          "question": "Rahîm ne anlama gelir?",
+          "options": ["Yaratıcı", "Sevenlerine çok şefkat gösteren", "Yaratan", "Affeden"],
+          "correct_answer": "Sevenlerine çok şefkat gösteren",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ın güzel isimlerini öğrenmek bize ne kazandırır?",
+          "options": ["Hiçbir şey", "O'nu daha çok sevmeyi", "Sadece bilgi", "Sadece eğlence"],
+          "correct_answer": "O'nu daha çok sevmeyi",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s2_kelime_tevhid",
       "unit_title": "Seviye 2 · Kelime-i Tevhid",
@@ -78,20 +325,82 @@
       "cards": [
         "Kelime-i Tevhid: 'Lâ ilâhe illallâh Muhammedü'r-Rasûlullâh' 🌙",
         "Anlamı: 'Allah'tan başka ilah yoktur, Muhammed (s.a.v.) Allah'ın elçisidir.'",
-        "Bu cümle, imanımızın en güzel özetidir. Allah birdir, Peygamberimiz O'nun elçisidir. ✨",
-        "Müslümanlar bu cümleyi sevgiyle ve sık sık tekrarlar. 💚"
+        "Tevhid 'birlemek' demektir; Allah'ı bir bilmek demektir. ☝️",
+        "Bu cümle imanımızın en güzel özetidir. ✨",
+        "Allah birdir, eşi ve benzeri yoktur.",
+        "Peygamberimiz Hz. Muhammed (s.a.v.) Allah'ın son elçisidir. 🌹",
+        "Müslümanlar bu cümleyi sevgiyle ve sık sık tekrarlar. 💚",
+        "Kelime-i Tevhid'i söyleyen kişi imanını ilan etmiş olur.",
+        "Bu söz, kalbi nurla doldurur ve günahları temizler. 🌟",
+        "Her gün defalarca söylemek tavsiye edilmiştir. 🤲"
       ],
-      "quiz": {
-        "question": "Kelime-i Tevhid'in anlamı nedir?",
-        "options": [
-          "Allah büyüktür",
-          "Allah'tan başka ilah yoktur, Muhammed O'nun elçisidir",
-          "Allah'a şükürler olsun",
-          "Allah'ın adıyla başlıyorum"
-        ],
-        "correct_answer": "Allah'tan başka ilah yoktur, Muhammed O'nun elçisidir",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "Kelime-i Tevhid'in anlamı nedir?",
+          "options": [
+            "Allah büyüktür",
+            "Allah'tan başka ilah yoktur, Muhammed O'nun elçisidir",
+            "Allah'a şükürler olsun",
+            "Allah'ın adıyla başlıyorum"
+          ],
+          "correct_answer": "Allah'tan başka ilah yoktur, Muhammed O'nun elçisidir",
+          "xp_reward": 5
+        },
+        {
+          "question": "'Tevhid' kelimesi ne demektir?",
+          "options": ["Çoğaltmak", "Birlemek", "Bölmek", "Saymak"],
+          "correct_answer": "Birlemek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Tevhid hangi dilden gelir?",
+          "options": ["Türkçe", "İngilizce", "Arapça", "Farsça"],
+          "correct_answer": "Arapça",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah kaç tanedir?",
+          "options": ["1", "2", "3", "Bilinmez"],
+          "correct_answer": "1",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Tevhid'i kim söyler?",
+          "options": ["Sadece çocuklar", "Sadece büyükler", "Tüm Müslümanlar", "Hiç kimse"],
+          "correct_answer": "Tüm Müslümanlar",
+          "xp_reward": 5
+        },
+        {
+          "question": "Muhammed (s.a.v.) kimin elçisidir?",
+          "options": ["İnsanların", "Meleklerin", "Allah'ın", "Bilinmez"],
+          "correct_answer": "Allah'ın",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Tevhid neyin özetidir?",
+          "options": ["Yemeklerin", "İmanımızın", "Oyunların", "Hayvanların"],
+          "correct_answer": "İmanımızın",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ın eşi var mıdır?",
+          "options": ["Vardır", "Yoktur", "Bilinmez", "Sadece bir tane"],
+          "correct_answer": "Yoktur",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Tevhid'i söyleyen kişi neyi ilan etmiş olur?",
+          "options": ["Yaşını", "İmanını", "Adını", "Boyunu"],
+          "correct_answer": "İmanını",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bu güzel cümleyi günde kaç kere söyleyebiliriz?",
+          "options": ["Sadece bir kez", "Sadece bayramda", "Defalarca", "Hiç söyleyemeyiz"],
+          "correct_answer": "Defalarca",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s2_kelime_sehadet",
@@ -99,16 +408,78 @@
       "level": 2,
       "cards": [
         "Kelime-i Şehadet: 'Eşhedü en lâ ilâhe illallâh ve eşhedü enne Muhammeden abdühû ve rasûlüh.' 🌟",
-        "Anlamı: 'Şahitlik ederim ki Allah'tan başka ilah yoktur ve yine şahitlik ederim ki Muhammed O'nun kulu ve elçisidir.'",
-        "Bu cümle, bir kişinin Müslüman olduğunu gösteren anahtardır. 🗝️",
-        "Yani 'Ben Müslüman'ım' demenin en güzel yoludur. 💖"
+        "Anlamı: 'Şahitlik ederim ki Allah'tan başka ilah yoktur ve Muhammed O'nun kulu ve elçisidir.'",
+        "'Şehadet' şahitlik etmek demektir. 🗝️",
+        "Bu cümle bir kişinin Müslüman olduğunu gösteren anahtardır.",
+        "Yani 'Ben Müslümanım' demenin en güzel yoludur. 💖",
+        "Bir kişi Müslüman olmak isterse iki şahit önünde bu cümleyi söyler.",
+        "Tevhid ile Şehadet birbirine çok benzer; biri 'birleme', diğeri 'şahitlik'tir.",
+        "Müslümanlar her namazda bu güzel cümleyi tekrarlar. 🕌",
+        "Şehadet getiren kişi hem dili hem kalbi ile inandığını söyler.",
+        "Bu cümle imanın temel taşıdır. 🏛️"
       ],
-      "quiz": {
-        "question": "Bir kişinin Müslüman olduğunu gösteren cümleye ne denir?",
-        "options": ["Besmele", "Kelime-i Şehadet", "Salavat", "Tekbir"],
-        "correct_answer": "Kelime-i Şehadet",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "Bir kişinin Müslüman olduğunu gösteren cümleye ne denir?",
+          "options": ["Besmele", "Kelime-i Şehadet", "Salavat", "Tekbir"],
+          "correct_answer": "Kelime-i Şehadet",
+          "xp_reward": 5
+        },
+        {
+          "question": "Şehadet ne demektir?",
+          "options": ["Saymak", "Şahitlik etmek", "Söylemek", "Yazmak"],
+          "correct_answer": "Şahitlik etmek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Şehadet hangi cümle ile başlar?",
+          "options": ["Bismillâhi", "Elhamdülillâh", "Eşhedü en lâ ilâhe illallâh", "Sübhânallah"],
+          "correct_answer": "Eşhedü en lâ ilâhe illallâh",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Şehadet'te kaç şeye şahitlik ederiz?",
+          "options": ["1", "2", "3", "4"],
+          "correct_answer": "2",
+          "xp_reward": 5
+        },
+        {
+          "question": "Müslümanlık şartlarının ilki nedir?",
+          "options": ["Namaz", "Oruç", "Kelime-i Şehadet", "Zekât"],
+          "correct_answer": "Kelime-i Şehadet",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Şehadet'e göre Hz. Muhammed kimdir?",
+          "options": ["Bir melek", "Allah'ın kulu ve elçisi", "Bir kral", "Bir sahabe"],
+          "correct_answer": "Allah'ın kulu ve elçisi",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bu güzel cümleyi söyleyen kişi neyini açıklamış olur?",
+          "options": ["Adını", "Müslümanlığını", "Yaşını", "İşini"],
+          "correct_answer": "Müslümanlığını",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kelime-i Şehadet nasıl söylenmelidir?",
+          "options": ["Sadece dille", "Sadece kalple", "Dil ve kalp ile birlikte", "Sessizce"],
+          "correct_answer": "Dil ve kalp ile birlikte",
+          "xp_reward": 5
+        },
+        {
+          "question": "Şehadet imanın neyidir?",
+          "options": ["Süsü", "Temel taşı", "Bonusu", "Sonu"],
+          "correct_answer": "Temel taşı",
+          "xp_reward": 5
+        },
+        {
+          "question": "Müslümanlar Kelime-i Şehadet'i nerede tekrarlar?",
+          "options": ["Sadece bayramlarda", "Hiçbir zaman", "Her namazda", "Sadece doğum gününde"],
+          "correct_answer": "Her namazda",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s2_allah_birligi",
@@ -116,39 +487,162 @@
       "level": 2,
       "cards": [
         "Allah birdir. Eşi, benzeri, ortağı yoktur. ☝️",
-        "Gökyüzünü, yıldızları, denizleri, hayvanları, seni ve beni yaratan yalnız Allah'tır. 🌌🐬",
-        "Allah doğmamış ve doğurmamıştır. Hiçbir şey O'na benzemez. 🌟",
-        "Allah her şeyi görür, işitir ve bilir. Hiçbir şey O'ndan gizli kalmaz. 👁️👂"
+        "Gökyüzünü, yıldızları, denizleri yaratan yalnız Allah'tır. 🌌",
+        "Hayvanları, çiçekleri, seni ve beni yaratan yalnız Allah'tır. 🐬🌷",
+        "Allah doğmamış ve doğurmamıştır. ✨",
+        "Hiçbir şey Allah'a benzemez. O her şeyden yücedir.",
+        "Allah her şeyi görür, işitir ve bilir. 👁️👂",
+        "Hiçbir şey Allah'tan gizli kalmaz; karanlıkta bile bilir. 🌙",
+        "Allah'ın gücü her şeye yeter; her şeye 'Ol' der, o da olur. ⭐",
+        "Bütün varlıklar Allah'a muhtaçtır; Allah hiçbir şeye muhtaç değildir.",
+        "İhlâs Suresi'nde Allah'ın bir olduğu çok güzel anlatılır. 📖"
       ],
-      "quiz": {
-        "question": "Allah hakkında doğru olan hangisidir?",
-        "options": [
-          "İkidir",
-          "Birdir, eşi ve benzeri yoktur",
-          "Sadece insanları görür",
-          "Bazı şeyleri bilmez"
-        ],
-        "correct_answer": "Birdir, eşi ve benzeri yoktur",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "Allah hakkında doğru olan hangisidir?",
+          "options": [
+            "İkidir",
+            "Birdir, eşi ve benzeri yoktur",
+            "Sadece insanları görür",
+            "Bazı şeyleri bilmez"
+          ],
+          "correct_answer": "Birdir, eşi ve benzeri yoktur",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ın gücü neye yeter?",
+          "options": ["Sadece bazı şeylere", "Her şeye", "Sadece insanlara", "Sadece meleklere"],
+          "correct_answer": "Her şeye",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'tan gizli kalan bir şey var mıdır?",
+          "options": ["Vardır", "Yoktur", "Sadece geceleri vardır", "Karanlıkta vardır"],
+          "correct_answer": "Yoktur",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah doğmuş mudur?",
+          "options": ["Doğmuştur", "Doğmamıştır", "Bilinmez", "Bir kez doğmuştur"],
+          "correct_answer": "Doğmamıştır",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ı bir bilmenin Türkçe anlatımı nedir?",
+          "options": ["Şirk", "Tevhid", "Küfür", "Nifak"],
+          "correct_answer": "Tevhid",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bütün varlıklar kime muhtaçtır?",
+          "options": ["İnsanlara", "Allah'a", "Hayvanlara", "Hiç kimseye"],
+          "correct_answer": "Allah'a",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah hangi sureyle birliğini anlatmıştır?",
+          "options": ["Fatiha", "İhlâs", "Felâk", "Nâs"],
+          "correct_answer": "İhlâs",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah bir şeyin olmasını isteyince ne der?",
+          "options": ["Lütfen", "Ol", "Hadi", "Çabuk"],
+          "correct_answer": "Ol",
+          "xp_reward": 5
+        },
+        {
+          "question": "Çiçekleri kim yarattı?",
+          "options": ["Arılar", "Toprak", "Allah", "Yağmur"],
+          "correct_answer": "Allah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah karanlıkta bir karıncayı görür mü?",
+          "options": ["Görmez", "Görür", "Sadece gündüz görür", "Bazen görür"],
+          "correct_answer": "Görür",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s3_namaz_giris",
       "unit_title": "Seviye 3 · Namaz Nedir?",
       "level": 3,
       "cards": [
-        "Namaz, Allah ile küçük bir buluşmadır. 🕌 Allah'a 'seni seviyorum, sana şükrediyorum' deme yoludur.",
-        "Müslümanlar günde 5 vakit namaz kılar. Bu, Allah'ın bize verdiği en güzel hediyelerden biridir. 🎁",
-        "Namaz kılarken kıbleye, yani Kâbe'ye doğru döneriz. Kâbe Mekke şehrindedir. 🕋",
-        "Namazda ayakta dururuz, eğiliriz (rükû) ve secdeye gideriz. Kalbimiz Allah'a yönelir. 💖"
+        "Namaz, Allah ile küçük bir buluşmadır. 🕌",
+        "Allah'a 'seni seviyorum, sana şükrediyorum' deme yoludur.",
+        "Müslümanlar günde 5 vakit namaz kılar. 🕰️",
+        "Namaz, İslam'ın 5 şartından biridir. ☝️",
+        "Namaz kılarken Kâbe'ye yönelir, bu yöne kıble deriz. 🕋",
+        "Namazda ayakta dururuz (kıyam), eğiliriz (rükû), secdeye gideriz.",
+        "Secde, Allah'a en yakın olduğumuz andır. 🙇",
+        "Namaz kalbi temizler, insanı kötülüklerden korur. ✨",
+        "Namaza başlamadan önce abdest alırız. 💧",
+        "Namaz, bir Müslüman'ın günlük en güzel meşgalesidir. 💖"
       ],
-      "quiz": {
-        "question": "Müslümanlar günde kaç vakit namaz kılar?",
-        "options": ["3", "5", "7", "1"],
-        "correct_answer": "5",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "Müslümanlar günde kaç vakit namaz kılar?",
+          "options": ["3", "5", "7", "1"],
+          "correct_answer": "5",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namaz kılarken hangi yöne döneriz?",
+          "options": ["Kuzey", "Güney", "Kıble (Kâbe)", "Doğu"],
+          "correct_answer": "Kıble (Kâbe)",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'a en yakın olduğumuz an hangisidir?",
+          "options": ["Kıyam", "Rükû", "Secde", "Selam"],
+          "correct_answer": "Secde",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namazdan önce ne yapılır?",
+          "options": ["Yemek yeriz", "Abdest alırız", "Uyuruz", "Koşarız"],
+          "correct_answer": "Abdest alırız",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namaz İslam'ın kaç şartından biridir?",
+          "options": ["3", "4", "5", "6"],
+          "correct_answer": "5",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namazda ayakta durmaya ne denir?",
+          "options": ["Kıyam", "Rükû", "Secde", "Tahiyyât"],
+          "correct_answer": "Kıyam",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namazda eğilmeye ne denir?",
+          "options": ["Kıyam", "Rükû", "Secde", "Selam"],
+          "correct_answer": "Rükû",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kâbe hangi şehirdedir?",
+          "options": ["İstanbul", "Medine", "Mekke", "Kudüs"],
+          "correct_answer": "Mekke",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namazın amacı nedir?",
+          "options": ["Yorulmak", "Eğlenmek", "Allah ile buluşmak", "Spor yapmak"],
+          "correct_answer": "Allah ile buluşmak",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namaz neyi temizler?",
+          "options": ["Sadece bedeni", "Sadece elbiseyi", "Kalbi", "Hiçbir şey"],
+          "correct_answer": "Kalbi",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s3_namaz_vakitleri",
@@ -156,68 +650,315 @@
       "level": 3,
       "cards": [
         "5 vakit namazımız var: Sabah, Öğle, İkindi, Akşam, Yatsı. 🌅☀️🌇🌆🌙",
-        "Sabah namazı güneş doğmadan önce kılınır. Yeni güne Allah ile başlarız. 🌄",
-        "Öğle güneş tepedeyken, İkindi öğleden sonra, Akşam güneş battığında, Yatsı ise gece kılınır. 🌃",
-        "Namaz vakitleri günü düzene sokar, Allah'ı hep hatırlamamızı sağlar. ⏰"
+        "Sabah namazı güneş doğmadan önce kılınır. 🌄",
+        "Sabah namazı 2 rekât sünnet + 2 rekât farz olmak üzere 4 rekâttır.",
+        "Öğle namazı güneş tepedeyken kılınır, 10 rekâttır.",
+        "İkindi namazı öğleden sonra kılınır, 8 rekâttır.",
+        "Akşam namazı güneş battığında kılınır, 5 rekâttır. 🌇",
+        "Yatsı namazı gece kılınır, 13 rekâttır. 🌌",
+        "Cuma günü öğle vakti, camide topluca Cuma namazı kılınır. 🕌",
+        "Namaz vakitleri günü düzene sokar. ⏰",
+        "Ezan, namaz vaktinin geldiğini bildirir. 📢"
       ],
-      "quiz": {
-        "question": "Güneş doğmadan önce kılınan namaz hangisidir?",
-        "options": ["Öğle", "İkindi", "Sabah", "Yatsı"],
-        "correct_answer": "Sabah",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "Güneş doğmadan önce kılınan namaz hangisidir?",
+          "options": ["Öğle", "İkindi", "Sabah", "Yatsı"],
+          "correct_answer": "Sabah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Güneş battıktan sonra kılınan namaz hangisidir?",
+          "options": ["Sabah", "Öğle", "Akşam", "İkindi"],
+          "correct_answer": "Akşam",
+          "xp_reward": 5
+        },
+        {
+          "question": "Cuma günü hangi vakit topluca namaz kılınır?",
+          "options": ["Sabah", "Öğle", "Akşam", "Yatsı"],
+          "correct_answer": "Öğle",
+          "xp_reward": 5
+        },
+        {
+          "question": "Akşam namazı kaç rekâttır?",
+          "options": ["2", "4", "5", "10"],
+          "correct_answer": "5",
+          "xp_reward": 5
+        },
+        {
+          "question": "Gece kılınan namazın adı nedir?",
+          "options": ["Yatsı", "Sabah", "Öğle", "İkindi"],
+          "correct_answer": "Yatsı",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sabah namazının farzı kaç rekâttır?",
+          "options": ["2", "3", "4", "5"],
+          "correct_answer": "2",
+          "xp_reward": 5
+        },
+        {
+          "question": "Öğleden sonra kılınan namaz hangisidir?",
+          "options": ["Sabah", "İkindi", "Akşam", "Yatsı"],
+          "correct_answer": "İkindi",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namaz vaktini bildiren çağrıya ne denir?",
+          "options": ["Salavat", "Ezan", "Kamet", "Niyet"],
+          "correct_answer": "Ezan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Öğle namazı toplam kaç rekâttır?",
+          "options": ["5", "8", "10", "13"],
+          "correct_answer": "10",
+          "xp_reward": 5
+        },
+        {
+          "question": "Yatsı namazı toplam kaç rekâttır?",
+          "options": ["10", "11", "13", "15"],
+          "correct_answer": "13",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s3_abdest",
       "unit_title": "Seviye 3 · Abdest",
       "level": 3,
       "cards": [
-        "Namaz kılmadan önce abdest alırız. Abdest hem temizliktir hem ibadettir. 💧",
-        "Önce ellerimizi yıkarız 🤲, sonra ağzımıza su veririz, burnumuza su çekeriz.",
-        "Yüzümüzü, kollarımızı dirseklere kadar yıkarız. Başımızı meshederiz (ıslak elle sıvazlarız). 💦",
-        "En son ayaklarımızı topuklarla beraber yıkarız. Artık tertemiziz, namaza hazırız! ✨"
+        "Namaz kılmadan önce abdest alırız. 💧",
+        "Abdest hem temizliktir hem ibadettir.",
+        "Abdeste 'Bismillâhirrahmânirrahîm' diyerek başlarız.",
+        "1) Ellerimizi bileklere kadar 3 kez yıkarız. 🤲",
+        "2) Ağzımıza 3 kez su veririz (mazmaza).",
+        "3) Burnumuza 3 kez su çekeriz (istinşak).",
+        "4) Yüzümüzü 3 kez yıkarız.",
+        "5) Kollarımızı dirseklerle birlikte 3 kez yıkarız (önce sağ).",
+        "6) Başımızı ıslak elle sıvazlarız (mesh). Kulak ve boynumuzu da meshederiz.",
+        "7) Son olarak ayaklarımızı topuklarla beraber 3 kez yıkarız. ✨"
       ],
-      "quiz": {
-        "question": "Namaz kılmadan önce ne yaparız?",
-        "options": ["Yemek yeriz", "Abdest alırız", "Uyuruz", "Koşarız"],
-        "correct_answer": "Abdest alırız",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "Namaz kılmadan önce ne yaparız?",
+          "options": ["Yemek yeriz", "Abdest alırız", "Uyuruz", "Koşarız"],
+          "correct_answer": "Abdest alırız",
+          "xp_reward": 5
+        },
+        {
+          "question": "Abdeste hangi sözle başlarız?",
+          "options": ["Elhamdülillah", "Bismillah", "Selamün Aleyküm", "Mâşallah"],
+          "correct_answer": "Bismillah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Abdestte ilk olarak ne yıkanır?",
+          "options": ["Yüz", "Eller", "Ayaklar", "Kollar"],
+          "correct_answer": "Eller",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kollar ne kadar yıkanır?",
+          "options": ["Bileklere kadar", "Dirseklere kadar", "Omuza kadar", "Sadece parmaklar"],
+          "correct_answer": "Dirseklere kadar",
+          "xp_reward": 5
+        },
+        {
+          "question": "Başı ıslak elle sıvazlamaya ne denir?",
+          "options": ["Niyet", "Mesh", "Selam", "Tahiyyât"],
+          "correct_answer": "Mesh",
+          "xp_reward": 5
+        },
+        {
+          "question": "Abdestte ağza su vermeye ne denir?",
+          "options": ["İstinşak", "Mazmaza", "Mesh", "Niyet"],
+          "correct_answer": "Mazmaza",
+          "xp_reward": 5
+        },
+        {
+          "question": "Abdest sadece temizlik midir?",
+          "options": ["Sadece temizliktir", "Hem temizlik hem ibadettir", "Sadece ibadettir", "Hiçbiri"],
+          "correct_answer": "Hem temizlik hem ibadettir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ayaklar nereye kadar yıkanır?",
+          "options": ["Bileklere kadar", "Topuklarla birlikte", "Sadece parmaklar", "Dize kadar"],
+          "correct_answer": "Topuklarla birlikte",
+          "xp_reward": 5
+        },
+        {
+          "question": "Abdestin son adımı nedir?",
+          "options": ["El yıkamak", "Yüz yıkamak", "Ayak yıkamak", "Ağız çalkalamak"],
+          "correct_answer": "Ayak yıkamak",
+          "xp_reward": 5
+        },
+        {
+          "question": "Abdestte yüz kaç kez yıkanır?",
+          "options": ["1", "2", "3", "5"],
+          "correct_answer": "3",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s3_ezan_cami",
       "unit_title": "Seviye 3 · Ezan ve Cami",
       "level": 3,
       "cards": [
-        "Ezan, namaz vaktinin geldiğini bildiren güzel bir davettir. 📢 'Haydi namaza, haydi kurtuluşa!' der.",
-        "Cami, Müslümanların toplu namaz kıldığı, Allah'ın evi olarak adlandırılan güzel mekanlardır. 🕌",
-        "Camide sessiz olur, koşmaz, kimseyi rahatsız etmeyiz. Ayakkabımızı çıkarırız. 👟",
-        "Ezan duyduğumuzda işimizi bırakıp dinler ve sessizce cevap veririz. 🤫"
+        "Ezan, namaz vaktinin geldiğini bildiren güzel bir davettir. 📢",
+        "Ezanı okuyan kişiye müezzin denir.",
+        "Ezan günde 5 kez minarelerden okunur.",
+        "Ezanın anlamı: 'Allah en büyüktür, haydi namaza, haydi kurtuluşa!'",
+        "Cami, Müslümanların toplu namaz kıldığı mübarek mekândır. 🕌",
+        "Camiye 'Allah'ın evi' denir.",
+        "Camiye girerken sağ ayakla, çıkarken sol ayakla çıkarız.",
+        "Camide ayakkabımızı çıkarır, sessiz oluruz. 👟",
+        "Cami içinde koşmaz, kimseyi rahatsız etmeyiz.",
+        "Ezanı duyduğumuzda sessizce dinler ve müezzinin söylediklerini tekrar ederiz. 🤫"
       ],
-      "quiz": {
-        "question": "Namaz vaktinin geldiğini bildiren sese ne denir?",
-        "options": ["Selam", "Salavat", "Ezan", "Kamet"],
-        "correct_answer": "Ezan",
-        "xp_reward": 25
-      }
+      "quiz": [
+        {
+          "question": "Namaz vaktinin geldiğini bildiren sese ne denir?",
+          "options": ["Selam", "Salavat", "Ezan", "Kamet"],
+          "correct_answer": "Ezan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ezanı okuyan kişiye ne denir?",
+          "options": ["İmam", "Müezzin", "Hatip", "Vâiz"],
+          "correct_answer": "Müezzin",
+          "xp_reward": 5
+        },
+        {
+          "question": "Camiye girerken hangi ayakla girilir?",
+          "options": ["Sol", "Sağ", "Her ikisi", "Hiçbiri"],
+          "correct_answer": "Sağ",
+          "xp_reward": 5
+        },
+        {
+          "question": "Camiye ne denir?",
+          "options": ["İnsanların evi", "Allah'ın evi", "Bir okul", "Bir park"],
+          "correct_answer": "Allah'ın evi",
+          "xp_reward": 5
+        },
+        {
+          "question": "Camide nasıl davranmalıyız?",
+          "options": ["Bağırarak", "Koşarak", "Sessiz ve saygılı", "Müzik dinleyerek"],
+          "correct_answer": "Sessiz ve saygılı",
+          "xp_reward": 5
+        },
+        {
+          "question": "Camiye girerken ayakkabıyı ne yaparız?",
+          "options": ["İçeri götürürüz", "Çıkarırız", "Yıkarız", "Atarız"],
+          "correct_answer": "Çıkarırız",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ezan günde kaç kez okunur?",
+          "options": ["3", "4", "5", "7"],
+          "correct_answer": "5",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ezan nereden okunur?",
+          "options": ["Kapıdan", "Minareden", "Mihraptan", "Avludan"],
+          "correct_answer": "Minareden",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ezandaki 'Haydi namaza' davetine ne deriz?",
+          "options": ["Hayye ale's-salâh", "Hayye ale'l-felâh", "Allâhu Ekber", "Lâ ilâhe illallâh"],
+          "correct_answer": "Hayye ale's-salâh",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ezanı duyduğumuzda ne yaparız?",
+          "options": ["Görmezden geliriz", "Sesli konuşuruz", "Sessizce dinleriz", "Şarkı söyleriz"],
+          "correct_answer": "Sessizce dinleriz",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s4_ramazan",
       "unit_title": "Seviye 4 · Ramazan Ayı",
       "level": 4,
       "cards": [
-        "Ramazan, Müslümanlar için çok özel bir aydır. 🌙 Kur'an-ı Kerim bu ayda inmeye başladı.",
-        "Bu ayda Müslümanlar oruç tutar. Yani sabahtan akşama bir şey yiyip içmeden Allah için sabrederler. ⏳",
-        "Ramazan boyunca daha çok yardımlaşır, daha çok ibadet ederiz. Evler ve sokaklar sevince bürünür. 🎉",
-        "Ay sonunda Ramazan Bayramı'nı kutlarız. Sevdiklerimizle buluşur, küçükler şeker alır. 🍬✨"
+        "Ramazan, Müslümanlar için çok özel bir aydır. 🌙",
+        "Kur'an-ı Kerim ilk olarak Ramazan ayında inmeye başladı. 📖",
+        "Ramazan'da Müslümanlar oruç tutar.",
+        "Oruç, sabahtan akşama kadar yiyip içmemektir. ⏳",
+        "Oruç İslam'ın 5 şartından biridir.",
+        "Oruç tutmayan çocuklar büyüklerine yardım eder, dua eder.",
+        "Ramazan'da Kadir Gecesi vardır, bin aydan daha hayırlıdır.",
+        "Ramazan boyunca yardımlaşma çok artar. 🤝",
+        "Ay sonunda Ramazan Bayramı kutlanır. 🎉",
+        "Bayramda büyüklerin elini öper, küçüklere şeker veririz. 🍬"
       ],
-      "quiz": {
-        "question": "Hangi ayda oruç tutulur?",
-        "options": ["Muharrem", "Ramazan", "Şaban", "Şevval"],
-        "correct_answer": "Ramazan",
-        "xp_reward": 30
-      }
+      "quiz": [
+        {
+          "question": "Hangi ayda oruç tutulur?",
+          "options": ["Muharrem", "Ramazan", "Şaban", "Şevval"],
+          "correct_answer": "Ramazan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an ilk olarak hangi ayda inmeye başlamıştır?",
+          "options": ["Muharrem", "Ramazan", "Recep", "Şaban"],
+          "correct_answer": "Ramazan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bin aydan daha hayırlı olan gece hangisidir?",
+          "options": ["Berat Gecesi", "Mevlit Kandili", "Kadir Gecesi", "Mirac Kandili"],
+          "correct_answer": "Kadir Gecesi",
+          "xp_reward": 5
+        },
+        {
+          "question": "Oruç İslam'ın kaç şartından biridir?",
+          "options": ["3", "4", "5", "6"],
+          "correct_answer": "5",
+          "xp_reward": 5
+        },
+        {
+          "question": "Oruç tutmayan çocuklar ne yapar?",
+          "options": ["Alay eder", "Büyüklere yardım eder, dua eder", "Yatar", "Bağırır"],
+          "correct_answer": "Büyüklere yardım eder, dua eder",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ramazan sonunda hangi bayram kutlanır?",
+          "options": ["Kurban Bayramı", "Ramazan Bayramı", "Yılbaşı", "Çocuk Bayramı"],
+          "correct_answer": "Ramazan Bayramı",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bayramda büyüklere ne yaparız?",
+          "options": ["Bağırırız", "El öperiz", "Görmezden geliriz", "Kavga ederiz"],
+          "correct_answer": "El öperiz",
+          "xp_reward": 5
+        },
+        {
+          "question": "Oruç ne zaman tutulur?",
+          "options": ["Geceleri", "Sabahtan akşama kadar", "Sadece akşam", "Sadece sabah"],
+          "correct_answer": "Sabahtan akşama kadar",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ramazan'da Müslümanlar daha çok ne yapar?",
+          "options": ["Yarışır", "Yardımlaşır", "Kavga eder", "Yatar"],
+          "correct_answer": "Yardımlaşır",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ramazan ayı Müslümanlar için nasıl bir aydır?",
+          "options": ["Sıradan", "Özel ve mübarek", "Sıkıcı", "Uzun"],
+          "correct_answer": "Özel ve mübarek",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s4_oruc",
@@ -225,286 +966,1273 @@
       "level": 4,
       "cards": [
         "Sahur: Oruca başlamadan önce, gece yenen güzel yemektir. 🥣",
-        "İmsak: Sahurun bittiği, orucun başladığı an. Artık güneş batana kadar yiyip içmeyiz. 🌅",
-        "İftar: Akşam, güneş battığında orucu açmak için yediğimiz sevinçli yemektir. 🌇🍽️",
-        "Teravih: Ramazan gecelerinde, yatsıdan sonra kılınan özel ve uzunca namazdır. 🕌"
+        "Sahur yemeği bereketlidir, gücümüzü artırır.",
+        "İmsak: Sahurun bittiği, orucun başladığı andır. 🌅",
+        "İmsaktan itibaren güneş batana kadar yiyip içmeyiz.",
+        "İftar: Güneş battığında orucu açmak için yediğimiz yemektir. 🌇🍽️",
+        "İftarı genellikle bir hurma veya su ile açarız.",
+        "İftar yaparken 'Allâhümme leke sumtü' duasını okuruz.",
+        "Teravih: Ramazan gecelerinde, yatsıdan sonra kılınan özel namazdır. 🕌",
+        "Teravih 20 rekâttır ve cemaatle kılınır.",
+        "Oruç sadece açlık değil; göz, kulak ve dilin de orucudur. 🤫"
       ],
-      "quiz": {
-        "question": "Akşam orucu açmak için yenen yemeğe ne denir?",
-        "options": ["Sahur", "İmsak", "İftar", "Teravih"],
-        "correct_answer": "İftar",
-        "xp_reward": 30
-      }
+      "quiz": [
+        {
+          "question": "Akşam orucu açmak için yenen yemeğe ne denir?",
+          "options": ["Sahur", "İmsak", "İftar", "Teravih"],
+          "correct_answer": "İftar",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sabah orucu başlatan an hangisidir?",
+          "options": ["Sahur", "İmsak", "İftar", "Akşam ezanı"],
+          "correct_answer": "İmsak",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sahur ne zaman yenir?",
+          "options": ["Akşam", "Öğle", "Gece, oruç başlamadan önce", "Sabah ezanından sonra"],
+          "correct_answer": "Gece, oruç başlamadan önce",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ramazan gecelerinde kılınan özel namaz nedir?",
+          "options": ["Vitir", "Teravih", "Tehiyyetü'l-Mescid", "Cuma"],
+          "correct_answer": "Teravih",
+          "xp_reward": 5
+        },
+        {
+          "question": "Teravih namazı kaç rekâttır?",
+          "options": ["4", "8", "12", "20"],
+          "correct_answer": "20",
+          "xp_reward": 5
+        },
+        {
+          "question": "İftarı genellikle ne ile açarız?",
+          "options": ["Et", "Hurma veya su", "Pasta", "Çikolata"],
+          "correct_answer": "Hurma veya su",
+          "xp_reward": 5
+        },
+        {
+          "question": "Oruçta sadece açlık var mıdır?",
+          "options": ["Sadece açlık", "Açlık ve susuzluk", "Açlık, susuzluk ve diğer organların orucu", "Sadece susuzluk"],
+          "correct_answer": "Açlık, susuzluk ve diğer organların orucu",
+          "xp_reward": 5
+        },
+        {
+          "question": "Teravih ne zaman kılınır?",
+          "options": ["Sabah", "Öğle", "Akşam", "Yatsıdan sonra"],
+          "correct_answer": "Yatsıdan sonra",
+          "xp_reward": 5
+        },
+        {
+          "question": "İmsaktan iftara kadar ne yapılır?",
+          "options": ["Yenir-içilir", "Yiyip içmek bırakılır", "Sadece içilir", "Sadece yenir"],
+          "correct_answer": "Yiyip içmek bırakılır",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sahur yemeği nasıldır?",
+          "options": ["Bereketli", "Yasak", "Önemsiz", "Zararlı"],
+          "correct_answer": "Bereketli",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s4_zekat_sadaka",
       "unit_title": "Seviye 4 · Zekât ve Sadaka",
       "level": 4,
       "cards": [
-        "Allah bize verdi, biz de paylaşırız. Bu paylaşmaya zekât ve sadaka denir. 💝",
-        "Zekât, zengin Müslümanların mallarının belli bir kısmını ihtiyacı olanlara vermesidir. 🏦➡️🤲",
-        "Sadaka ise her zaman, her yaşta verebileceğimiz yardımdır. Bir tebessüm bile sadakadır! 😊",
-        "Paylaşan eller her zaman daha mutludur. Çünkü Allah paylaşanı sever. 🌷"
+        "Allah bize verdi, biz de paylaşırız. 💝",
+        "Bu paylaşmaya zekât ve sadaka denir.",
+        "Zekât, zengin Müslümanların mallarının 1/40'ını ihtiyacı olanlara vermesidir.",
+        "Zekât İslam'ın 5 şartından biridir.",
+        "Sadaka ise herkesin her zaman verebileceği yardımdır.",
+        "Bir tebessüm bile sadakadır! 😊",
+        "Açları doyurmak, susayanlara su vermek de sadakadır. 🍞💧",
+        "Sadakayı gizli vermek daha güzeldir.",
+        "Paylaşan eller daha mutludur. 🤲",
+        "Zekât ve sadaka topluma sevgi ve barış getirir. ☮️"
       ],
-      "quiz": {
-        "question": "Zekât ve sadakanın ortak amacı nedir?",
-        "options": [
-          "Sadece zenginleşmek",
-          "İhtiyacı olanlara yardım etmek",
-          "Yemek pişirmek",
-          "Oyun oynamak"
-        ],
-        "correct_answer": "İhtiyacı olanlara yardım etmek",
-        "xp_reward": 30
-      }
+      "quiz": [
+        {
+          "question": "Zekât ve sadakanın ortak amacı nedir?",
+          "options": [
+            "Sadece zenginleşmek",
+            "İhtiyacı olanlara yardım etmek",
+            "Yemek pişirmek",
+            "Oyun oynamak"
+          ],
+          "correct_answer": "İhtiyacı olanlara yardım etmek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Zekât İslam'ın kaç şartından biridir?",
+          "options": ["3", "4", "5", "6"],
+          "correct_answer": "5",
+          "xp_reward": 5
+        },
+        {
+          "question": "Zenginlerin malının ne kadarı zekât olarak verilir?",
+          "options": ["1/2", "1/10", "1/40", "1/100"],
+          "correct_answer": "1/40",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aşağıdakilerden hangisi sadakadır?",
+          "options": ["Bağırmak", "Tebessüm", "Yalan söylemek", "Kavga"],
+          "correct_answer": "Tebessüm",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sadakayı nasıl vermek daha güzeldir?",
+          "options": ["Bağırarak", "Gizlice", "Herkese duyurarak", "İsteksizce"],
+          "correct_answer": "Gizlice",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sadakayı kim verebilir?",
+          "options": ["Sadece zenginler", "Sadece büyükler", "Herkes", "Sadece imamlar"],
+          "correct_answer": "Herkes",
+          "xp_reward": 5
+        },
+        {
+          "question": "Susayan birine su vermek nedir?",
+          "options": ["Zekât", "Sadaka", "Oruç", "Namaz"],
+          "correct_answer": "Sadaka",
+          "xp_reward": 5
+        },
+        {
+          "question": "Paylaşmak Allah'ı nasıl yapar?",
+          "options": ["Üzer", "Memnun eder", "Yorar", "İlgilendirmez"],
+          "correct_answer": "Memnun eder",
+          "xp_reward": 5
+        },
+        {
+          "question": "Zekât ve sadaka topluma ne getirir?",
+          "options": ["Üzüntü", "Sevgi ve barış", "Korku", "Yarış"],
+          "correct_answer": "Sevgi ve barış",
+          "xp_reward": 5
+        },
+        {
+          "question": "Zekât verilen kişiler kimlerdir?",
+          "options": ["Zenginler", "İhtiyaç sahipleri", "Sadece akrabalar", "Sadece komşular"],
+          "correct_answer": "İhtiyaç sahipleri",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s5_peygamberimiz",
       "unit_title": "Seviye 5 · Peygamberimiz (s.a.v.)",
       "level": 5,
       "cards": [
         "Hz. Muhammed (s.a.v.) Allah'ın bize gönderdiği son peygamberdir. 🌹",
-        "O, en güzel ahlakın örneğidir. Doğru, dürüst, merhametli, sabırlı ve cömerttir.",
-        "Çocukları çok severdi, hayvanlara şefkat gösterirdi. 🐈🐦",
-        "Biz de O'nun gibi olmaya, O'nun sevgisine layık olmaya çalışırız. 💚"
+        "571 yılında Mekke'de doğdu.",
+        "Babasının adı Abdullah, annesinin adı Âmine'dir.",
+        "Doğmadan babasını, küçükken annesini kaybetti.",
+        "Dedesi Abdülmuttalib ve amcası Ebû Tâlib O'nu büyüttü.",
+        "Çocukluğundan beri dürüst, güvenilir ve merhametliydi.",
+        "Mekkeliler O'na 'Muhammedü'l-Emîn' (güvenilir) lakabını verdi.",
+        "40 yaşında Hira Mağarası'nda ilk vahiy O'na geldi. 📖",
+        "Allah, O'na 23 yıl boyunca Kur'an'ı vahyetti.",
+        "Çocukları çok severdi, hayvanlara şefkat gösterirdi. 🐈🐦"
       ],
-      "quiz": {
-        "question": "Son peygamber kimdir?",
-        "options": ["Hz. Âdem", "Hz. Nuh", "Hz. İbrahim", "Hz. Muhammed (s.a.v.)"],
-        "correct_answer": "Hz. Muhammed (s.a.v.)",
-        "xp_reward": 30
-      }
+      "quiz": [
+        {
+          "question": "Son peygamber kimdir?",
+          "options": ["Hz. Âdem", "Hz. Nuh", "Hz. İbrahim", "Hz. Muhammed (s.a.v.)"],
+          "correct_answer": "Hz. Muhammed (s.a.v.)",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimiz hangi şehirde doğdu?",
+          "options": ["Medine", "Mekke", "Kudüs", "Şam"],
+          "correct_answer": "Mekke",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimizin babasının adı nedir?",
+          "options": ["Abdullah", "Abdülmuttalib", "Ebû Tâlib", "Hamza"],
+          "correct_answer": "Abdullah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimizin annesinin adı nedir?",
+          "options": ["Hatice", "Âmine", "Fâtıma", "Âişe"],
+          "correct_answer": "Âmine",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimize ilk vahiy hangi mağarada geldi?",
+          "options": ["Sevr", "Hira", "Uhud", "Kâbe"],
+          "correct_answer": "Hira",
+          "xp_reward": 5
+        },
+        {
+          "question": "İlk vahiy geldiğinde Peygamberimiz kaç yaşındaydı?",
+          "options": ["20", "30", "40", "50"],
+          "correct_answer": "40",
+          "xp_reward": 5
+        },
+        {
+          "question": "Mekkeliler Peygamberimize hangi lakabı vermişti?",
+          "options": ["Es-Sâdık", "Muhammedü'l-Emîn", "El-Fâtih", "El-Hâkim"],
+          "correct_answer": "Muhammedü'l-Emîn",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimiz kim tarafından büyütüldü?",
+          "options": ["Babası", "Dedesi ve amcası", "Annesi", "Halası"],
+          "correct_answer": "Dedesi ve amcası",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimiz hangi yılda doğdu?",
+          "options": ["570", "571", "610", "622"],
+          "correct_answer": "571",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimize Kur'an kaç yıl boyunca indirildi?",
+          "options": ["10", "13", "23", "40"],
+          "correct_answer": "23",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s5_salavat_aile",
       "unit_title": "Seviye 5 · Salavat ve Aile",
       "level": 5,
       "cards": [
-        "Peygamberimizin ismini duyduğumuzda 'sallallâhu aleyhi ve sellem' (s.a.v.) deriz. Buna salavat denir. 🌷",
-        "Peygamberimizin annesi Âmine, babası Abdullah, dedesi Abdülmuttalib'dir.",
-        "Mekke'de doğdu, Medine'ye hicret etti. Sevgili eşi Hz. Hatice ile çok mutlu bir aile kurdu. 🏡",
-        "Çok sevdiği kızı Fâtıma vardır. Torunları Hz. Hasan ve Hz. Hüseyin'i çok severdi. 👨‍👩‍👧‍👦"
+        "Peygamberimizin ismini duyduğumuzda 'sallallâhu aleyhi ve sellem' (s.a.v.) deriz. 🌷",
+        "Bu duaya salavat denir; Peygamberimize selam ve sevgi göndermektir.",
+        "Salavat getiren kişiye Allah ondan 10 kat fazla salat eder.",
+        "Peygamberimizin ilk eşi Hz. Hatice'dir. 💞",
+        "Hz. Hatice O'na ilk inanan, ilk Müslüman olan eşidir.",
+        "En sevgili kızı Hz. Fâtıma'dır. 🌹",
+        "Damadı Hz. Ali ve torunları Hz. Hasan ve Hz. Hüseyin'i çok severdi.",
+        "Mekke'de doğdu, 622 yılında Medine'ye hicret etti. 🐪",
+        "Medine'de güzel bir İslam toplumu kurdu. 🕌",
+        "63 yaşında Medine'de vefat etti, Mescid-i Nebevî'de defnedildi. 🌌"
       ],
-      "quiz": {
-        "question": "Peygamberimizin ismini duyduğumuzda ne söyleriz?",
-        "options": ["Bismillah", "Salavat (s.a.v.)", "Elhamdülillah", "İnşaallah"],
-        "correct_answer": "Salavat (s.a.v.)",
-        "xp_reward": 30
-      }
+      "quiz": [
+        {
+          "question": "Peygamberimizin ismini duyduğumuzda ne söyleriz?",
+          "options": ["Bismillah", "Salavat (s.a.v.)", "Elhamdülillah", "İnşaallah"],
+          "correct_answer": "Salavat (s.a.v.)",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimizin ilk eşi kimdir?",
+          "options": ["Âişe", "Hatice", "Fâtıma", "Âmine"],
+          "correct_answer": "Hatice",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimizin sevgili kızı kimdir?",
+          "options": ["Âişe", "Zeynep", "Fâtıma", "Hatice"],
+          "correct_answer": "Fâtıma",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimizin damadı ve amcaoğlu kimdir?",
+          "options": ["Ebû Bekir", "Ömer", "Osman", "Ali"],
+          "correct_answer": "Ali",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimizin torunları kimlerdir?",
+          "options": ["Hasan ve Hüseyin", "Ebu Bekir ve Ömer", "Ali ve Osman", "Bilal ve Hamza"],
+          "correct_answer": "Hasan ve Hüseyin",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimiz hangi yıl Medine'ye hicret etmiştir?",
+          "options": ["571", "610", "622", "632"],
+          "correct_answer": "622",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimiz nerede vefat etmiştir?",
+          "options": ["Mekke", "Medine", "Kudüs", "Şam"],
+          "correct_answer": "Medine",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimize ilk inanan eşi kimdir?",
+          "options": ["Âişe", "Hatice", "Hafsa", "Zeynep"],
+          "correct_answer": "Hatice",
+          "xp_reward": 5
+        },
+        {
+          "question": "Salavat ne anlama gelir?",
+          "options": ["Peygamberimize selam göndermek", "Allah'a dua", "Selam vermek", "Yemek duası"],
+          "correct_answer": "Peygamberimize selam göndermek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimiz kaç yaşında vefat etmiştir?",
+          "options": ["40", "53", "63", "75"],
+          "correct_answer": "63",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s6_kuran",
       "unit_title": "Seviye 6 · Kur'an-ı Kerim",
       "level": 6,
       "cards": [
-        "Kur'an-ı Kerim, Allah'ın bize gönderdiği son ve en kıymetli kitaptır. 📖✨",
+        "Kur'an-ı Kerim, Allah'ın bize gönderdiği son kitaptır. 📖✨",
         "Peygamberimize Cebrail (a.s.) aracılığıyla parça parça indirildi.",
-        "İçinde Allah'ın bizimle konuşmaları, peygamber kıssaları ve güzel ahlak vardır.",
-        "Kur'an'ı temiz ellerle tutar, yüksek bir yere koyar ve saygıyla dinleriz. 🤲"
+        "23 yıl boyunca indirilmiştir.",
+        "İlk inen ayet 'Oku!' (İkra) emridir.",
+        "Kur'an 114 sureden oluşur.",
+        "En uzun sure Bakara, en kısa sure Kevser'dir.",
+        "Kur'an 30 cüze ayrılmıştır.",
+        "Kur'an Arapça olarak inmiştir; meal okuyarak anlamını öğreniriz.",
+        "Kur'an'a temiz ellerle dokunur, saygıyla okuruz. 🤲",
+        "Kur'an okumak günahları temizler, kalbi nurla doldurur. 🌟"
       ],
-      "quiz": {
-        "question": "Kur'an-ı Kerim'i Peygamberimize hangi melek getirmiştir?",
-        "options": ["Mikail", "İsrafil", "Cebrail", "Azrail"],
-        "correct_answer": "Cebrail",
-        "xp_reward": 30
-      }
+      "quiz": [
+        {
+          "question": "Kur'an-ı Kerim'i Peygamberimize hangi melek getirmiştir?",
+          "options": ["Mikâil", "İsrâfil", "Cebrail", "Azrâil"],
+          "correct_answer": "Cebrail",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an kaç süreden oluşur?",
+          "options": ["100", "110", "114", "120"],
+          "correct_answer": "114",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an'ın ilk inen ayetinin emri nedir?",
+          "options": ["Yaz", "Oku", "Dinle", "Konuş"],
+          "correct_answer": "Oku",
+          "xp_reward": 5
+        },
+        {
+          "question": "En uzun sure hangisidir?",
+          "options": ["Fâtiha", "Bakara", "Kevser", "İhlâs"],
+          "correct_answer": "Bakara",
+          "xp_reward": 5
+        },
+        {
+          "question": "En kısa sure hangisidir?",
+          "options": ["Kevser", "İhlâs", "Felâk", "Nâs"],
+          "correct_answer": "Kevser",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an kaç cüzdür?",
+          "options": ["20", "30", "40", "60"],
+          "correct_answer": "30",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an hangi dilde inmiştir?",
+          "options": ["İbranice", "Süryanice", "Arapça", "Farsça"],
+          "correct_answer": "Arapça",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an kaç yılda tamamlanmıştır?",
+          "options": ["13", "23", "33", "40"],
+          "correct_answer": "23",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an'a nasıl dokunulur?",
+          "options": ["Kirli elle", "Temiz elle", "Eldivenle", "Hiç dokunulmaz"],
+          "correct_answer": "Temiz elle",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an'ın anlamını öğrenmek için ne okuruz?",
+          "options": ["Hikâye", "Meal", "Gazete", "Şiir"],
+          "correct_answer": "Meal",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s6_kutsal_mekanlar",
       "unit_title": "Seviye 6 · Kutsal Mekânlar",
       "level": 6,
       "cards": [
-        "Kâbe, Mekke'dedir ve dünyadaki ilk mabettir. Müslümanlar namazda Kâbe'ye yönelir. 🕋",
-        "Mescid-i Nebevî, Peygamberimizin Medine'de yaptırdığı camidir. İçinde mübarek kabri vardır.",
-        "Mescid-i Aksâ ise Kudüs'tedir ve Müslümanların ilk kıblesi olmuştur.",
-        "Bu üç mescit; Mekke, Medine ve Kudüs, bizim için çok değerlidir. 💚"
+        "Müslümanlar için 3 büyük kutsal mescid vardır.",
+        "Mescid-i Harâm (Kâbe): Mekke'dedir, dünyadaki ilk mabettir. 🕋",
+        "Kâbe'yi Hz. İbrahim ve oğlu Hz. İsmail birlikte yapmıştır.",
+        "Müslümanlar namazda Kâbe'ye yönelir.",
+        "Mescid-i Nebevî: Peygamberimizin Medine'de yaptırdığı camidir. 🕌",
+        "Mescid-i Nebevî'de Peygamberimizin mübarek kabri vardır.",
+        "Mescid-i Aksâ: Kudüs'tedir, Müslümanların ilk kıblesi olmuştur.",
+        "Peygamberimiz Mirac gecesinde Mescid-i Aksâ'dan göğe yükselmiştir.",
+        "Müslümanlar imkân buldukça hac veya umre için Kâbe'yi ziyaret eder. ✈️",
+        "Bu üç mescit Müslümanlar için çok değerlidir. 💚"
       ],
-      "quiz": {
-        "question": "Müslümanların namazda yöneldiği yer neresidir?",
-        "options": ["Mescid-i Aksâ", "Mescid-i Nebevî", "Kâbe", "Eyüp Sultan"],
-        "correct_answer": "Kâbe",
-        "xp_reward": 30
-      }
+      "quiz": [
+        {
+          "question": "Müslümanların namazda yöneldiği yer neresidir?",
+          "options": ["Mescid-i Aksâ", "Mescid-i Nebevî", "Kâbe", "Eyüp Sultan"],
+          "correct_answer": "Kâbe",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kâbe hangi şehirdedir?",
+          "options": ["Medine", "Mekke", "Kudüs", "İstanbul"],
+          "correct_answer": "Mekke",
+          "xp_reward": 5
+        },
+        {
+          "question": "Mescid-i Nebevî hangi şehirdedir?",
+          "options": ["Mekke", "Medine", "Kudüs", "Bağdat"],
+          "correct_answer": "Medine",
+          "xp_reward": 5
+        },
+        {
+          "question": "Mescid-i Aksâ hangi şehirdedir?",
+          "options": ["Mekke", "Medine", "Kudüs", "Şam"],
+          "correct_answer": "Kudüs",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kâbe'yi kim yapmıştır?",
+          "options": ["Hz. Âdem", "Hz. Muhammed", "Hz. İbrahim ve Hz. İsmail", "Hz. Musa"],
+          "correct_answer": "Hz. İbrahim ve Hz. İsmail",
+          "xp_reward": 5
+        },
+        {
+          "question": "Mescid-i Nebevî'de kimin kabri vardır?",
+          "options": ["Hz. İbrahim'in", "Peygamberimizin", "Hz. Âdem'in", "Hz. Musa'nın"],
+          "correct_answer": "Peygamberimizin",
+          "xp_reward": 5
+        },
+        {
+          "question": "Müslümanların ilk kıblesi neresiydi?",
+          "options": ["Kâbe", "Mescid-i Aksâ", "Mescid-i Nebevî", "Sina Dağı"],
+          "correct_answer": "Mescid-i Aksâ",
+          "xp_reward": 5
+        },
+        {
+          "question": "Mirac gecesinde Peygamberimiz nereden göğe yükselmiştir?",
+          "options": ["Kâbe", "Mescid-i Aksâ", "Sevr Mağarası", "Uhud Dağı"],
+          "correct_answer": "Mescid-i Aksâ",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kâbe'yi ziyaret etmek için yapılan ibadete ne denir?",
+          "options": ["Sadaka", "Hac", "Oruç", "Namaz"],
+          "correct_answer": "Hac",
+          "xp_reward": 5
+        },
+        {
+          "question": "Dünyadaki ilk mabet hangisidir?",
+          "options": ["Mescid-i Nebevî", "Mescid-i Aksâ", "Kâbe", "Süleymaniye"],
+          "correct_answer": "Kâbe",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s7_iman_sartlari",
       "unit_title": "Seviye 7 · İmanın 6 Şartı",
       "level": 7,
       "cards": [
-        "İmanın 6 şartı vardır. Bunlar bizim kalbimize inen sağlam sevgilerdir. ❤️",
-        "1) Allah'a iman, 2) Meleklere iman, 3) Kitaplara iman.",
-        "4) Peygamberlere iman, 5) Ahiret gününe iman, 6) Kaza ve kadere iman.",
-        "Bu altı şarta inanan kalp, Müslüman bir kalptir. 🌟"
+        "İmanın 6 şartı kalbimize inen sağlam sevgilerdir. ❤️",
+        "1) Allah'a iman: Allah'a inanırız.",
+        "2) Meleklere iman: Meleklerin var olduğuna inanırız.",
+        "3) Kitaplara iman: Allah'ın gönderdiği kitaplara inanırız.",
+        "4) Peygamberlere iman: Bütün peygamberlere inanırız.",
+        "5) Ahiret gününe iman: Öldükten sonra dirileceğimize inanırız.",
+        "6) Kaza ve kadere iman: Her şeyin Allah'ın bilgisinde olduğuna inanırız.",
+        "Bu altı şarta inanan kalp Müslüman bir kalptir. 🌟",
+        "İman dilde söylenir, kalpte yaşanır.",
+        "Bu güzel inanç bize hayatta huzur verir. ☮️"
       ],
-      "quiz": {
-        "question": "İmanın şartı kaç tanedir?",
-        "options": ["4", "5", "6", "7"],
-        "correct_answer": "6",
-        "xp_reward": 35
-      }
+      "quiz": [
+        {
+          "question": "İmanın şartı kaç tanedir?",
+          "options": ["4", "5", "6", "7"],
+          "correct_answer": "6",
+          "xp_reward": 5
+        },
+        {
+          "question": "İmanın ilk şartı nedir?",
+          "options": ["Meleklere iman", "Allah'a iman", "Kitaplara iman", "Peygamberlere iman"],
+          "correct_answer": "Allah'a iman",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aşağıdakilerden hangisi imanın şartıdır?",
+          "options": ["Para kazanmak", "Ahirete iman", "Spor yapmak", "Şarkı söylemek"],
+          "correct_answer": "Ahirete iman",
+          "xp_reward": 5
+        },
+        {
+          "question": "İmanın 4. şartı nedir?",
+          "options": ["Kitaplara iman", "Peygamberlere iman", "Meleklere iman", "Kadere iman"],
+          "correct_answer": "Peygamberlere iman",
+          "xp_reward": 5
+        },
+        {
+          "question": "İmanın son şartı nedir?",
+          "options": ["Allah'a iman", "Meleklere iman", "Kaza ve kadere iman", "Kitaplara iman"],
+          "correct_answer": "Kaza ve kadere iman",
+          "xp_reward": 5
+        },
+        {
+          "question": "İman nerede yaşanır?",
+          "options": ["Sadece dilde", "Sadece kafada", "Kalpte", "Ellerde"],
+          "correct_answer": "Kalpte",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ahirete iman ne demektir?",
+          "options": ["Bayrama inanmak", "Öldükten sonra dirilmeye inanmak", "Doğaya inanmak", "Kadere inanmak"],
+          "correct_answer": "Öldükten sonra dirilmeye inanmak",
+          "xp_reward": 5
+        },
+        {
+          "question": "İman bize ne verir?",
+          "options": ["Üzüntü", "Korku", "Huzur", "Kavga"],
+          "correct_answer": "Huzur",
+          "xp_reward": 5
+        },
+        {
+          "question": "Meleklere iman imanın kaçıncı şartıdır?",
+          "options": ["1", "2", "3", "4"],
+          "correct_answer": "2",
+          "xp_reward": 5
+        },
+        {
+          "question": "İmanın şartlarına inanmayan kişiye ne denmez?",
+          "options": ["Müslüman", "Mümin", "Kâfir", "Hepsi yanlış"],
+          "correct_answer": "Mümin",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s7_melekler",
       "unit_title": "Seviye 7 · Melekler",
       "level": 7,
       "cards": [
-        "Melekler nurdan yaratılmış görünmez varlıklardır. Asla günah işlemezler. ✨",
-        "Cebrail: peygamberlere vahiy getirir. Mikâil: rızıkları ve doğa olaylarını dağıtır.",
-        "İsrâfil: kıyamette Sûr'a üflemekle görevlidir. Azrâil: canları almakla görevlidir.",
-        "Kirâmen Kâtibîn melekleri: sağ omzumuzda iyiliklerimizi, sol omzumuzda hatalarımızı yazar. 📝"
+        "Melekler nurdan yaratılmış görünmez varlıklardır. ✨",
+        "Asla günah işlemezler, Allah'a hep itaat ederler.",
+        "Yemek yemezler, içmezler, uyumazlar.",
+        "Cebrail: Peygamberlere vahiy getirir.",
+        "Mikâil: Rızıkları ve doğa olaylarını yönetir.",
+        "İsrâfil: Kıyamette Sûr'a üflemekle görevlidir.",
+        "Azrâil: Canları almakla görevlidir.",
+        "Kirâmen Kâtibîn: Sağ omzumuzda iyilikleri, sol omzumuzda hataları yazar. 📝",
+        "Münker-Nekir: Kabirde sorular soran iki melektir.",
+        "Hafaza melekleri: Bizi kötülüklerden koruyan meleklerdir. 🛡️"
       ],
-      "quiz": {
-        "question": "Peygamberlere vahiy getiren melek kimdir?",
-        "options": ["Mikâil", "İsrâfil", "Cebrail", "Azrâil"],
-        "correct_answer": "Cebrail",
-        "xp_reward": 35
-      }
+      "quiz": [
+        {
+          "question": "Peygamberlere vahiy getiren melek kimdir?",
+          "options": ["Mikâil", "İsrâfil", "Cebrail", "Azrâil"],
+          "correct_answer": "Cebrail",
+          "xp_reward": 5
+        },
+        {
+          "question": "Melekler neden yaratılmıştır?",
+          "options": ["Topraktan", "Ateşten", "Nurdan", "Sudan"],
+          "correct_answer": "Nurdan",
+          "xp_reward": 5
+        },
+        {
+          "question": "Canları alan melek kimdir?",
+          "options": ["Cebrail", "Mikâil", "İsrâfil", "Azrâil"],
+          "correct_answer": "Azrâil",
+          "xp_reward": 5
+        },
+        {
+          "question": "Rızık ve doğa olaylarından sorumlu melek kimdir?",
+          "options": ["Cebrail", "Mikâil", "Azrâil", "İsrâfil"],
+          "correct_answer": "Mikâil",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kıyamette Sûr'a üfleyecek melek kimdir?",
+          "options": ["Cebrail", "İsrâfil", "Mikâil", "Azrâil"],
+          "correct_answer": "İsrâfil",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sağ omzumuzda iyiliklerimizi hangi melek yazar?",
+          "options": ["Kirâmen Kâtibîn", "Münker", "Nekir", "Hafaza"],
+          "correct_answer": "Kirâmen Kâtibîn",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kabirde soru soran melekler hangileridir?",
+          "options": ["Cebrail-Mikâil", "Münker-Nekir", "Azrâil-İsrâfil", "Hafaza melekleri"],
+          "correct_answer": "Münker-Nekir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Melekler ne yapmazlar?",
+          "options": ["İtaat etmezler", "Günah işlemezler", "Allah'ı anmazlar", "Hepsi yanlış"],
+          "correct_answer": "Günah işlemezler",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bizi koruyan meleklere ne denir?",
+          "options": ["Hafaza", "Kirâmen Kâtibîn", "Münker", "Nekir"],
+          "correct_answer": "Hafaza",
+          "xp_reward": 5
+        },
+        {
+          "question": "Melekler yer içer mi?",
+          "options": ["Yer içer", "Yemez içmez", "Sadece içer", "Sadece yer"],
+          "correct_answer": "Yemez içmez",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s7_kitaplar_peygamberler",
       "unit_title": "Seviye 7 · Kitaplar ve Peygamberler",
       "level": 7,
       "cards": [
-        "4 büyük kitap: Tevrat (Hz. Musa'ya), Zebûr (Hz. Davud'a), İncil (Hz. İsa'ya), Kur'an (Peygamberimize). 📚",
-        "Allah'ın insanlara güzel yolu göstermesi için gönderdiği elçilere peygamber denir.",
-        "Hz. Âdem ilk peygamber, Hz. Muhammed (s.a.v.) son peygamberdir.",
-        "Hz. Nuh, Hz. İbrahim, Hz. Musa, Hz. İsa gibi büyük peygamberleri de hatırlarız. 🌟"
+        "Allah, insanlara yol göstermek için kitaplar göndermiştir. 📚",
+        "4 büyük kitap vardır: Tevrat, Zebûr, İncil, Kur'an.",
+        "Tevrat Hz. Musa'ya gönderildi.",
+        "Zebûr Hz. Davud'a gönderildi.",
+        "İncil Hz. İsa'ya gönderildi.",
+        "Kur'an Peygamberimiz Hz. Muhammed'e gönderildi.",
+        "Allah'ın elçilerine peygamber denir.",
+        "Hz. Âdem ilk peygamberdir.",
+        "Hz. Muhammed (s.a.v.) son peygamberdir.",
+        "5 büyük peygambere 'Ulü'l-azm' denir: Nuh, İbrahim, Musa, İsa, Muhammed (s.a.v.). 🌟"
       ],
-      "quiz": {
-        "question": "Hz. Musa'ya gönderilen kitap hangisidir?",
-        "options": ["Zebûr", "Tevrat", "İncil", "Kur'an"],
-        "correct_answer": "Tevrat",
-        "xp_reward": 35
-      }
+      "quiz": [
+        {
+          "question": "Hz. Musa'ya gönderilen kitap hangisidir?",
+          "options": ["Zebûr", "Tevrat", "İncil", "Kur'an"],
+          "correct_answer": "Tevrat",
+          "xp_reward": 5
+        },
+        {
+          "question": "Hz. Davud'a gönderilen kitap hangisidir?",
+          "options": ["Tevrat", "Zebûr", "İncil", "Kur'an"],
+          "correct_answer": "Zebûr",
+          "xp_reward": 5
+        },
+        {
+          "question": "Hz. İsa'ya gönderilen kitap hangisidir?",
+          "options": ["Tevrat", "Zebûr", "İncil", "Kur'an"],
+          "correct_answer": "İncil",
+          "xp_reward": 5
+        },
+        {
+          "question": "İlk peygamber kimdir?",
+          "options": ["Hz. Nuh", "Hz. Âdem", "Hz. İbrahim", "Hz. Muhammed"],
+          "correct_answer": "Hz. Âdem",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kaç büyük kitap vardır?",
+          "options": ["2", "3", "4", "5"],
+          "correct_answer": "4",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aşağıdakilerden hangisi 'Ulü'l-azm' peygamber değildir?",
+          "options": ["Hz. Nuh", "Hz. İbrahim", "Hz. Lût", "Hz. Musa"],
+          "correct_answer": "Hz. Lût",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ın elçilerine ne denir?",
+          "options": ["Sahabe", "Peygamber", "İmam", "Veli"],
+          "correct_answer": "Peygamber",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an kime gönderilmiştir?",
+          "options": ["Hz. Musa", "Hz. İsa", "Hz. Muhammed", "Hz. Davud"],
+          "correct_answer": "Hz. Muhammed",
+          "xp_reward": 5
+        },
+        {
+          "question": "Son peygamber kimdir?",
+          "options": ["Hz. İsa", "Hz. Musa", "Hz. Muhammed (s.a.v.)", "Hz. Âdem"],
+          "correct_answer": "Hz. Muhammed (s.a.v.)",
+          "xp_reward": 5
+        },
+        {
+          "question": "Tevrat hangi peygambere indirilmiştir?",
+          "options": ["Hz. Musa", "Hz. Davud", "Hz. İsa", "Hz. Muhammed"],
+          "correct_answer": "Hz. Musa",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s7_ahiret_kader",
       "unit_title": "Seviye 7 · Ahiret, Kaza ve Kader",
       "level": 7,
       "cards": [
-        "Bu dünya bir misafirhane gibidir. Asıl yurdumuz ahirettir. 🌍➡️🌌",
-        "Ahirette güzel davranışlarımızın karşılığını cennette, yanlışlarımızın karşılığını ise Allah'ın dilediği şekilde göreceğiz.",
-        "Kader: Allah'ın her şeyi önceden bilmesidir. Kaza: olayların zamanı gelince gerçekleşmesidir.",
-        "Biz kaderin ne olduğunu bilmeyiz; bize düşen iyi niyetle çalışmak ve Allah'a güvenmektir. 🤲"
+        "Bu dünya bir misafirhane gibidir; asıl yurdumuz ahirettir. 🌍➡️🌌",
+        "Ölüm bir son değil, ahirete yolculuğun başlangıcıdır.",
+        "Ahirette güzel davranışlarımızın karşılığını cennette göreceğiz. 🌷",
+        "Cehennem, kötülük yapanların cezalandırıldığı yerdir.",
+        "Allah çok merhametlidir; tövbe edenleri affeder. 💧",
+        "Kıyamet günü herkes Allah'ın huzurunda hesap verecek.",
+        "Kader: Allah'ın her şeyi önceden bilmesidir.",
+        "Kaza: Olayların zamanı gelince gerçekleşmesidir.",
+        "Biz kaderin ne olduğunu bilmeyiz; çalışır, iyi niyetli oluruz.",
+        "Allah'a güvenmek, kaderine razı olmak huzur verir. 🤲"
       ],
-      "quiz": {
-        "question": "Asıl yurdumuz neresidir?",
-        "options": ["Dünya", "Ahiret", "Cennet bahçesi", "Misafirhane"],
-        "correct_answer": "Ahiret",
-        "xp_reward": 35
-      }
+      "quiz": [
+        {
+          "question": "Asıl yurdumuz neresidir?",
+          "options": ["Dünya", "Ahiret", "Cennet bahçesi", "Misafirhane"],
+          "correct_answer": "Ahiret",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ölüm nedir?",
+          "options": ["Bir son", "Ahirete yolculuğun başlangıcı", "Sadece uyku", "Bir hayal"],
+          "correct_answer": "Ahirete yolculuğun başlangıcı",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ın her şeyi önceden bilmesine ne denir?",
+          "options": ["Kaza", "Kader", "Niyet", "Şükür"],
+          "correct_answer": "Kader",
+          "xp_reward": 5
+        },
+        {
+          "question": "Olayların zamanı gelince gerçekleşmesine ne denir?",
+          "options": ["Kaza", "Kader", "Şans", "Hayal"],
+          "correct_answer": "Kaza",
+          "xp_reward": 5
+        },
+        {
+          "question": "İyilik yapanların ödülü neresidir?",
+          "options": ["Cehennem", "Cennet", "Dünya", "Berzah"],
+          "correct_answer": "Cennet",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah ne kadar merhametlidir?",
+          "options": ["Az", "Çok", "Sınırsız", "Hiç"],
+          "correct_answer": "Sınırsız",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kıyamet gününde ne olur?",
+          "options": ["Eğleniriz", "Allah'ın huzurunda hesap veririz", "Uyuruz", "Yaşamaya devam ederiz"],
+          "correct_answer": "Allah'ın huzurunda hesap veririz",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bu dünyada biz neyiz?",
+          "options": ["Sahip", "Misafir", "Kral", "Hizmetçi"],
+          "correct_answer": "Misafir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kötülük yapanların gideceği yer neresidir?",
+          "options": ["Cennet", "Cehennem", "Berzah", "Dünya"],
+          "correct_answer": "Cehennem",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah, tövbe edeni ne yapar?",
+          "options": ["Affeder", "Cezalandırır", "Görmezden gelir", "Unutur"],
+          "correct_answer": "Affeder",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s8_dua_sureler",
       "unit_title": "Seviye 8 · Dualar ve Sureler",
       "level": 8,
       "cards": [
-        "Dua, Allah ile konuşmaktır. 🌷 Allah duamızı her zaman duyar.",
-        "Rabbi Yessir duası: 'Rabbim! Kolaylaştır, zorlaştırma; hayırla tamamla.' Derse başlarken okuruz. 📖",
-        "Kısa surelerimiz: Fâtiha, İhlâs, Felâk, Nâs, Kevser, Fil, Kureyş, Mâûn, Asr.",
-        "Bu sureleri öğrenmek, namazımızı güzelleştirir. 🌟"
+        "Dua, Allah ile konuşmaktır. 🌷",
+        "Allah, samimi yapılan duayı mutlaka duyar.",
+        "Dua ederken ellerimizi açar, kalpten yalvarırız. 🤲",
+        "Rabbi Yessir duası: Derse başlarken okuruz. 'Rabbim! Kolaylaştır, zorlaştırma; hayırla tamamla.'",
+        "Fâtiha: Kur'an'ın ilk sûresidir, namazda her rekâtta okunur.",
+        "İhlâs: Allah'ın bir olduğunu anlatan kısa süredir.",
+        "Felâk: Kötülüklerden Allah'a sığındığımız süredir. 🛡️",
+        "Nâs: İnsanların şerrinden Allah'a sığındığımız süredir.",
+        "Kevser: Kur'an'ın en kısa süresidir, 3 ayettir.",
+        "Bu sureleri ezberlemek bizi Allah'a daha yakın yapar. ✨"
       ],
-      "quiz": {
-        "question": "Derse başlarken hangi duayı okuruz?",
-        "options": ["Sübhâneke", "Rabbi Yessir", "Salli-Bârik", "Rabbenâ"],
-        "correct_answer": "Rabbi Yessir",
-        "xp_reward": 35
-      }
+      "quiz": [
+        {
+          "question": "Derse başlarken hangi duayı okuruz?",
+          "options": ["Sübhâneke", "Rabbi Yessir", "Salli-Bârik", "Rabbenâ"],
+          "correct_answer": "Rabbi Yessir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an'ın ilk süresi hangisidir?",
+          "options": ["Bakara", "Fâtiha", "İhlâs", "Yâsîn"],
+          "correct_answer": "Fâtiha",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah'ın bir olduğunu anlatan süre hangisidir?",
+          "options": ["Felâk", "Nâs", "İhlâs", "Kevser"],
+          "correct_answer": "İhlâs",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kur'an'ın en kısa süresi hangisidir?",
+          "options": ["İhlâs", "Felâk", "Kevser", "Asr"],
+          "correct_answer": "Kevser",
+          "xp_reward": 5
+        },
+        {
+          "question": "Dua nedir?",
+          "options": ["Şarkı söylemek", "Allah ile konuşmak", "Uyumak", "Yemek"],
+          "correct_answer": "Allah ile konuşmak",
+          "xp_reward": 5
+        },
+        {
+          "question": "Dua ederken nasıl yaparız?",
+          "options": ["Yatarız", "Ellerimizi açarız", "Bağırırız", "Susarız"],
+          "correct_answer": "Ellerimizi açarız",
+          "xp_reward": 5
+        },
+        {
+          "question": "Kötülüklerden Allah'a sığındığımız sûre hangisidir?",
+          "options": ["İhlâs", "Felâk", "Kevser", "Fâtiha"],
+          "correct_answer": "Felâk",
+          "xp_reward": 5
+        },
+        {
+          "question": "İnsanların şerrinden Allah'a sığındığımız sûre hangisidir?",
+          "options": ["Felâk", "Nâs", "İhlâs", "Kevser"],
+          "correct_answer": "Nâs",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah duayı nasıl duyar?",
+          "options": ["Hiç duymaz", "Bazen duyar", "Mutlaka duyar", "Geç duyar"],
+          "correct_answer": "Mutlaka duyar",
+          "xp_reward": 5
+        },
+        {
+          "question": "Fâtiha namazda ne sıklıkta okunur?",
+          "options": ["Hiç okunmaz", "Her rekâtta", "Sadece bir kez", "Sadece bayramda"],
+          "correct_answer": "Her rekâtta",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s8_namaz_dualari",
       "unit_title": "Seviye 8 · Namaz Duaları",
       "level": 8,
       "cards": [
-        "Sübhâneke: Namaza başlarken Allah'ı yücelten kısa duamızdır. ✨",
-        "Tahiyyât (Ettehiyyâtü): Oturuşta okuduğumuz, Allah'a selam veren büyük duadır.",
-        "Salli-Bârik: Peygamberimize selam ve dua gönderdiğimiz iki güzel duadır. 🌹",
-        "Rabbenâ duaları: 'Rabbimiz bize dünyada ve ahirette iyilik ver' diye yalvardığımız dualardır. 🤲"
+        "Sübhâneke: Namaza başlarken Allah'ı yücelten kısa duadır. ✨",
+        "Sübhâneke'yi her namazın başında okuruz.",
+        "Ettehiyyâtü (Tahiyyât): Oturuşta okuduğumuz büyük duadır.",
+        "Tahiyyât, Mirac'ta Allah ile Peygamberimiz arasında geçen güzel sözlerdir.",
+        "Allâhümme Salli: Peygamberimize selam ve dua gönderdiğimiz duadır. 🌹",
+        "Allâhümme Bârik: Salli'den sonra okuduğumuz benzer içerikli güzel duadır.",
+        "Rabbenâ Âtinâ: 'Rabbimiz bize dünyada ve ahirette iyilik ver' duasıdır. 🤲",
+        "Rabbenâğfirlî: 'Rabbim beni, anne-babamı ve müminleri bağışla' duasıdır.",
+        "Kunut Duaları: Vitir namazında okunan iki güzel duadır.",
+        "Bu duaları öğrenmek namazımızı tam kılar. 🕌"
       ],
-      "quiz": {
-        "question": "Namaza başlarken okunan duanın adı nedir?",
-        "options": ["Tahiyyât", "Sübhâneke", "Salli-Bârik", "Rabbenâ"],
-        "correct_answer": "Sübhâneke",
-        "xp_reward": 35
-      }
+      "quiz": [
+        {
+          "question": "Namaza başlarken okunan duanın adı nedir?",
+          "options": ["Tahiyyât", "Sübhâneke", "Salli-Bârik", "Rabbenâ"],
+          "correct_answer": "Sübhâneke",
+          "xp_reward": 5
+        },
+        {
+          "question": "Namazda oturuşta okuduğumuz büyük dua hangisidir?",
+          "options": ["Sübhâneke", "Ettehiyyâtü", "Salli", "Kunut"],
+          "correct_answer": "Ettehiyyâtü",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimize selam ve dua gönderdiğimiz dua hangisidir?",
+          "options": ["Sübhâneke", "Tahiyyât", "Allâhümme Salli", "Rabbi Yessir"],
+          "correct_answer": "Allâhümme Salli",
+          "xp_reward": 5
+        },
+        {
+          "question": "Vitir namazında okunan dualara ne denir?",
+          "options": ["Kunut Duaları", "Rabbenâ", "Salli", "Sübhâneke"],
+          "correct_answer": "Kunut Duaları",
+          "xp_reward": 5
+        },
+        {
+          "question": "'Rabbenâ Âtinâ' duasında ne isteriz?",
+          "options": ["Sadece para", "Dünya ve ahirette iyilik", "Sadece sağlık", "Sadece bilgi"],
+          "correct_answer": "Dünya ve ahirette iyilik",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sübhâneke ne yapar?",
+          "options": ["Allah'ı yüceltir", "İnsanları över", "Yemek ister", "Soru sorar"],
+          "correct_answer": "Allah'ı yüceltir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Tahiyyât hangi olayda inmiştir?",
+          "options": ["Hicret", "Mirac", "Bedir", "Uhud"],
+          "correct_answer": "Mirac",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allâhümme Bârik ne zaman okunur?",
+          "options": ["Sübhâneke'den önce", "Allâhümme Salli'den sonra", "İlk rekâtta", "Hiç"],
+          "correct_answer": "Allâhümme Salli'den sonra",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sübhâneke kaç kere okunur?",
+          "options": ["Her rekâtta", "Sadece ilk rekâtta", "Hiç okunmaz", "Sadece son rekâtta"],
+          "correct_answer": "Sadece ilk rekâtta",
+          "xp_reward": 5
+        },
+        {
+          "question": "'Rabbenâğfirlî' duasında kim için af dileriz?",
+          "options": ["Sadece kendimiz için", "Kendimiz, anne-baba ve müminler için", "Sadece anne-baba için", "Sadece arkadaşlar için"],
+          "correct_answer": "Kendimiz, anne-baba ve müminler için",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s8_gunluk_dualar",
       "unit_title": "Seviye 8 · Günlük Dualarımız",
       "level": 8,
       "cards": [
-        "Yemekten önce: 'Bismillâhirrahmânirrahîm.' 🍽️ Yemekten sonra: 'Elhamdülillah.'",
-        "Uyumadan önce: 'Allâhümme bismike emûtü ve ahyâ.' 🌙 (Rabbim, senin isminle uyur ve uyanırım.)",
+        "Yemekten önce: 'Bismillâhirrahmânirrahîm.' 🍽️",
+        "Yemekten sonra: 'Elhamdülillah.'",
+        "Uyumadan önce: 'Allâhümme bismike emûtü ve ahyâ.' 🌙",
         "Sabah uyanınca: 'Elhamdülillâhillezî ahyânâ ba'de mâ emâtenâ.' ☀️",
-        "Eve girerken Bismillah, çıkarken 'Allâhümme innî eûzü bike…' deriz. 🏡"
+        "Eve girerken: 'Bismillâhi velecnâ.' 🏡",
+        "Evden çıkarken: 'Bismillâhi tevekkeltü alallâh.'",
+        "Tuvalete girerken sol ayakla ve dua ile gireriz.",
+        "Tuvaletten çıkarken sağ ayakla ve dua ile çıkarız.",
+        "Aynaya bakarken: 'Allah'ım nasıl yaratılışımı güzelleştirdiysen ahlakımı da güzelleştir.' 🪞",
+        "Anne-babamızı her gün dua ile hatırlarız. 🌷"
       ],
-      "quiz": {
-        "question": "Yemekten sonra ne söyleriz?",
-        "options": ["Bismillah", "Maşallah", "Elhamdülillah", "İnşallah"],
-        "correct_answer": "Elhamdülillah",
-        "xp_reward": 35
-      }
+      "quiz": [
+        {
+          "question": "Yemekten sonra ne söyleriz?",
+          "options": ["Bismillah", "Mâşallah", "Elhamdülillah", "İnşallah"],
+          "correct_answer": "Elhamdülillah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Yemekten önce ne söyleriz?",
+          "options": ["Bismillah", "Elhamdülillah", "İnşallah", "Selam"],
+          "correct_answer": "Bismillah",
+          "xp_reward": 5
+        },
+        {
+          "question": "Eve girerken hangi ayakla girilir?",
+          "options": ["Sol", "Sağ", "Önemli değil", "Hiçbiri"],
+          "correct_answer": "Sağ",
+          "xp_reward": 5
+        },
+        {
+          "question": "Tuvalete hangi ayakla girilir?",
+          "options": ["Sol", "Sağ", "Her ikisi", "Bilinmez"],
+          "correct_answer": "Sol",
+          "xp_reward": 5
+        },
+        {
+          "question": "Tuvaletten hangi ayakla çıkılır?",
+          "options": ["Sol", "Sağ", "Bilinmez", "Önemli değil"],
+          "correct_answer": "Sağ",
+          "xp_reward": 5
+        },
+        {
+          "question": "Uyumadan önce hangi dua okunur?",
+          "options": ["Allâhümme bismike emûtü ve ahyâ", "Bismillah", "Selamün Aleyküm", "Rabbi Yessir"],
+          "correct_answer": "Allâhümme bismike emûtü ve ahyâ",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aynaya bakarken hangi dua edilir?",
+          "options": ["Ahlakımı güzelleştir duası", "Yemek duası", "Salavat", "Tahiyyât"],
+          "correct_answer": "Ahlakımı güzelleştir duası",
+          "xp_reward": 5
+        },
+        {
+          "question": "Evden çıkarken hangi dua okunur?",
+          "options": ["Bismillâhi tevekkeltü alallâh", "Sübhâneke", "Rabbi Yessir", "Selam"],
+          "correct_answer": "Bismillâhi tevekkeltü alallâh",
+          "xp_reward": 5
+        },
+        {
+          "question": "Sabah uyanınca ne deriz?",
+          "options": ["Elhamdülillah uyandık duası", "Salavat", "Bismillah", "Mâşallah"],
+          "correct_answer": "Elhamdülillah uyandık duası",
+          "xp_reward": 5
+        },
+        {
+          "question": "Anne-babamızı her gün ne ile hatırlarız?",
+          "options": ["Hediye", "Dua", "Para", "Yemek"],
+          "correct_answer": "Dua",
+          "xp_reward": 5
+        }
+      ]
     },
-
     {
       "id": "s9_durustluk",
       "unit_title": "Seviye 9 · Dürüstlük",
       "level": 9,
       "cards": [
-        "Müslüman daima doğruyu söyler, yalandan uzak durur. 🤍",
-        "Bize bir şey emanet edildiğinde onu sahibine eksiksiz teslim ederiz. Buna emanete sadakat denir.",
-        "Peygamberimizin lakabı Muhammedü'l-Emîn yani 'güvenilir' idi. 🌟",
-        "Doğruluk insanı hem dünyada hem ahirette mutlu eder."
+        "Müslüman daima doğruyu söyler. 🤍",
+        "Yalan söylemek büyük bir kötülüktür.",
+        "Bize bir şey emanet edildiğinde sahibine eksiksiz teslim ederiz.",
+        "Buna emanete sadakat denir. 🤝",
+        "Peygamberimiz çocukluğundan beri çok dürüsttü.",
+        "Mekkeliler O'na 'Muhammedü'l-Emîn' (güvenilir) lakabını verdi.",
+        "Doğruluk insanı hem dünyada hem ahirette mutlu eder.",
+        "Yalan söyleyen kişiye kimse güvenmez.",
+        "Bir kez yalan söyleyen, sonra başka yalanlarla onu örtmek zorunda kalır.",
+        "Allah doğruları sever ve onları yalnız bırakmaz. 💚"
       ],
-      "quiz": {
-        "question": "Peygamberimize verilen 'Muhammedü'l-Emîn' lakabı ne anlama gelir?",
-        "options": ["Güzel konuşan", "Güvenilir", "Hızlı koşan", "Çok zeki"],
-        "correct_answer": "Güvenilir",
-        "xp_reward": 40
-      }
+      "quiz": [
+        {
+          "question": "Peygamberimize verilen 'Muhammedü'l-Emîn' lakabı ne anlama gelir?",
+          "options": ["Güzel konuşan", "Güvenilir", "Hızlı koşan", "Çok zeki"],
+          "correct_answer": "Güvenilir",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bir Müslüman ne söyler?",
+          "options": ["Yalan", "Doğru", "Kötü söz", "Boş laf"],
+          "correct_answer": "Doğru",
+          "xp_reward": 5
+        },
+        {
+          "question": "Emanete sadakat ne demektir?",
+          "options": ["Emaneti kaybetmek", "Emaneti sahibine eksiksiz vermek", "Emaneti kullanmak", "Emaneti unutmak"],
+          "correct_answer": "Emaneti sahibine eksiksiz vermek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Yalan söyleyen kişiye ne olur?",
+          "options": ["Sevilir", "Güven kalmaz", "Çok sevilir", "Hediye alır"],
+          "correct_answer": "Güven kalmaz",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah kimleri sever?",
+          "options": ["Yalancıları", "Doğruları", "Hilekârları", "Tembel kişileri"],
+          "correct_answer": "Doğruları",
+          "xp_reward": 5
+        },
+        {
+          "question": "Yalanın sonu nedir?",
+          "options": ["Mutluluk", "Yeni yalanlar", "Para", "Sevgi"],
+          "correct_answer": "Yeni yalanlar",
+          "xp_reward": 5
+        },
+        {
+          "question": "Doğruluk insanı nerede mutlu eder?",
+          "options": ["Sadece dünyada", "Sadece ahirette", "Dünyada ve ahirette", "Hiç mutlu etmez"],
+          "correct_answer": "Dünyada ve ahirette",
+          "xp_reward": 5
+        },
+        {
+          "question": "Peygamberimiz çocukluğundan beri nasıldı?",
+          "options": ["Yalancı", "Dürüst", "Tembel", "Kavgacı"],
+          "correct_answer": "Dürüst",
+          "xp_reward": 5
+        },
+        {
+          "question": "Emanet nedir?",
+          "options": ["Kaybedilen bir şey", "Bize bırakılan bir şey", "Hediye", "Çöp"],
+          "correct_answer": "Bize bırakılan bir şey",
+          "xp_reward": 5
+        },
+        {
+          "question": "Yalan söylemek nasıl bir şeydir?",
+          "options": ["İyilik", "Büyük bir kötülük", "Sıradan bir şey", "Eğlence"],
+          "correct_answer": "Büyük bir kötülük",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s9_saygi_yardim",
       "unit_title": "Seviye 9 · Saygı ve Yardımlaşma",
       "level": 9,
       "cards": [
-        "Anne-babamıza, öğretmenlerimize, büyüklerimize saygı gösteririz. 🌷",
-        "Küçüklere şefkatli, akranlarımıza nazik davranırız.",
-        "Hayvanlara su veririz, kuşları ürkütmeyiz, bitkilere zarar vermeyiz. 🌱🐦",
-        "Bir başkasına yardım ettiğimizde Allah da bize yardım eder. 🤝"
+        "Anne-babamıza saygı en büyük ibadetlerdendir. 🌷",
+        "Allah, anne-babaya 'öf' bile demememizi ister.",
+        "Öğretmenlerimize ve büyüklerimize saygı göstermek görevimizdir.",
+        "Küçüklere şefkat, akranlara nezaket gösteririz.",
+        "Komşularımızla iyi geçinir, onlara yardım ederiz. 🏘️",
+        "Hayvanlara su veririz, yuvalarına dokunmayız. 🐦",
+        "Bitkilere zarar vermeyiz, çevreyi korurız. 🌱",
+        "Bir başkasına yardım ettiğimizde Allah da bize yardım eder. 🤝",
+        "Selâm vermek, sadaka vermek, gülümsemek de yardımdır. 😊",
+        "Yardımlaşan toplum güçlü ve mutlu olur. ☮️"
       ],
-      "quiz": {
-        "question": "Aşağıdakilerden hangisi güzel ahlak değildir?",
-        "options": [
-          "Büyüklere saygı",
-          "Hayvanlara şefkat",
-          "Yardımlaşma",
-          "Yalan söylemek"
-        ],
-        "correct_answer": "Yalan söylemek",
-        "xp_reward": 40
-      }
+      "quiz": [
+        {
+          "question": "Aşağıdakilerden hangisi güzel ahlak değildir?",
+          "options": [
+            "Büyüklere saygı",
+            "Hayvanlara şefkat",
+            "Yardımlaşma",
+            "Yalan söylemek"
+          ],
+          "correct_answer": "Yalan söylemek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah anne-babaya hangi sözü bile söylememizi yasaklar?",
+          "options": ["Teşekkür", "Öf", "Selam", "Tamam"],
+          "correct_answer": "Öf",
+          "xp_reward": 5
+        },
+        {
+          "question": "Hayvanlara nasıl davranırız?",
+          "options": ["Zarar veririz", "Şefkat gösteririz", "Korkuturuz", "Kovalarız"],
+          "correct_answer": "Şefkat gösteririz",
+          "xp_reward": 5
+        },
+        {
+          "question": "Komşularımızla nasıl olmalıyız?",
+          "options": ["Kavgalı", "İlgisiz", "İyi geçinen", "Düşman"],
+          "correct_answer": "İyi geçinen",
+          "xp_reward": 5
+        },
+        {
+          "question": "Küçüklere nasıl davranırız?",
+          "options": ["Sert", "Şefkatli", "İlgisiz", "Kızgın"],
+          "correct_answer": "Şefkatli",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aşağıdakilerden hangisi yardımdır?",
+          "options": ["Bağırmak", "Gülümsemek", "Kavga etmek", "Yalan söylemek"],
+          "correct_answer": "Gülümsemek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Bir başkasına yardım ettiğimizde Allah ne yapar?",
+          "options": ["Görmez", "Bize de yardım eder", "Cezalandırır", "İlgilenmez"],
+          "correct_answer": "Bize de yardım eder",
+          "xp_reward": 5
+        },
+        {
+          "question": "Anne-babaya saygı nedir?",
+          "options": ["Bir alışkanlık", "Büyük bir ibadet", "Sıradan iş", "Önemsiz"],
+          "correct_answer": "Büyük bir ibadet",
+          "xp_reward": 5
+        },
+        {
+          "question": "Çevreyi nasıl koruruz?",
+          "options": ["Çöp atarak", "Bitkilere zarar vererek", "Temiz tutarak", "İlgisiz kalarak"],
+          "correct_answer": "Temiz tutarak",
+          "xp_reward": 5
+        },
+        {
+          "question": "Yardımlaşan toplum nasıl olur?",
+          "options": ["Zayıf", "Güçlü ve mutlu", "Dağınık", "Üzgün"],
+          "correct_answer": "Güçlü ve mutlu",
+          "xp_reward": 5
+        }
+      ]
     },
     {
       "id": "s9_israf",
       "unit_title": "Seviye 9 · İsraf Etmemek",
       "level": 9,
       "cards": [
-        "Allah bize verdiği nimetleri boşa harcamamızı sevmez. Buna israf denir. 🚫",
-        "Suyu açık bırakmamak, ışığı boşuna yakmamak, ekmeği çöpe atmamak israfa karşı tedbirimizdir. 💧💡🍞",
-        "İsraf etmemek aynı zamanda yardımlaşmaktır: Bizim israf etmediğimiz şey başkasına nimet olur.",
-        "Allah, ölçülü ve tasarruflu olanları sever. 💚"
+        "Allah verdiği nimetleri boşa harcamamızı sevmez. 🚫",
+        "Nimetleri boşa harcamaya israf denir.",
+        "Suyu açık bırakmamak israfa karşı tedbirimizdir. 💧",
+        "Işığı boşuna yakmamak da israfı önler. 💡",
+        "Ekmeği çöpe atmak büyük bir israftır. 🍞",
+        "Yemeği tabağımızda bırakmamaya özen göstermeliyiz.",
+        "Allah, ölçülü ve tasarruflu olanları sever.",
+        "İsraf etmediğimiz şey başkasına nimet olur. 🤲",
+        "Bilgisayar ve telefonu da gereksiz kullanmamak israftan kaçınmaktır.",
+        "Az ile yetinmek bereket getirir. 🌾"
       ],
-      "quiz": {
-        "question": "Nimetleri boşa harcamaya ne denir?",
-        "options": ["Şükür", "İsraf", "Sadaka", "Niyet"],
-        "correct_answer": "İsraf",
-        "xp_reward": 40
-      }
+      "quiz": [
+        {
+          "question": "Nimetleri boşa harcamaya ne denir?",
+          "options": ["Şükür", "İsraf", "Sadaka", "Niyet"],
+          "correct_answer": "İsraf",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah kimleri sever?",
+          "options": ["İsraf edenleri", "Ölçülü olanları", "Tembelleri", "Bencilleri"],
+          "correct_answer": "Ölçülü olanları",
+          "xp_reward": 5
+        },
+        {
+          "question": "Suyu boşa akıtmak nedir?",
+          "options": ["Şükür", "İbadet", "İsraf", "Sadaka"],
+          "correct_answer": "İsraf",
+          "xp_reward": 5
+        },
+        {
+          "question": "Ekmeği çöpe atmak nasıldır?",
+          "options": ["Doğal", "Yanlış (israf)", "Gerekli", "Sevap"],
+          "correct_answer": "Yanlış (israf)",
+          "xp_reward": 5
+        },
+        {
+          "question": "İsraf etmediğimiz nimet kime nimet olur?",
+          "options": ["Bize", "Hiç kimseye", "Başkasına", "Sadece zenginlere"],
+          "correct_answer": "Başkasına",
+          "xp_reward": 5
+        },
+        {
+          "question": "Az ile yetinmek ne getirir?",
+          "options": ["Yoksulluk", "Bereket", "Üzüntü", "Hastalık"],
+          "correct_answer": "Bereket",
+          "xp_reward": 5
+        },
+        {
+          "question": "Aşağıdakilerden hangisi israftan kaçınmaktır?",
+          "options": ["Işığı sürekli yakmak", "Suyu açık bırakmak", "Yemeği bitirmek", "Ekmeği çöpe atmak"],
+          "correct_answer": "Yemeği bitirmek",
+          "xp_reward": 5
+        },
+        {
+          "question": "Telefonu gereksiz kullanmak nedir?",
+          "options": ["Sevap", "İsraf", "Zorunlu", "Doğal"],
+          "correct_answer": "İsraf",
+          "xp_reward": 5
+        },
+        {
+          "question": "Allah israf hakkında ne der?",
+          "options": ["Sevilir bir şeydir", "İstemez, sevmez", "Önemsizdir", "İyi bir şeydir"],
+          "correct_answer": "İstemez, sevmez",
+          "xp_reward": 5
+        },
+        {
+          "question": "İsrafın zıttı nedir?",
+          "options": ["Cömertlik", "Tasarruf", "Cimrilik", "Tembellik"],
+          "correct_answer": "Tasarruf",
+          "xp_reward": 5
+        }
+      ]
     }
   ]
 }

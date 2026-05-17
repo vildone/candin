@@ -46,18 +46,21 @@ interface RawDiniUnit {
   unit_title: string
   level?: number
   cards: string[]
-  quiz: RawQuiz
+  quiz: RawQuiz | RawQuiz[]
 }
 
 export async function fetchDiniUnits(): Promise<DiniUnit[]> {
   const rows = await fetchModule<RawDiniUnit>("dini_bilgiler")
-  return rows.map((r) => ({
-    id: r.data.id,
-    title: r.data.unit_title,
-    level: r.data.level ?? 1,
-    cards: r.data.cards,
-    quiz: mapQuiz(r.data.quiz),
-  }))
+  return rows.map((r) => {
+    const quizzes = Array.isArray(r.data.quiz) ? r.data.quiz : [r.data.quiz]
+    return {
+      id: r.data.id,
+      title: r.data.unit_title,
+      level: r.data.level ?? 1,
+      cards: r.data.cards,
+      quiz: quizzes.map(mapQuiz),
+    }
+  })
 }
 
 export async function fetchUnits(): Promise<Unit[]> {

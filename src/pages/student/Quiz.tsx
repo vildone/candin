@@ -49,16 +49,14 @@ export function QuizScreen() {
   }, [unitId])
 
   const questions: PreparedQuestion[] = unit
-    ? [
-        {
-          question: unit.quiz.question,
-          options: unit.quiz.options,
-          correctIndex: Math.max(0, unit.quiz.options.indexOf(unit.quiz.correctAnswer)),
-        },
-      ]
+    ? unit.quiz.map((q) => ({
+        question: q.question,
+        options: q.options,
+        correctIndex: Math.max(0, q.options.indexOf(q.correctAnswer)),
+      }))
     : []
 
-  const xpReward = unit?.quiz.xpReward ?? 30
+  const xpReward = unit?.quiz.reduce((sum, q) => sum + q.xpReward, 0) ?? 30
 
   useEffect(() => {
     if (!finished || !unit) return

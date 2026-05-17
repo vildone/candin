@@ -41,7 +41,7 @@ export interface DiniUnit {
   title: string
   level: number
   cards: string[]
-  quiz: Quiz
+  quiz: Quiz[]
 }
 
 // Namaz sekmesi: dikey adımlar

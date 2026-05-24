@@ -4,7 +4,7 @@ import { BookOpen, Moon, Heart, Globe, MessageSquare } from "lucide-react"
 const tabs = [
   { to: "/", icon: BookOpen, label: "Dersler", end: true },
   { to: "/dualar", icon: Heart, label: "Dualar", end: false },
-  { to: "/hikayeler", icon: Globe, label: "Hikayeler", end: false },
+  { to: "/peygamberler", icon: Globe, label: "Peygamberler", end: false },
   { to: "/namaz", icon: MessageSquare, label: "Namaz", end: false },
   { to: "/kuran", icon: Moon, label: "Kur'an", end: false },
 ]

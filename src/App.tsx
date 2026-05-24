@@ -9,8 +9,8 @@ import { KuranScreen } from "@/pages/student/Kuran"
 import { NamazScreen } from "@/pages/student/Namaz"
 import { DualarScreen } from "@/pages/student/Dualar"
 import { DuaDetailScreen } from "@/pages/student/DuaDetail"
-import { HikayelerScreen } from "@/pages/student/Hikayeler"
-import { HikayeDetailScreen } from "@/pages/student/HikayeDetail"
+import { PeygamberlerScreen } from "@/pages/student/Peygamberler"
+import { PeygamberDetailScreen } from "@/pages/student/PeygamberDetail"
 import { ProfilScreen } from "@/pages/student/Profil"
 import { AdminDashboard } from "@/pages/admin/Dashboard"
 import { ContentManagement } from "@/pages/admin/ContentManagement"
@@ -41,9 +41,8 @@ export function App() {
             <Route path="/dualar" element={<DualarScreen />} />
             <Route path="/dualar/:duaId" element={<DuaDetailScreen />} />
 
-            {/* Hikayeler */}
-            <Route path="/hikayeler" element={<HikayelerScreen />} />
-            <Route path="/hikayeler/:hikayeId" element={<HikayeDetailScreen />} />
+            {/* Peygamberler — detay sayfası StudentLayout DIŞINDA (tam ekran) */}
+            <Route path="/peygamberler" element={<PeygamberlerScreen />} />
 
             {/* Namaz */}
             <Route path="/namaz" element={<NamazScreen />} />
@@ -69,6 +68,16 @@ export function App() {
             element={
               <RequireAuth>
                 <QuizScreen />
+              </RequireAuth>
+            }
+          />
+
+          {/* Peygamber detay — tam ekran (PDF okuma) */}
+          <Route
+            path="/peygamberler/:peygamberId"
+            element={
+              <RequireAuth>
+                <PeygamberDetailScreen />
               </RequireAuth>
             }
           />

@@ -7,8 +7,10 @@ import { LessonScreen } from "@/pages/student/Lesson"
 import { QuizScreen } from "@/pages/student/Quiz"
 import { KuranScreen } from "@/pages/student/Kuran"
 import { NamazScreen } from "@/pages/student/Namaz"
-import { SurelerScreen } from "@/pages/student/Sureler"
-import { PeygamberlerScreen } from "@/pages/student/Peygamberler"
+import { DualarScreen } from "@/pages/student/Dualar"
+import { DuaDetailScreen } from "@/pages/student/DuaDetail"
+import { HikayelerScreen } from "@/pages/student/Hikayeler"
+import { HikayeDetailScreen } from "@/pages/student/HikayeDetail"
 import { ProfilScreen } from "@/pages/student/Profil"
 import { AdminDashboard } from "@/pages/admin/Dashboard"
 import { ContentManagement } from "@/pages/admin/ContentManagement"
@@ -32,11 +34,24 @@ export function App() {
               </RequireAuth>
             }
           >
+            {/* Dersler (Ana sayfa - Duolingo yapısı) */}
             <Route path="/" element={<StudentDashboard />} />
-            <Route path="/kuran" element={<KuranScreen />} />
+
+            {/* Dualar */}
+            <Route path="/dualar" element={<DualarScreen />} />
+            <Route path="/dualar/:duaId" element={<DuaDetailScreen />} />
+
+            {/* Hikayeler */}
+            <Route path="/hikayeler" element={<HikayelerScreen />} />
+            <Route path="/hikayeler/:hikayeId" element={<HikayeDetailScreen />} />
+
+            {/* Namaz */}
             <Route path="/namaz" element={<NamazScreen />} />
-            <Route path="/sureler" element={<SurelerScreen />} />
-            <Route path="/peygamberler" element={<PeygamberlerScreen />} />
+
+            {/* Kur'an */}
+            <Route path="/kuran" element={<KuranScreen />} />
+
+            {/* Profil */}
             <Route path="/profil" element={<ProfilScreen />} />
           </Route>
 

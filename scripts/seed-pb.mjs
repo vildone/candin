@@ -20,6 +20,7 @@ const MODULES = [
   { module: "namaz",         file: "namaz.json",         arrayKey: "units" },
   { module: "sureler",       file: "sureler.json",       arrayKey: "units" },
   { module: "peygamberler",  file: "peygamberler.json",  arrayKey: "units" },
+  { module: "dualar",        file: "dualar.json",        arrayKey: "units" },
 ]
 
 async function loadJson(file) {

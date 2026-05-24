@@ -28,9 +28,20 @@ export function RegisterScreen() {
     try {
       await register({ email, password, name })
       navigate("/")
-    } catch (err) {
-      const message =
-        err instanceof Error && err.message ? err.message : "Kayıt başarısız oldu."
+    } catch (err: unknown) {
+      let message = "Kayıt başarısız oldu."
+      if (err && typeof err === "object") {
+        const rec = err as Record<string, unknown>
+        // PocketBase ClientResponseError: .data = response body = { data: { email: ... }, message: ... }
+        const body = (typeof rec.data === "object" && rec.data !== null ? rec.data : {}) as Record<string, unknown>
+        const inner = (typeof body.data === "object" && body.data !== null ? body.data : {}) as Record<string, unknown>
+        const emailErr = inner.email as { code?: string; message?: string } | undefined
+        if (emailErr?.code === "validation_not_unique") {
+          message = "Bu e-posta adresi zaten kayıtlı."
+        } else if (typeof rec.message === "string" && rec.message) {
+          message = rec.message as string
+        }
+      }
       setError(message)
     } finally {
       setBusy(false)

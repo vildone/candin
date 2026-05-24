@@ -5,9 +5,14 @@ import type {
   Unit,
   NamazFlow,
   NamazStep,
+  NamazReading,
   BlankQuestion,
   ProphetStory,
   Quiz,
+  Dua,
+  DuaWord,
+  Hikaye,
+  ElifbaDers,
 } from "@/types"
 
 interface ContentRecord<T = unknown> {
@@ -41,6 +46,8 @@ async function fetchModule<T>(module: string): Promise<ContentRecord<T>[]> {
   })
 }
 
+// ─── Dersler (Duolingo yapısı) ───
+
 interface RawDiniUnit {
   id: string
   unit_title: string
@@ -72,6 +79,8 @@ export async function fetchUnits(): Promise<Unit[]> {
   }))
 }
 
+// ─── Kur'an (Elif-Ba) ───
+
 interface RawKuranLesson {
   id: string
   letter_arabic: string
@@ -93,6 +102,15 @@ export async function fetchKuranLetters(): Promise<KuranLetter[]> {
   }))
 }
 
+// ─── Namaz ───
+
+interface RawNamazReading {
+  arabic: string
+  turkish: string
+  transliteration: string
+  note?: string
+}
+
 interface RawNamazStep {
   step_number: number
   title: string
@@ -100,6 +118,7 @@ interface RawNamazStep {
   detail?: string
   emoji?: string
   image_src?: string
+  readings?: RawNamazReading[]
 }
 
 interface RawNamazUnit {
@@ -111,16 +130,33 @@ interface RawNamazUnit {
 export async function fetchNamazFlow(): Promise<NamazFlow | null> {
   const rows = await fetchModule<RawNamazUnit>("namaz")
   if (rows.length === 0) return null
-  const first = rows[0].data
-  const steps: NamazStep[] = first.steps.map((s) => ({
-    id: s.step_number,
-    title: s.title,
-    description: s.description,
-    detail: s.detail ?? "",
-    emoji: s.emoji ?? "🕌",
-  }))
-  return { id: first.id, title: first.unit_title, steps }
+  // Tüm birimlerin adımlarını birleştir (abdest + namaz kılınışı)
+  const allSteps: NamazStep[] = []
+  let globalStepNumber = 0
+  for (const row of rows) {
+    const unit = row.data
+    for (const s of unit.steps) {
+      globalStepNumber++
+      allSteps.push({
+        id: globalStepNumber,
+        title: s.title,
+        description: s.description,
+        detail: s.detail ?? "",
+        emoji: s.emoji ?? "🕌",
+        imageSrc: s.image_src,
+        readings: s.readings?.map((r) => ({
+          arabic: r.arabic,
+          turkish: r.turkish,
+          transliteration: r.transliteration,
+          note: r.note,
+        })),
+      })
+    }
+  }
+  return { id: "namaz_full", title: "Adım Adım Namaz Öğreniyorum", steps: allSteps }
 }
+
+// ─── Sureler (Boşluk doldurma) ───
 
 interface RawSurahQuestion {
   id: string
@@ -165,6 +201,8 @@ export async function fetchBlankQuestions(): Promise<BlankQuestion[]> {
   )
 }
 
+// ─── Peygamberler ───
+
 interface RawProphetCard {
   step: number
   image_src?: string
@@ -185,5 +223,97 @@ export async function fetchProphetStories(): Promise<ProphetStory[]> {
     title: r.data.unit_title,
     emoji: r.data.emoji ?? "📖",
     paragraphs: r.data.story_cards.map((c) => c.text),
+  }))
+}
+
+// ─── Dualar ───
+
+interface RawDuaWord {
+  arabic: string
+  turkish: string
+  transliteration?: string
+}
+
+interface RawDua {
+  id: string
+  title: string
+  arabic: string
+  turkish: string
+  transliteration: string
+  category: string
+  words: RawDuaWord[]
+  explanation?: string
+  audio_src?: string
+}
+
+export async function fetchDualar(): Promise<Dua[]> {
+  const rows = await fetchModule<RawDua>("dualar")
+  return rows.map((r, idx) => ({
+    id: r.data.id,
+    title: r.data.title,
+    arabic: r.data.arabic,
+    turkish: r.data.turkish,
+    transliteration: r.data.transliteration,
+    category: r.data.category ?? "genel",
+    words: (r.data.words ?? []).map((w) => ({
+      arabic: w.arabic,
+      turkish: w.turkish,
+      transliteration: w.transliteration,
+    })),
+    explanation: r.data.explanation,
+    audioSrc: r.data.audio_src,
+    order: r.order_index ?? idx,
+  }))
+}
+
+// ─── Hikayeler ───
+
+interface RawHikaye {
+  id: string
+  title: string
+  emoji?: string
+  summary: string
+  content: string
+  key_points: string[]
+  estimated_minutes: number
+  image_src?: string
+}
+
+export async function fetchHikayeler(): Promise<Hikaye[]> {
+  const rows = await fetchModule<RawHikaye>("hikayeler")
+  return rows.map((r, idx) => ({
+    id: r.data.id,
+    title: r.data.title,
+    emoji: r.data.emoji ?? "🌹",
+    summary: r.data.summary,
+    content: r.data.content,
+    keyPoints: r.data.key_points ?? [],
+    estimatedMinutes: r.data.estimated_minutes ?? 5,
+    imageSrc: r.data.image_src,
+    order: r.order_index ?? idx,
+  }))
+}
+
+// ─── Elifba Dersleri (Kur'an sekmesi - statik JSON) ───
+
+import elifbaData from "@/data/elifba_dersler.json"
+
+export function fetchElifbaDersler(): ElifbaDers[] {
+  return (elifbaData as ElifbaDers[]).map((d) => ({
+    id: d.id,
+    ders_no: d.ders_no,
+    title: d.title,
+    descriptions: d.descriptions ?? [],
+    method: d.method ?? "",
+    sesler: (d.sesler ?? []).map((s) => ({
+      id: s.id,
+      url: s.url,
+      label: s.label,
+    })),
+    gorseller: (d.gorseller ?? []).map((g) => ({
+      id: g.id,
+      url: g.url,
+      alt: g.alt,
+    })),
   }))
 }

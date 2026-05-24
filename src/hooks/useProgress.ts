@@ -1,6 +1,7 @@
-import { useCallback } from "react"
+import { useCallback, useState, useEffect } from "react"
 import { useAuth } from "@/lib/auth"
 import { pb } from "@/lib/pb"
+import type { LearnedItemType } from "@/types"
 
 function todayIso(): string {
   return new Date().toISOString().slice(0, 10)
@@ -19,10 +20,33 @@ export interface ProgressState {
   unlockedUnits: string[]
   badges: string[]
   lastActiveDate: string | null
+  learnedItems: LearnedItem[]
+}
+
+export interface LearnedItem {
+  type: LearnedItemType
+  id: string
+  learnedAt: string
 }
 
 export function useProgress() {
   const { user, refresh } = useAuth()
+  const [learnedItems, setLearnedItems] = useState<LearnedItem[]>([])
+
+  // localStorage'dan öğrenildi bilgilerini yükle
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("candin_learned_items")
+      if (saved) {
+        setLearnedItems(JSON.parse(saved))
+      }
+    } catch {}
+  }, [])
+
+  const saveLearned = useCallback((items: LearnedItem[]) => {
+    setLearnedItems(items)
+    localStorage.setItem("candin_learned_items", JSON.stringify(items))
+  }, [])
 
   const state: ProgressState = {
     xp: user?.xp ?? 0,
@@ -31,6 +55,7 @@ export function useProgress() {
     unlockedUnits: user?.unlocked_units ?? [],
     badges: user?.badges ?? [],
     lastActiveDate: user?.last_active_date ?? null,
+    learnedItems,
   }
 
   const updateUser = useCallback(
@@ -102,6 +127,46 @@ export function useProgress() {
     }
   }, [user, updateUser])
 
+  // ─── Öğrenildi takibi (localStorage) ───
+
+  const markLearned = useCallback(
+    (type: LearnedItemType, id: string) => {
+      const exists = learnedItems.some((item) => item.type === type && item.id === id)
+      if (exists) return
+      const newItem: LearnedItem = {
+        type,
+        id,
+        learnedAt: new Date().toISOString(),
+      }
+      saveLearned([...learnedItems, newItem])
+    },
+    [learnedItems, saveLearned],
+  )
+
+  const unmarkLearned = useCallback(
+    (type: LearnedItemType, id: string) => {
+      const filtered = learnedItems.filter(
+        (item) => !(item.type === type && item.id === id),
+      )
+      saveLearned(filtered)
+    },
+    [learnedItems, saveLearned],
+  )
+
+  const isLearned = useCallback(
+    (type: LearnedItemType, id: string): boolean => {
+      return learnedItems.some((item) => item.type === type && item.id === id)
+    },
+    [learnedItems],
+  )
+
+  const getLearnedCount = useCallback(
+    (type: LearnedItemType): number => {
+      return learnedItems.filter((item) => item.type === type).length
+    },
+    [learnedItems],
+  )
+
   return {
     ...state,
     addXp,
@@ -109,5 +174,9 @@ export function useProgress() {
     unlockUnit,
     awardBadge,
     registerActivity,
+    markLearned,
+    unmarkLearned,
+    isLearned,
+    getLearnedCount,
   }
 }

@@ -1,13 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom"
-import { BookOpen, Moon, User, Heart, Globe, Settings } from "lucide-react"
+import { BookOpen, Moon, Heart, Globe, MessageSquare } from "lucide-react"
 
 const tabs = [
-  { to: "/", icon: BookOpen, label: "Din" },
-  { to: "/kuran", icon: Moon, label: "Kur'an" },
-  { to: "/namaz", icon: User, label: "Namaz" },
-  { to: "/sureler", icon: Heart, label: "Sureler" },
-  { to: "/peygamberler", icon: Globe, label: "Peygamberler" },
-  { to: "/profil", icon: Settings, label: "Profil" },
+  { to: "/", icon: BookOpen, label: "Dersler", end: true },
+  { to: "/dualar", icon: Heart, label: "Dualar", end: false },
+  { to: "/hikayeler", icon: Globe, label: "Hikayeler", end: false },
+  { to: "/namaz", icon: MessageSquare, label: "Namaz", end: false },
+  { to: "/kuran", icon: Moon, label: "Kur'an", end: false },
 ]
 
 export function StudentLayout() {
@@ -21,7 +20,7 @@ export function StudentLayout() {
             <NavLink
               key={tab.to}
               to={tab.to}
-              end={tab.to === "/"}
+              end={tab.end}
               className={({ isActive }) =>
                 `flex flex-col items-center gap-0.5 rounded-xl px-2 py-1.5 transition-all ${
                   isActive

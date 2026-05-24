@@ -131,6 +131,7 @@ export function QuizScreen() {
         xpReward={xpReward}
         levelCompleted={levelCompleted}
         currentLevel={unit?.level ?? 1}
+        unitId={unitId ?? ""}
       />
     )
   }
@@ -250,12 +251,14 @@ function QuizResult({
   xpReward,
   levelCompleted,
   currentLevel,
+  unitId,
 }: {
   score: number
   total: number
   xpReward: number
   levelCompleted: boolean
   currentLevel: number
+  unitId: string
 }) {
   const percentage = Math.round((score / total) * 100)
   const passed = score === total
@@ -324,9 +327,16 @@ function QuizResult({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: levelCompleted ? 1.4 : 1 }}
-        className="mt-8 w-full max-w-xs"
+        className="mt-8 flex w-full max-w-xs flex-col gap-3"
       >
-        <Link to="/">
+        {!passed && (
+          <Link to={`/sinav/${unitId}`} className="w-full">
+            <Button variant="outline" className="h-14 w-full rounded-2xl text-base font-bold">
+              Tekrar Dene
+            </Button>
+          </Link>
+        )}
+        <Link to="/" className="w-full">
           <Button className="h-14 w-full rounded-2xl text-base font-bold">
             Ana Sayfaya Dön
           </Button>

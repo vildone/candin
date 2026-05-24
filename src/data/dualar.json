@@ -1,0 +1,457 @@
+{
+  "units": [
+    {
+      "id": "dua_subhaneke",
+      "title": "Sübhâneke",
+      "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلَا إِلَهَ غَيْرُكَ",
+      "turkish": "Allah'ım! Sen eksik sıfatlardan pak ve uzaksın. Seni daima böyle tenzih eder ve överim. Senin adın mübarektir. Varlığın her şeyden üstündür. Senden başka ilah yoktur.",
+      "transliteration": "Subhânekellâhumme ve bi hamdik ve tebârakesmuk ve teâlâ cedduk ve lâ ilâhe ğayruk",
+      "category": "namaz",
+      "explanation": "Namaza başlarken, iftitah tekbirinden (Allahu Ekber dedikten) sonra eller bağlanınca okunur.",
+      "words": [
+        {
+          "arabic": "سُبْحَانَكَ",
+          "turkish": "Sen tenzih ederim"
+        },
+        {
+          "arabic": "اللَّهُمَّ",
+          "turkish": "Allah'ım"
+        },
+        {
+          "arabic": "وَبِحَمْدِكَ",
+          "turkish": "Ve seni överim"
+        },
+        {
+          "arabic": "وَتَبَارَكَ اسْمُكَ",
+          "turkish": "Senin adın mübarektir"
+        },
+        {
+          "arabic": "وَتَعَالَى جَدُّكَ",
+          "turkish": "Varlığın her şeyden üstündür"
+        },
+        {
+          "arabic": "وَلَا إِلَهَ غَيْرُكَ",
+          "turkish": "Senden başka ilah yoktur"
+        }
+      ]
+    },
+    {
+      "id": "dua_ettehiyyatu",
+      "title": "Ettehiyyâtü",
+      "arabic": "اَلتَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ اَلسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ اَشْهَدُ اَنْ لَا إِلَهَ إِلَّا اللَّهُ وَاَشْهَدُ اَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "turkish": "Dil ile, beden ve mal ile yapılan bütün ibadetler Allah'a dır. Ey Peygamber! Allah'ın selamı, rahmet ve bereketleri senin üzerine olsun. Selam bizim üzerimize ve Allah'ın bütün iyi kulları üzerine olsun. Şahitlik ederim ki, Allah'tan başka ilah yoktur. Yine şahitlik ederim ki, Muhammed, O'nun kulu ve Peygamberidir.",
+      "transliteration": "Ettehiyyâtu lillâhi vessalevâtu vettayibât. Esselâmu aleyke eyyuhen-Nebiyyu ve rahmetullahi ve berakâtuhu. Esselâmu aleynâ ve alâ ibâdillâhis-Sâlihîn. Eşhedu en lâ ilâhe illallâh ve eşhedu enne Muhammeden abduhû ve Rasuluh.",
+      "category": "namaz",
+      "explanation": "Namazın oturuşunda okunur. İlk ve son oturuşta okunur.",
+      "words": [
+        {
+          "arabic": "اَلتَّحِيَّاتُ لِلَّهِ",
+          "turkish": "Bütün ibadetler Allah'a"
+        },
+        {
+          "arabic": "اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِيُّ",
+          "turkish": "Selam sana ey Peygamber"
+        },
+        {
+          "arabic": "اَشْهَدُ اَنْ لَا إِلَهَ إِلَّا اللَّهُ",
+          "turkish": "Şahitlik ederim ki Allah'tan başka ilah yoktur"
+        },
+        {
+          "arabic": "وَاَشْهَدُ اَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+          "turkish": "Ve Muhammed O'nun kulu ve elçisidir"
+        }
+      ]
+    },
+    {
+      "id": "dua_salli",
+      "title": "Allahümme Salli",
+      "arabic": "اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "turkish": "Allah'ım! Muhammed'e ve Muhammed'in ümmetine rahmet eyle; şerefini yücelt. İbrahim'e ve İbrahim'in ümmetine rahmet ettiğin gibi. Şüphesiz övülmeye layık yalnız sensin, şan ve şeref sahibi de sensin.",
+      "transliteration": "Allâhumme salli alâ Muhammedin ve alâ âli Muhammed. Kemâ salleyte alâ İbrahime ve alâ âli İbrahim. İnneke hamidun mecîd.",
+      "category": "namaz",
+      "explanation": "Son oturuşta, Ettehiyyâtü'den sonra okunur.",
+      "words": [
+        {
+          "arabic": "اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ",
+          "turkish": "Allah'ım, Muhammed'e rahmet eyle"
+        },
+        {
+          "arabic": "وَعَلَى آلِ مُحَمَّدٍ",
+          "turkish": "Ve Muhammed'in ailesine"
+        },
+        {
+          "arabic": "كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ",
+          "turkish": "İbrahim'e ettiğin gibi"
+        },
+        {
+          "arabic": "إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          "turkish": "Şüphesiz sen övülmeye layıksın"
+        }
+      ]
+    },
+    {
+      "id": "dua_barik",
+      "title": "Allahümme Bârik",
+      "arabic": "اَللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "turkish": "Allah'ım! Muhammed'e ve Muhammed'in ümmetine hayır ve bereket ver. İbrahim'e ve İbrahim'in ümmetine verdiğin gibi. Şüphesiz övülmeye layık yalnız sensin, şan ve şeref sahibi de sensin.",
+      "transliteration": "Allâhumme barik alâ Muhammedin ve alâ âli Muhammed. Kemâ barekte alâ İbrahîme ve alâ âli İbrahim. İnneke hamidun mecîd.",
+      "category": "namaz",
+      "explanation": "Salli duasından hemen sonra okunur.",
+      "words": [
+        {
+          "arabic": "اَللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ",
+          "turkish": "Allah'ım, Muhammed'e bereket ver"
+        },
+        {
+          "arabic": "كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ",
+          "turkish": "İbrahim'e verdiğin gibi"
+        },
+        {
+          "arabic": "إِنَّكَ حَمِيدٌ مَجِيدٌ",
+          "turkish": "Sen övülmeye layıksın"
+        }
+      ]
+    },
+    {
+      "id": "dua_rabbena_atina",
+      "title": "Rabbenâ Âtinâ",
+      "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+      "turkish": "Allah'ım! Bize dünyada iyilik ve güzellik, ahirette de iyilik, güzellik ver. Bizi ateş azabından koru.",
+      "transliteration": "Rabbenâ âtina fid'dunyâ haseneten ve fil'âhirati haseneten ve kınâ azâbennâr.",
+      "category": "namaz",
+      "explanation": "Son oturuşta, Salli-Bariq'tan sonra okunur. Bakara Suresi 201. ayet.",
+      "words": [
+        {
+          "arabic": "رَبَّنَا آتِنَا",
+          "turkish": "Rabbimiz bize ver"
+        },
+        {
+          "arabic": "فِي الدُّنْيَا حَسَنَةً",
+          "turkish": "Dünyada iyilik"
+        },
+        {
+          "arabic": "وَفِي الْآخِرَةِ حَسَنَةً",
+          "turkish": "Ahirette de iyilik"
+        },
+        {
+          "arabic": "وَقِنَا عَذَابَ النَّارِ",
+          "turkish": "Bizi ateş azabından koru"
+        }
+      ]
+    },
+    {
+      "id": "dua_rabbenağfirli",
+      "title": "Rabbenâğfirlî",
+      "arabic": "رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
+      "turkish": "Ey bizim Rabbimiz! Beni, anamı ve babamı ve bütün mü'minleri hesap gününde bağışla.",
+      "transliteration": "Rabbenâğfirlî ve li-vâlideyye ve lil-Mu'minine yevme yekûmu'l hisâb.",
+      "category": "namaz",
+      "explanation": "İbrahim Suresi 41. ayet. Son oturuşta okunabilir.",
+      "words": [
+        {
+          "arabic": "رَبَّنَا اغْفِرْ لِي",
+          "turkish": "Rabbimiz beni bağışla"
+        },
+        {
+          "arabic": "وَلِوَالِدَيَّ",
+          "turkish": "Ve anamı babamı"
+        },
+        {
+          "arabic": "وَلِلْمُؤْمِنِينَ",
+          "turkish": "Ve mü'minleri"
+        },
+        {
+          "arabic": "يَوْمَ يَقُومُ الْحِسَابُ",
+          "turkish": "Hesap gününde"
+        }
+      ]
+    },
+    {
+      "id": "dua_ayetel_kursi",
+      "title": "Âyetel Kürsî",
+      "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+      "turkish": "O'ndan başka ilah olmayan Allah, hay ve kayyumdur. O'nu uyuklama ve uyku tutmaz. Göklerde ve yerlerde olan şeyler O'nundur. İzni olmaksızın O'nun yanında şefaat eden yoktur. Halkın önünde ve arkasında olanı bilir. İnsanlar O'nun ilminden, O'nun isteğinden başkasını ihata edemezler. Kürsisi semaları ve yeri içine alır. Onların hıfzı O'nu yormaz. O, pek yüksek ve büyüktür.",
+      "transliteration": "Allahulailahe illa huvel hayyul kayyum, late'huzuhu sinetun vela nevmun, lehu mafissemavati ve mafil ardı, men zelleziy yeşfe-u ındehu illa biiznih yağlemu mabeyne eydiyhim vema halfehum vela yuhıtune bişey'in min ılmihı illa bimaşae, vesia kursiyyuhussemavati vel'arda vela yeuduhu hıfzuhuma vehuvel aliyyul azim.",
+      "category": "namaz",
+      "explanation": "Bakara Suresi 255. ayet. Namazdan sonra ve yatarken okunması tavsiye edilir.",
+      "words": [
+        {
+          "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ",
+          "turkish": "O'ndan başka ilah yoktur"
+        },
+        {
+          "arabic": "الْحَيُّ الْقَيُّومُ",
+          "turkish": "Hay ve Kayyum (ezel ve ebedi)"
+        },
+        {
+          "arabic": "لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ",
+          "turkish": "Uyuklama ve uyku tutmaz"
+        },
+        {
+          "arabic": "وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ",
+          "turkish": "Kürsisi gökleri ve yeri içine alır"
+        },
+        {
+          "arabic": "وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+          "turkish": "O, pek yüksek ve büyüktür"
+        }
+      ]
+    },
+    {
+      "id": "dua_ezan",
+      "title": "Ezan Duası",
+      "arabic": "اَللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلَاةِ الْقَائِمَةِ آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ وَالدَّرَجَةَ الرَّفِيعَةَ وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ",
+      "turkish": "Allah'ım! Bu tam davetin ve kılınacak namazın Rabbi, Muhammed'e vesileyi, fazileti ve yüce dereceyi ver. Onu vaadettiğin övülmüş makama gönder. Şüphesiz sen vaadinden dönmezsin.",
+      "transliteration": "Allahumme Rebbe hazihi'd-da'veti't-tamme. Vesselatil kâimeti ati Muhammedenil vesilete vel fazilete ved-dereceter-refîate. vebashu makamen Mahmudenillezi veadteh. İnneke lâ tühlifü'l-mîâd.",
+      "category": "namaz",
+      "explanation": "Ezan okunduktan sonra bu dua edilir.",
+      "words": [
+        {
+          "arabic": "اَللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ",
+          "turkish": "Allah'ım bu tam davetin Rabbi"
+        },
+        {
+          "arabic": "آتِ مُحَمَّدًا الْوَسِيلَةَ",
+          "turkish": "Muhammed'e vesileyi ver"
+        },
+        {
+          "arabic": "وَابْعَثْهُ مَقَامًا مَحْمُودًا",
+          "turkish": "Onu övülmüş makama gönder"
+        },
+        {
+          "arabic": "إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ",
+          "turkish": "Şüphesiz sen vaadinden dönmezsin"
+        }
+      ]
+    },
+    {
+      "id": "dua_kunut_1",
+      "title": "Kunut Duası 1",
+      "arabic": "اَللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنَسْتَهْدِيكَ وَنُؤْمِنُ بِكَ وَنَتُوبُ إِلَيْكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ كُلَّهُ نَشْكُرُكَ وَلَا نَكْفُرُكَ وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ",
+      "turkish": "Allahım! Senden yardım isteriz, günahlarımızı bağışlamanı isteriz, razı olduğun şeylere hidayet etmeni isteriz. Sana inanırız, sana tevbe ederiz. Sana güveniriz. Bize verdiğin bütün nimetleri bilerek seni hayır ile överiz. Sana şükrederiz. Hiçbir nimetini inkar etmez ve onları başkasından bilmeyiz. Nimetlerini inkar eden ve sana karşı geleni bırakırız.",
+      "transliteration": "Allâhumme innâ nesteînuke ve nestağfiruke ve nestehdik. Ve nu'minu bike ve netûbu ileyk. Ve netevekkelu aleyke ve nusni aleykel-hayra kullehu neşkuruke ve lâ nekfuruke ve nahleu ve netruku men yefcuruk.",
+      "category": "namaz",
+      "explanation": "Hanefi mezhebine göre vitir namazında, 3. rekatın rükuundan önce eller kaldırılarak okunur.",
+      "words": [
+        {
+          "arabic": "اَللَّهُمَّ إِنَّا نَسْتَعِينُكَ",
+          "turkish": "Allah'ım senden yardım isteriz"
+        },
+        {
+          "arabic": "وَنَسْتَغْفِرُكَ",
+          "turkish": "Bağışlamanı isteriz"
+        },
+        {
+          "arabic": "وَنُؤْمِنُ بِكَ",
+          "turkish": "Sana inanırız"
+        },
+        {
+          "arabic": "وَنَتَوَكَّلُ عَلَيْكَ",
+          "turkish": "Sana güveniriz"
+        },
+        {
+          "arabic": "نَشْكُرُكَ وَلَا نَكْفُرُكَ",
+          "turkish": "Sana şükrederiz, inkar etmeyiz"
+        }
+      ]
+    },
+    {
+      "id": "dua_kunut_2",
+      "title": "Kunut Duası 2",
+      "arabic": "اَللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ وَإِلَيْكَ نَسْعَى وَنَحْفِدُ نَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ",
+      "turkish": "Allahım! Biz yalnız sana kulluk ederiz. Namazı yalnız senin için kılarız, ancak sana secde ederiz. Yalnız sana koşar ve sana yaklaştıracak şeyleri kazanmaya çalışırız. İbadetlerini sevinçle yaparız. Rahmetinin devamını ve çoğalmasını dileriz. Azabından korkarız, şüphesiz senin azabın kafirlere ve inançsızlara ulaşır.",
+      "transliteration": "Allâhumme iyyâke na'budu ve leke nusalli ve nescudu ve ileyke nes'a ve nahfidu nercû rahmeteke ve nahşâ azâbeke inne azâbeke bilkuffâri mulhık.",
+      "category": "namaz",
+      "explanation": "1. Kunut duasından hemen sonra okunur.",
+      "words": [
+        {
+          "arabic": "إِيَّاكَ نَعْبُدُ",
+          "turkish": "Yalnız sana kulluk ederiz"
+        },
+        {
+          "arabic": "وَلَكَ نُصَلِّي وَنَسْجُدُ",
+          "turkish": "Senin için namaz kılar ve secde ederiz"
+        },
+        {
+          "arabic": "نَرْجُو رَحْمَتَكَ",
+          "turkish": "Rahmetini dileriz"
+        },
+        {
+          "arabic": "وَنَخْشَى عَذَابَكَ",
+          "turkish": "Azabından korkarız"
+        }
+      ]
+    },
+    {
+      "id": "dua_hasir",
+      "title": "Hüvallâhüllezî (Haşr 22-24)",
+      "arabic": "هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَٰنُ الرَّحِيمُ هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ",
+      "turkish": "O, öyle Allah'tır ki O'ndan başka tanrı yoktur. Görülmeyeni ve görüleni bilendir. O, esirgeyen bağışlayandır. O, mâlik ve sahiptir, münezzehtir, selâmet verendir, emniyete kavuşturandır, gözetip koruyandır, üstündür, istediğini zorla yaptırandır, büyüklükte eşi olmayandır. Allah puta tapanların ortak koştukları şeylerden münezzehtir. O, yaratan, var eden, varlıklara şekil veren Allah'tır. En güzel isimler O'nundur.",
+      "transliteration": "Huvallahullezi la ilahe illa hu 'alimulgaybi vessehadeti huverrahmanurrahiym. Huvallahullezi la ilahe illa hu elmelikul kuddususselamul mu'minul muheyminul 'aziyzul cebbarul mutekebbir subhanallahi 'amma yusrikun. Huvallahul halikul - bariulmusavviru lehul esma ulhusna yusebbihu lehu ma fissemavati vel'ard. Ve huvel'azizulhakim.",
+      "category": "namaz",
+      "explanation": "Haşr Suresi 22-24. ayetler. Namazdan sonra okunur.",
+      "words": [
+        {
+          "arabic": "هُوَ اللَّهُ",
+          "turkish": "O Allah'tır"
+        },
+        {
+          "arabic": "الْمَلِكُ الْقُدُّوسُ السَّلَامُ",
+          "turkish": "Melik, Kuddus, Selam"
+        },
+        {
+          "arabic": "الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ",
+          "turkish": "Yaratan, var eden, şekil veren"
+        },
+        {
+          "arabic": "لَهُ الْأَسْمَاءُ الْحُسْنَىٰ",
+          "turkish": "En güzel isimler O'nundur"
+        }
+      ]
+    },
+    {
+      "id": "sure_fatiha",
+      "title": "Fâtiha Suresi",
+      "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ الرَّحْمَٰنِ الرَّحِيمِ مَالِكِ يَوْمِ الدِّينِ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+      "turkish": "Hamd, Âlemlerin Rabbi, Rahmân, Rahîm, hesap ve ceza gününün maliki Allah'a mahsustur. Yalnız sana ibadet ederiz ve yalnız senden yardım dileriz. Bizi doğru yola ilet.",
+      "transliteration": "Elhamdu lillâhi rabbil'alemin. Errahmânir'rahim. Mâliki yevmiddin. İyyâke na'budu ve iyyâke neste'în, İhdinessırâtel mustakîm. Sırâtellezine en'amte aleyhim ğayrilmağdûbi aleyhim ve leddâllîn.",
+      "category": "namaz",
+      "explanation": "Kur'an'ın ilk suresi. Her rekatın başında okunur.",
+      "words": [
+        {
+          "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "turkish": "Rahman ve Rahim Allah'ın adıyla"
+        },
+        {
+          "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+          "turkish": "Hamd alemlerin Rabbi Allah'a"
+        },
+        {
+          "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "turkish": "Yalnız sana kulluk eder, senden yardım dileriz"
+        },
+        {
+          "arabic": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+          "turkish": "Bizi doğru yola ilet"
+        }
+      ]
+    },
+    {
+      "id": "sure_ihlas",
+      "title": "İhlâs Suresi",
+      "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ اللَّهُ الصَّمَدُ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "turkish": "De ki: O, Allah'tır, bir tektir. Allah Samed'dir. Ondan çocuk olmamıştır. Kendisi de doğmamıştır. Hiçbir şey O'na denk ve benzer değildir.",
+      "transliteration": "Kul hüvellâhü ehad. Allâhussamed. Lem yelid ve lem yûled. Ve lem yekün lehû küfüven ehad.",
+      "category": "namaz",
+      "explanation": "İhlas Suresi. Namazda Fâtiha'dan sonra okunur.",
+      "words": [
+        {
+          "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+          "turkish": "De ki: O Allah birdir"
+        },
+        {
+          "arabic": "اللَّهُ الصَّمَدُ",
+          "turkish": "Allah Samed'dir"
+        },
+        {
+          "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+          "turkish": "Doğurmamış ve doğmamıştır"
+        },
+        {
+          "arabic": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+          "turkish": "Hiçbir şey O'na denk değildir"
+        }
+      ]
+    },
+    {
+      "id": "sure_felak",
+      "title": "Felak Suresi",
+      "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+      "turkish": "De ki: Yarattığı şeylerin kötülüğünden, karanlığı çöktüğü zaman gecenin kötülüğünden, düğümlere üfleyenlerin kötülüğünden, haset ettiği zaman hasetçinin kötülüğünden, sabah aydınlığının Rabbine sığınırım.",
+      "transliteration": "Kul e'ûzu birabbilfelak. Min şerri mâ halak. Ve min şerri ğasikın izâ vekab. Ve min şerrinneffâsâti fil'ukad. Ve min şerri hâsidin izâ hased.",
+      "category": "namaz",
+      "explanation": "Felak Suresi. Namazda okunur.",
+      "words": []
+    },
+    {
+      "id": "sure_nas",
+      "title": "Nâs Suresi",
+      "arabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ مَلِكِ النَّاسِ إِلَٰهِ النَّاسِ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ مِنَ الْجِنَّةِ وَالنَّاسِ",
+      "turkish": "De ki: Cinlerden ve insanlardan; insanların kalplerine vesvese veren sinsi vesvesecinin kötülüğünden, insanların Rabbine, insanların Melik'ine, insanların İlah'ına sığınırım.",
+      "transliteration": "Kul e'ûzu birabbinnâsi. Melikinnâsi. İlâhinnâsi. Min şerrilvesvâsilhannâsi. Ellezî yuvesvisu fî sudûrinnâsi. Minelcinneti vennâsi.",
+      "category": "namaz",
+      "explanation": "Nâs Suresi. Felak ile birlikte namazda okunur.",
+      "words": []
+    },
+    {
+      "id": "sure_kevser",
+      "title": "Kevser Suresi",
+      "arabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ فَصَلِّ لِرَبِّكَ وَانْحَرْ إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+      "turkish": "Şüphesiz biz sana Kevser'i verdik. O halde, Rabbin için namaz kıl, kurban kes. Doğrusu sana buğzeden, soyu kesik olanın ta kendisidir.",
+      "transliteration": "İnnâ a'taynâkelkevser. Fesalli lirabbike venhar. İnne şânieke huvel'ebter.",
+      "category": "namaz",
+      "explanation": "Kevser Suresi — Kur'an'ın en kısa surelerinden.",
+      "words": []
+    },
+    {
+      "id": "sure_kafirun",
+      "title": "Kâfirûn Suresi",
+      "arabic": "قُلْ يَا أَيُّهَا الْكَافِرُونَ لَا أَعْبُدُ مَا تَعْبُدُونَ وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+      "turkish": "De ki: Ey kâfirler! Ben sizin kulluk ettiklerinize kulluk etmem. Siz de benim kulluk ettiğime kulluk edecek değilsiniz. Sizin dininiz size, benim dinim de banadır.",
+      "transliteration": "Kul yâ eyyuhel kâfirûn. Lâ a'budu mâ ta'budûn. Ve lâ entum âbidûne mâ a'bud. Ve lâ ene âbidun mâ abedtum. Ve lâ entum âbidûne mâ a'bud. Lekum dînukum veliye dîn.",
+      "category": "namaz",
+      "explanation": "Kâfirûn Suresi. Namazda okunur.",
+      "words": []
+    },
+    {
+      "id": "sure_fil",
+      "title": "Fil Suresi",
+      "arabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+      "turkish": "Rabbinin, fil sahiplerine ne yaptığını görmedin mi? Onların tuzaklarını boşa çıkarmadı mı? Üzerlerine balçıktan pişirilmiş taşlar atan sürü sürü kuşlar gönderdi. Nihayet onları yenilmiş ekin yaprakları haline getirdi.",
+      "transliteration": "Elem tera keyfe fe'ale rabbuke biashâbilfîl. Elem yec'al keydehum fî tadlîl. Ve ersele aleyhim tayran ebâbîl. Termîhim bihicâratin min siccîl. Fece'alehum ke'asfin me'kûl.",
+      "category": "namaz",
+      "explanation": "Fil Suresi.",
+      "words": []
+    },
+    {
+      "id": "sure_kureys",
+      "title": "Kureyş Suresi",
+      "arabic": "لِإِيلَافِ قُرَيْشٍ إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ",
+      "turkish": "Kureyş'i ısındırıp alıştırdığı; onları kışın ve yazın yaptıkları yolculuğa ısındırıp alıştırdığı için, Kureyş de, kendilerini besleyip açlıklarını gideren ve onları korkudan emin kılan bu evin Rabbine kulluk etsin.",
+      "transliteration": "Li'î lâfi Kurayş'in. Îlâfihim rihleteşşitâi vessayf. Felya'budû rabbe hâzelbeyt. Ellezî et'amehum min cû'in ve âmenehum min havf.",
+      "category": "namaz",
+      "explanation": "Kureyş Suresi.",
+      "words": []
+    },
+    {
+      "id": "sure_maun",
+      "title": "Mâûn Suresi",
+      "arabic": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ فَوَيْلٌ لِّلْمُصَلِّينَ الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ الَّذِينَ هُمْ يُرَاءُونَ وَيَمْنَعُونَ الْمَاعُونَ",
+      "turkish": "Gördün mü, o hesap ve ceza gününü yalanlayanı! İşte o, yetimi itip kakan, yoksula yedirmeyi özendirmeyen kimsedir. Yazıklar olsun o namaz kılanlara ki, onlar namazlarını ciddiye almazlar.",
+      "transliteration": "Era'eytellezî yukezzibu biddîn. Fezâlikellezî, yedu'ulyetîm. Ve lâ yehuddu alâ ta'âmilmiskîn. Feveylun lilmusallîn. Ellezîne hum an salâtihim sâhûn. Ellezîne hum yurâûne. Ve yemne'ûnelmâ'ûn.",
+      "category": "namaz",
+      "explanation": "Mâûn Suresi.",
+      "words": []
+    },
+    {
+      "id": "sure_nasr",
+      "title": "Nasr Suresi",
+      "arabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ إِنَّهُ كَانَ تَوَّابًا",
+      "turkish": "Allah'ın yardımı ve zafer günü gelip, insanların Allah'ın dinine akın akın girdiklerini görünce, Rabbini överek tesbih et; O'ndan bağışlama dile, çünkü O, tevbeleri daima kabul edendir.",
+      "transliteration": "İzâ câe nasrullahi velfeth. Ve raeytennâse yedhulûne fî dinillâhi efvâcâ. Fesebbih bihamdi rabbike vestağfirh. İnnehû kâne tevvâbâ.",
+      "category": "namaz",
+      "explanation": "Nasr Suresi.",
+      "words": []
+    },
+    {
+      "id": "sure_tebbet",
+      "title": "Tebbet Suresi",
+      "arabic": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ فِي جِيدِهَا حَبْلٌ مِّن مَّسَدٍ",
+      "turkish": "Ebû Leheb'in elleri kurusun. Zaten kurudu. Ona ne malı fayda verdi, ne de kazandığı. O, bir alevli ateşe girecektir.",
+      "transliteration": "Tebbet yedâ ebî leheben ve tebb. Mâ eğnâ anhu mâluhû ve mâ keseb. Seyeslâ nâren zâte leheb. Vemraetuhû hammâletelhatab. Fî cî dihâ hablun min mesed.",
+      "category": "namaz",
+      "explanation": "Tebbet Suresi.",
+      "words": []
+    }
+  ]
+}

@@ -1,120 +1,241 @@
 {
   "module": "namaz_ogreniyorum",
-  "title": "Adım Adım Namaz Simülatörü",
+  "title": "Adım Adım Namaz Öğreniyorum",
   "units": [
     {
       "id": "abdest_adimlari",
-      "unit_title": "1. Bölüm: Abdest Almayı Öğreniyoruz 💧",
+      "unit_title": "Abdest Almayı Öğreniyoruz 💧",
       "steps": [
         {
           "step_number": 1,
           "title": "Niyet ve Besmele",
-          "description": "'Niyet ettim Allah rızası için abdest almaya' deriz ve 'Eûzü billahi mineşşeytanirracîm, Bismillahirrahmanirrahim' diyerek başlarız.",
-          "image_src": "/images/abdest_niyet.png"
+          "description": "Niyet ederiz ve Besmele ile başlarız.",
+          "detail": "Önce 'Niyet ettim Allah rızası için abdest almaya' diye niyet ederiz. Sonra 'Eûzü billahi mineşşeytanirracîm, Bismillahirrahmanirrahim' diyerek abdeste başlarız.",
+          "emoji": "🤲",
+          "image_src": "/images/namaz/abdest_ust.png"
         },
         {
           "step_number": 2,
           "title": "Elleri Yıkamak",
-          "description": "Ellerimizi bileklere kadar, parmak aralarını da ovalayarak 3 kere güzelce yıkarız. 👐",
-          "image_src": "/images/abdest_eller.png"
+          "description": "Ellerimizi bileklere kadar 3 kere yıkarız.",
+          "detail": "Parmak aralarını da ovalayarak, bileklere kadar her iki elimizi 3 kere güzelce yıkarız. Parmaklarda yüzük varsa oynatarak altını da yıkamalıyız.",
+          "emoji": "👐"
         },
         {
           "step_number": 3,
           "title": "Ağza Su Vermek",
-          "description": "Sağ elimizle ağzımıza 3 kere su alıp çalkalarız. Dişlerimizin temiz olmasına dikkat ederiz. 🚰",
-          "image_src": "/images/abdest_agiz.png"
+          "description": "Ağzımıza 3 kere su alıp çalkalarız.",
+          "detail": "Sağ elimizle ağzımıza 3 kere su alıp çalkalarız. Dişlerimizin temiz olmasına dikkat ederiz. Misvak veya diş fırçası kullanmak sünnettir.",
+          "emoji": "🚰"
         },
         {
           "step_number": 4,
           "title": "Burna Su Vermek",
-          "description": "Sağ elimizle burnumuza 3 kere su çeker, sol elimizle temizleriz. 👃",
-          "image_src": "/images/abdest_burun.png"
+          "description": "Burnumuza 3 kere su çekeriz.",
+          "detail": "Sağ elimizle burnumuza 3 kere su çeker, sol elimizle (küçük parmakla) burnumuzu temizleriz.",
+          "emoji": "👃"
         },
         {
           "step_number": 5,
           "title": "Yüzü Yıkamak",
-          "description": "Alnımızın saç bitiminden çenemizin altına kadar tüm yüzümüzü 3 kere yıkarız. 😊",
-          "image_src": "/images/abdest_yuz.png"
+          "description": "Yüzümüzü 3 kere yıkarız.",
+          "detail": "Alnımızın saç bitiminden çenemizin altına kadar, kulak yumuşaklarına kadar tüm yüzümüzü 3 kere yıkarız.",
+          "emoji": "😊"
         },
         {
           "step_number": 6,
           "title": "Kolları Yıkamak",
-          "description": "Önce sağ kolumuzu, sonra sol kolumuzu dirseklerle beraber 3 kere yıkarız. 💪",
-          "image_src": "/images/abdest_kollar.png"
+          "description": "Kollarımızı dirseklerle beraber 3 kere yıkarız.",
+          "detail": "Önce sağ kolumuzu, sonra sol kolumuzu dirseklerle beraber 3 kere yıkarız. Dirsek uçlarını da yıkamayı unutmayalım.",
+          "emoji": "💪"
         },
         {
           "step_number": 7,
           "title": "Başı Meshetmek",
-          "description": "Sağ elimizin içiyle başımızın dörtte birini ıslatarak sıvazlarız (meshederiz). 💆‍♂️",
-          "image_src": "/images/abdest_bas.png"
+          "description": "Başımızın dörtte birini meshederiz.",
+          "detail": "Ellerimizi ıslatıp, sağ elimizin içiyle başımızın dörtte birini (ön kısmını) ıslatarak sıvazlarız (meshederiz).",
+          "emoji": "💆"
         },
         {
           "step_number": 8,
           "title": "Kulak ve Boynu Meshetmek",
-          "description": "Ellerimizi tekrar ıslatıp kulaklarımızın içini ve arkasını, sonra da boynumuzu meshederiz. 👂",
-          "image_src": "/images/abdest_boyun.png"
+          "description": "Kulaklarımızı ve boynumuzu meshederiz.",
+          "detail": "Ellerimizi tekrar ıslatıp; başparmaklarla kulaklarımızın içini, işaret parmaklarıyla kulak arkasını, sonra da boynumuzu üç parmakla meshederiz.",
+          "emoji": "👂"
         },
         {
           "step_number": 9,
           "title": "Ayakları Yıkamak",
-          "description": "Önce sağ, sonra sol ayağımızı topuklarla beraber, parmak aralarını da ovalayarak 3 kere yıkarız. 🦶",
-          "image_src": "/images/abdest_ayak.png"
+          "description": "Ayaklarımızı topuklarla beraber 3 kere yıkarız.",
+          "detail": "Önce sağ, sonra sol ayağımızı topuklarla beraber, parmak aralarını da ovalayarak 3 kere yıkarız. Parmak aralarını ovalamak sünnettir.",
+          "emoji": "🦶"
         }
-      ],
-      "quiz": {
-        "question": "Abdest alırken yüzümüzü yıkadıktan hemen sonra hangi organımızı yıkarız?",
-        "options": ["Ayaklarımızı", "Kollarımızı", "Ağzımızı", "Başımızı"],
-        "correct_answer": "Kollarımızı",
-        "xp_reward": 15
-      }
+      ]
     },
     {
       "id": "namaz_kilinisi",
-      "unit_title": "2. Bölüm: Namaz Kılmayı Öğreniyoruz 🤲",
+      "unit_title": "Namaz Kılmayı Öğreniyoruz 🕌",
       "steps": [
         {
           "step_number": 1,
           "title": "Niyet ve İftitah Tekbiri",
-          "description": "Kıbleye döneriz. Kılacağımız namaza niyet ederiz. Erkekler ellerini kulak hizasına kaldırıp 'Allahu Ekber' diyerek namaza başlar. 🕋",
-          "image_src": "/images/namaz_tekbir.png"
+          "description": "Kıbleye dönüp 'Allahu Ekber' diyerek namaza başlarız.",
+          "detail": "Kıbleye döneriz. Kılacağımız namaza niyet ederiz. Erkekler ellerini kulak hizasına, kadınlar göğüs hizasına kaldırıp 'Allahu Ekber' der. Sonra ellerini bağlar.",
+          "emoji": "🕋",
+          "image_src": "/images/namaz/namaz_ust.png",
+          "readings": [
+            {
+              "arabic": "اللَّهُ أَكْبَرُ",
+              "turkish": "Allah en büyüktür",
+              "transliteration": "Allahu Ekber",
+              "note": "İftitah tekbiri — Namaza başlarken söylenir"
+            }
+          ]
         },
         {
           "step_number": 2,
-          "title": "Kıyam ve Kıraat",
-          "description": "Ellerimizi bağlayıp ayakta dururuz (Kıyam). Gözlerimiz secde edeceğimiz yerdedir. Burada Sübhaneke, Fatiha ve Kur'an'dan bir sure okuruz (Kıraat). 📖",
-          "image_src": "/images/namaz_kiyam.png"
+          "title": "Kıyam — Ayakta Duruş ve Kıraat",
+          "description": "Ellerimizi bağlayıp ayakta dururuz. Sübhaneke, Fatiha ve bir sure okuruz.",
+          "detail": "Ellerimizi bağlayıp ayakta dururuz (Kıyam). Gözlerimiz secde edeceğimiz yerdedir. İlk rekatta: Sübhaneke → Eûzübesmele → Fatiha → Zamm-ı sure (Kur'an'dan bir sure) okuruz. Sonraki rekatlarda sadece Fatiha + sure okuruz.",
+          "emoji": "📖",
+          "readings": [
+            {
+              "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلَا إِلَهَ غَيْرُكَ",
+              "turkish": "Allah'ım! Sen eksik sıfatlardan pak ve uzaksın. Seni daima tenzih eder ve överim. Senin adın mübarektir. Varlığın her şeyden üstündür. Senden başka ilah yoktur.",
+              "transliteration": "Subhânekellâhumme ve bi hamdik ve tebârakesmuk ve teâlâ cedduk ve lâ ilâhe ğayruk",
+              "note": "Sübhaneke — İlk rekatta okunur"
+            },
+            {
+              "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ الرَّحْمَٰنِ الرَّحِيمِ مَالِكِ يَوْمِ الدِّينِ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+              "turkish": "Hamd, Âlemlerin Rabbi, Rahmân, Rahîm, hesap ve ceza gününün maliki Allah'a mahsustur. Yalnız sana ibadet ederiz ve yalnız senden yardım dileriz. Bizi doğru yola ilet.",
+              "transliteration": "Elhamdu lillâhi rabbil'alemin. Errahmânir'rahim. Mâliki yevmiddin. İyyâke na'budu ve iyyâke neste'în. İhdinessırâtel mustakîm. Sırâtellezine en'amte aleyhim ğayrilmağdûbi aleyhim ve leddâllîn.",
+              "note": "Fâtiha Suresi — Her rekatta okunur"
+            }
+          ]
         },
         {
           "step_number": 3,
-          "title": "Rüku",
-          "description": "'Allahu Ekber' diyerek eğiliriz. Ellerimizi dizlerimize koyar, sırtımızı düz tutarız. 3 kere 'Sübhane Rabbiye'l-Azîm' deriz. 🙇‍♂️",
-          "image_src": "/images/namaz_ruku.png"
+          "title": "Rükû — Eğilme",
+          "description": "'Allahu Ekber' diyerek eğiliriz. 3 kere 'Sübhane Rabbiye'l-Azîm' deriz.",
+          "detail": "'Allahu Ekber' diyerek eğiliriz. Ellerimizi dizlerimize koyar, sırtımızı düz tutarız. En az 3 kere 'Sübhâne Rabbiye'l-Azîm' deriz. Sonra 'Semi'allahu limen hamideh' diyerek doğruluruz.",
+          "emoji": "🙇",
+          "readings": [
+            {
+              "arabic": "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
+              "turkish": "Büyük Rabbimi tenzih ederim",
+              "transliteration": "Sübhâne Rabbiye'l-Azîm",
+              "note": "Rükûda en az 3 kere söylenir"
+            },
+            {
+              "arabic": "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ",
+              "turkish": "Allah, kendisine hamd edeni işitir",
+              "transliteration": "Semi'allahu limen hamideh",
+              "note": "Rükûdan doğrulurken söylenir"
+            },
+            {
+              "arabic": "رَبَّنَا لَكَ الْحَمْدُ",
+              "turkish": "Rabbimiz, hamd sana mahsustur",
+              "transliteration": "Rabbenâ lekel hamd",
+              "note": "Doğrulduktan sonra söylenir"
+            }
+          ]
         },
         {
           "step_number": 4,
-          "title": "Secde",
-          "description": "'Allahu Ekber' diyerek yere kapanırız. Alnımız, burnumuz, ellerimiz, dizlerimiz ve ayak uçlarımız yere değer. 3 kere 'Sübhane Rabbiye'l-A'lâ' deriz. 🙇‍♂️",
-          "image_src": "/images/namaz_secde.png"
+          "title": "Secde — Yere Kapanma",
+          "description": "'Allahu Ekber' diyerek yere kapanırız. 3 kere 'Sübhane Rabbiye'l-A'lâ' deriz.",
+          "detail": "'Allahu Ekber' diyerek yere kapanırız. Alnımız, burnumuz, iki elimiz, iki dizimiz ve iki ayak ucumuz yere değer. En az 3 kere 'Sübhâne Rabbiye'l-A'lâ' deriz. Secde en faziletli ibadet durumudur.",
+          "emoji": "🙏",
+          "readings": [
+            {
+              "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى",
+              "turkish": "Yüce Rabbimi tenzih ederim",
+              "transliteration": "Sübhâne Rabbiye'l-A'lâ",
+              "note": "Secdede en az 3 kere söylenir"
+            }
+          ]
         },
         {
           "step_number": 5,
-          "title": "Kade (Oturuş)",
-          "description": "Namazın sonunda dizlerimizin üzerine otururuz. Ettahiyyatü, Salli-Barik ve Rabbena dualarını okuruz. 🤲",
-          "image_src": "/images/namaz_kade.png"
+          "title": "İki Secde Arası Oturuş",
+          "description": "İki secde arasında otururuz. 'Allahummaghfirlî' duası okunur.",
+          "detail": "İlk secdeden sonra 'Allahu Ekber' diyerek kalkıp otururuz. Sol ayağımızı yere serip üzerine otururuz, sağ ayağımızı dik tutarız. Kısa bir dua okuruz. Sonra tekrar 'Allahu Ekber' diyerek ikinci secdeye gideriz.",
+          "emoji": "🧎",
+          "readings": [
+            {
+              "arabic": "اَللَّهُمَّ اغْفِرْلِي",
+              "turkish": "Allah'ım beni bağışla",
+              "transliteration": "Allahummaghfirlî",
+              "note": "İki secde arasında otururken okunur"
+            }
+          ]
         },
         {
           "step_number": 6,
-          "title": "Selam Vermek",
-          "description": "Önce sağ omzumuza, sonra sol omzumuza bakarak 'Esselâmü aleyküm ve rahmetullah' deriz ve namazı bitiririz. 🕊️",
-          "image_src": "/images/namaz_selam.png"
+          "title": "Ka'de — Oturuş (Ettehiyyâtü)",
+          "description": "2. rekatın sonunda oturup Ettehiyyâtü duasını okuruz.",
+          "detail": "İki rekatlı namazlarda son oturuş, dört rekatlı namazlarda ise ilk oturuştur. Sol ayağımızı yere serip üzerine otururuz, sağ ayağımızı dik tutarız. İşaret parmağımızı kaldırarak Ettehiyyâtü'yü okuruz.",
+          "emoji": "🤲",
+          "image_src": "/images/namaz/namaz_alt.png",
+          "readings": [
+            {
+              "arabic": "اَلتَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ اَلسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ اَشْهَدُ اَنْ لَا إِلَهَ إِلَّا اللَّهُ وَاَشْهَدُ اَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+              "turkish": "Bütün ibadetler Allah'a dır. Ey Peygamber! Allah'ın selamı, rahmet ve bereketleri senin üzerine olsun. Selam bizim üzerimize ve Allah'ın iyi kulları üzerine olsun. Şahitlik ederim ki Allah'tan başka ilah yoktur ve Muhammed O'nun kulu ve elçisidir.",
+              "transliteration": "Ettehiyyâtu lillâhi vessalevâtu vettayibât. Esselâmu aleyke eyyuhen-Nebiyyu ve rahmetullahi ve berakâtuhu. Esselâmu aleynâ ve alâ ibâdillâhis-Sâlihîn. Eşhedu en lâ ilâhe illallâh ve eşhedu enne Muhammeden abduhû ve Rasuluh.",
+              "note": "Ettehiyyâtü — Her oturuşta okunur"
+            }
+          ]
+        },
+        {
+          "step_number": 7,
+          "title": "Son Oturuş — Salli, Bârik ve Dualar",
+          "description": "Son oturuşta Salli, Bârik dualarını ve Rabbenâ dualarını okuruz.",
+          "detail": "Ettehiyyâtü'den sonra sırasıyla: Allahümme Salli → Allahümme Bârik → Rabbenâ Âtinâ → Rabbenâğfirlî dualarını okuruz. Sonra önce sağa, sonra sola selam veririz.",
+          "emoji": "🕌",
+          "readings": [
+            {
+              "arabic": "اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+              "turkish": "Allah'ım! Muhammed'e ve ümmetine rahmet eyle; şerefini yücelt. İbrahim'e ve ümmetine rahmet ettiğin gibi.",
+              "transliteration": "Allâhumme salli alâ Muhammedin ve alâ âli Muhammed. Kemâ salleyte alâ İbrahime ve alâ âli İbrahim. İnneke hamidun mecîd.",
+              "note": "Salli Duası — Ettehiyyâtü'den sonra"
+            },
+            {
+              "arabic": "اَللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+              "turkish": "Allah'ım! Muhammed'e ve ümmetine hayır ve bereket ver. İbrahim'e ve ümmetine verdiğin gibi.",
+              "transliteration": "Allâhumme barik alâ Muhammedin ve alâ âli Muhammed. Kemâ barekte alâ İbrahîme ve alâ âli İbrahim. İnneke hamidun mecîd.",
+              "note": "Bârik Duası — Salli'den sonra"
+            },
+            {
+              "arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+              "turkish": "Rabbimiz! Bize dünyada iyilik ver, ahirette de iyilik ver. Bizi ateş azabından koru.",
+              "transliteration": "Rabbenâ âtina fid'dunyâ haseneten ve fil'âhirati haseneten ve kınâ azâbennâr.",
+              "note": "Rabbenâ Âtinâ — Bârik'ten sonra"
+            },
+            {
+              "arabic": "رَبَّنَا اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ",
+              "turkish": "Rabbimiz! Beni, anamı, babamı ve bütün mü'minleri hesap gününde bağışla.",
+              "transliteration": "Rabbenâğfirlî ve li-vâlideyye ve lil-Mu'minine yevme yekûmu'l hisâb.",
+              "note": "Rabbenâğfirlî — Son dua"
+            }
+          ]
+        },
+        {
+          "step_number": 8,
+          "title": "Selam Verme",
+          "description": "Önce sağa, sonra sola selam vererek namazı bitiririz.",
+          "detail": "Önce sağ omzumuza bakarak 'Esselâmü aleyküm ve rahmetullah' deriz. Sonra sol omzumuza bakarak aynı şekilde selam veririz. Böylece namazımız tamamlanır.",
+          "emoji": "🕊️",
+          "image_src": "/images/namaz/namaz_son.png",
+          "readings": [
+            {
+              "arabic": "اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
+              "turkish": "Allah'ın selamı ve rahmeti üzerinize olsun",
+              "transliteration": "Esselâmu aleyküm ve rahmetullah",
+              "note": "Önce sağa, sonra sola — 2 kere söylenir"
+            }
+          ]
         }
-      ],
-      "quiz": {
-        "question": "Namazda ayakta dururken (Kıyam) ellerimizi bağladıktan sonra ilk olarak hangi duayı okuruz?",
-        "options": ["Fatiha Suresi", "İhlas Suresi", "Sübhaneke Duası", "Ettahiyyatü Duası"],
-        "correct_answer": "Sübhaneke Duası",
-        "xp_reward": 20
-      }
+      ]
     }
   ]
 }

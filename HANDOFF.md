@@ -1,7 +1,7 @@
 # Candin — Oturum Devri (Handoff)
 
-**Son güncelleme:** 2026-05-17
-**Durum:** İçerik genişletildi — 28 ünite × 10 kart + 10 quiz = 280 kart + 280 soru, PB'de canlı.
+**Son güncelleme:** 2026-05-24
+**Durum:** 5 sekmeli yeni mimari tamamlandı — Kur'an elifbası (28 ders, lokal), Dualar (22), Namaz (17 adım, Hanefi), Hikayeler. PB'ye seed edildi.
 
 ---
 
@@ -9,181 +9,157 @@
 
 ```bash
 cd "/Volumes/King/Vibe/Canım Dinim/Candin"
-colima start      # gerekirse
-docker compose up -d
+npm run dev        # Vite dev server (port 8765)
 ```
 
 - **Web (Vite + React):** http://localhost:8765
-- **PocketBase API:** http://localhost:8090
+- **PocketBase API:** http://localhost:8090 (SSH tunnel üzerinden)
 - **PocketBase Admin UI:** http://localhost:8090/_/
 
 ### Superuser
 - E-posta: `ethemkoklu@gmail.com`
 - Şifre: `Ek**123719`
-- Şifreyi unutursan/sıfırlamak istersen:
-  ```bash
-  docker exec candin-pb /usr/local/bin/pocketbase --dir /pb_data superuser upsert <email> <pass>
-  ```
 
 ---
 
-## Önemli Gotcha'lar (Bir Daha Tuzağa Düşme)
+## Önemli Gotcha'lar
 
-### 1. Colima mount path
-Proje `/Volumes/King/...` altında. Colima varsayılan olarak `/Volumes`'u mount **etmez**. Çözüldü:
-- `/Volumes/King/Vibe/Colima/default/colima.yaml` içine eklendi:
-  ```yaml
-  mounts:
-    - location: /Volumes/King
-      writable: true
-  ```
-- Yeni Colima VM'i başlattığında bu ayar korunmalı; aksi halde container `package.json` bulamaz (ENOENT).
+### 1. Vite port: 8765
+`vite.config.ts`'te `server.port: 8765, strictPort: true`. Değiştirme.
 
-### 2. PocketBase CLI `--dir` flag'i ZORUNLU
-`docker exec candin-pb pocketbase superuser upsert ...` çalıştırırken **mutlaka** `--dir /pb_data` ver. Aksi halde CLI varsayılan olarak `/usr/local/bin/pb_data` dizinine yazar, server `/pb_data` dizinini kullanır → şifre uyuşmaz, "Invalid login credentials" hatası alırsın.
+### 2. Seed script
+```bash
+node scripts/seed-pb.mjs
+```
+Tüm content_items'ları siler, JSON'dan yeniden yükler. Idempotent.
 
-### 3. PocketBase v0.38 API
-- Eski API (`Dao`, `SchemaField`, `dao.saveCollection`) **kaldırıldı**.
-- Yeni API: `app.findCollectionByNameOrId()`, `new NumberField/TextField/JSONField(...)`, `collection.fields.add(...)`, `app.save(collection)`.
-- Çalışan örnek: `pb_migrations/1715000000_extend_users.js`.
+### 3. elifba_dersler.json — statik JSON'dan okunur
+Kur'an sekmesi `pbContent.fetchElifbaDersler()` ile `src/data/elifba_dersler.json`'dan okur, PocketBase'den değil. Medya dosyaları `public/elifba/dersN/` altında.
 
-### 4. Vite, Next.js değil
-Kullanıcı zaman zaman "Next.js" diyor ama proje **Vite 7 + React 19 + React Router 7**. `app/` veya `pages/` Next router'ı varsaymak yanlış. Rotalar `src/App.tsx` içinde `<Routes>`.
+### 4. Amiri font — index.html'de Google Fonts
+Arapça metinler için Amiri fontu `index.html`'de `<link>` ile yüklü. Kaldırma.
 
 ### 5. Türkçe dosya yolu
-Proje yolu `/Volumes/King/Vibe/Canım Dinim/Candin` — Türkçe karakter içeriyor. Şu an sorun yok ama yeni script eklerken path'i hep tırnak içine al.
+Proje yolu `/Volumes/King/Vibe/Canım Dinim/Candin` — path'leri tırnak içine al.
 
 ---
 
-## Kullanıcının KESİN Kuralları (Asla Atlama)
+## Kullanıcının KESİN Kuralları
 
-- **Türkçe:** UI metinleri, butonlar, kullanıcıya görünen her şey **kesinlikle** Türkçe.
-- **Yasaklı isimlendirme:** "god-mode" ve türevleri **asla** kullanılamaz (kod, değişken, rota, yorum). Yerine **"Yönetici Paneli"** veya **"Ebeveyn Paneli"**.
-- **Animasyon tonu:** Profil ekranı coşkulu (framer-motion bol bol), Yönetici Paneli sade ve profesyonel.
+- **Türkçe:** Tüm UI metinleri Türkçe.
+- **Yasaklı isimlendirme:** "god-mode" ve türevleri kullanılamaz. Yerine "Yönetici Paneli" veya "Ebeveyn Paneli".
+- **Animasyon tonu:** Profil coşkulu, Yönetici Paneli sade.
 
 ---
 
 ## Tamamlanan İşler
 
-### Backend / Altyapı
-- `Dockerfile` — Vite dev container (port 8765)
-- `docker-compose.yml` — `web` + `pb` servisleri, `pb_data` volume, healthcheck
-- `.dockerignore`
-- `pb_migrations/1715000000_extend_users.js` — `users` koleksiyonuna `xp`, `streak`, `last_active_date`, `completed_lessons`, `unlocked_units`, `badges` alanları
+### 5 Sekmeli Yeni Mimari (2026-05-24)
 
-### Frontend / Auth
-- `src/lib/pb.ts` — PocketBase client + `CandinUser` tipi + helpers
-- `src/lib/auth.tsx` — `AuthProvider` + `useAuth()` + login/register/logout/refresh
-- `src/pages/auth/Login.tsx` — Türkçe giriş formu
-- `src/pages/auth/Register.tsx` — Türkçe kayıt formu (min 8 karakter şifre)
-- `src/components/RequireAuth.tsx` — Auth guard wrapper
-- `src/App.tsx` — `<AuthProvider>` wrap, `/giris` + `/kayit` rotaları, tüm öğrenci/admin rotaları `RequireAuth` ile korunuyor
-- `src/main.tsx` — Zustand `registerActivity()` çağrısı kaldırıldı
+Bottom nav: `📖 Dersler | 🤲 Dualar | 🌹 Hikayeler | 💬 Namaz | 🌙 Kur'an`
 
-### Frontend / Veri Bağlama
-- `src/pages/student/Profil.tsx` — `useAuth().user` üzerinden PB'den `xp/streak/badges/name/avatar` okuyor + "Çıkış Yap" butonu
-- `BADGE_CATALOG` Profil içinde inline (id → `{name, icon}` eşleme)
+**Dersler sekmesi** (mevcut Duolingo yapısı, hiç değişmedi):
+- 9 seviye, 28 ünite, her ünitede kart + quiz
+- Dashboard → seviye accordion → ünite kartları
+
+**Dualar sekmesi** (yeni):
+- 22 dua/sure listesi, kategori filtreleme, arama
+- Detay sayfası: Arapça (Amiri font), okunuş, anlam, kelime kelime analiz
+- Ses butonu (audioSrc varsa), "Öğrenildi" işaretleme (localStorage)
+- Dosyalar: `src/pages/student/Dualar.tsx`, `DuaDetail.tsx`
+
+**Hikayeler sekmesi** (yeni):
+- Liste: emoji, başlık, özet, okuma süresi
+- Detay: tam metin (paragraf), önemli dersler, "Öğrenildi"
+- Dosyalar: `src/pages/student/Hikayeler.tsx`, `HikayeDetail.tsx`
+
+**Namaz sekmesi** (yeniden yazıldı):
+- 17 adım: 9 abdest + 8 namaz kılınışı
+- Bölüm başlıkları: "💧 Abdest" / "🕌 Namaz Kılınışı"
+- Her adımda: detaylı açıklama + "Namazda Okunanlar" (Arapça + okunuş + anlam, Amiri font)
+- Hanefi mezhebine göre tüm dualar
+- Dosya: `src/pages/student/Namaz.tsx`
+
+**Kur'an sekmesi** (elifba — tamamen yeniden):
+- 28 elifba dersi (onderalkan.com'dan alındı)
+- Liste: 2 sütunlu grid, ders numarası + başlık + istatistik
+- Detay: harf grid (3/4/5 sütun responsive), tıkla → ses dinle, açıklamalar, yöntem
+- 745 ses + 745 görsel — hepsi `public/elifba/dersN/` altında LOKAL
+- Dosya: `src/pages/student/Kuran.tsx`
+
+### Veri Katmanı
+
+| Dosya | Açıklama |
+|---|---|
+| `src/types/index.ts` | Dua, Hikaye, NamazReading, ElifbaDers, LearnedItem tipleri |
+| `src/lib/pbContent.ts` | fetchDualar(), fetchHikayeler(), fetchElifbaDersler(), fetchNamazFlow() (tüm birimleri birleştirir) |
+| `src/hooks/useProgress.ts` | markLearned/unmarkLearned/isLearned/getLearnedCount (localStorage) |
+| `src/data/dualar.json` | 22 dua/sure seed data (PocketBase'ye yüklendi) |
+| `src/data/elifba_dersler.json` | 28 elifba dersi (statik JSON, PocketBase'den değil) |
+| `src/data/namaz.json` | 17 adım (9 abdest + 8 namaz) + her adımda readings |
+| `src/data/namaz_dualar_sureler.json` | PDF'den çıkarılan ham data (referans) |
+
+### PocketBase Seed
+
+```
+dini_bilgiler: 28
+elifba:        3
+namaz:         2
+sureler:       2
+peygamberler:  2
+dualar:       22
+Toplam:       59
+```
+
+### Font
+- **Amiri** (Google Fonts) — `index.html`'de yüklü
+- Arapça metinler: `style={{ fontFamily: "'Amiri', 'Traditional Arabic', serif" }}`
 
 ---
-
-## Tamamlanan İşler (2026-05-16)
-
-- **content_items koleksiyonu** (`pb_migrations/1715000100_content_items.js`): `module`, `item_id`, `order_index`, `data:JSON`. HANDOFF'taki 5 ayrı koleksiyon planı yerine tek koleksiyon (pragmatik karar).
-- **Seed scripti:** `scripts/seed-pb.mjs` + `npm run seed`. Idempotent (önce siler, sonra yükler).
-- **`src/lib/pbContent.ts`:** async loader'lar — `fetchDiniUnits`, `fetchUnits`, `fetchKuranLetters`, `fetchNamazFlow`, `fetchBlankQuestions`, `fetchProphetStories`.
-- **`src/hooks/useProgress.ts`:** PB users record'unu güncelleyen `addXp/completeLesson/unlockUnit/awardBadge/registerActivity` hook'u. Streak logic'i burada.
-- **5 öğrenci sekmesi:** Dashboard, Kuran, Namaz, Sureler, Peygamberler — tamamen PB'den okuyor. Sureler doğru cevapta `addXp` ile PB'ye yazıyor. Dashboard mount'ta `registerActivity` çağırıyor.
-- **Admin Dashboard (Ebeveyn Paneli):** PB user'a bağlı. accuracyRate/totalTimeSpent/recentActivity/weakTopics henüz tracking yok → placeholder "—" ve boş listeler.
-- **Temizlik:** `src/store/userStore.ts` + `src/lib/dataFetcher.ts` silindi, `zustand` paketten çıkarıldı.
-
-## 9 Seviyeli Müfredat Geçişi (2026-05-17)
-
-- **`dini_bilgiler.json`** — NotebookLM müfredatına göre 28 ünite, 9 seviye. Her ünitede 4 flashcard + 1 quiz.
-- **`DiniUnit` tipine `level: number` eklendi** (`src/types/index.ts`).
-- **`pbContent.ts`** — `fetchDiniUnits()` artık `level` alanını dolduruyor.
-- **`auth.tsx`** — `register()` → `unlocked_units: ["s1_islam_muslim"]`.
-- **Dashboard.tsx** — Seviye bazlı accordion: 9 seviye başlığı (emoji + isim + ilerleme çubuğu), tıklanınca ünite listesi açılıyor. Kilitli seviyeler tıklanamaz.
-- **Quiz.tsx** — Seviye tamamlama bildirimi eklendi.
-- **Seed** — PB'ye 37 content_items yüklendi (28 dini bilgiler + 9 diğer).
-
-| Seviye | Konu | Ünite |
-|--------|------|-------|
-| 1 | Tanışma & Sevgi | 4 |
-| 2 | Şehadet & Tevhid | 3 |
-| 3 | Namaz & Temizlik | 4 |
-| 4 | Oruç & Zekât | 3 |
-| 5 | Peygamberimiz | 2 |
-| 6 | Kur'an & Kutsal Mekânlar | 2 |
-| 7 | İman Esasları | 4 |
-| 8 | Dua & Sureler | 3 |
-| 9 | Güzel Ahlak | 3 |
-
----
-
-## İçerik Genişletme (2026-05-17)
-
-- **`DiniUnit.quiz: Quiz` → `Quiz[]`** dönüşümü tamamlandı (`src/types/index.ts`).
-- **`pbContent.ts`** — `RawDiniUnit.quiz: RawQuiz | RawQuiz[]` backward-compat ile destekleniyor; her zaman array'e normalize edilir.
-- **`Quiz.tsx`** — tüm soruları sırayla soruyor, toplam XP = `quiz.reduce((sum, q) => sum + q.xpReward, 0)`. Geçme koşulu: tüm sorular %100 doğru.
-- **`dini_bilgiler.json`** — 28 ünitenin tamamı **10 kart + 10 soru** formatında. NotebookLM müfredatına dayalı içerik.
-- Quiz XP ödülü: soru başına 5 puan, ünite başına 50 puan toplam.
-- PB'ye 28 dini_bilgiler + 9 diğer = 37 content_items başarıyla seed edildi.
 
 ## Sıradaki İşler (TODO)
 
-### 1. Aktivite/zaman/accuracy tracking
-Admin Dashboard placeholder'larını gerçek veriyle doldurmak için:
-- Yeni PB koleksiyonu `activity_log` (user, date, module, action, earned_xp, status).
-- `useProgress` her XP/completion event'inde log yazsın.
-- Dashboard `pb.collection("activity_log").getList(...).filter user=current` ile okusun.
-- accuracyRate = (success count) / (total) son N etkileşim.
+### 1. Namaz/Abdest Görselleri
+Ethem PDF'den görsel temin edecek. `public/images/namaz/` klasörüne koyulacak, `namaz.json`'daki `image_src` alanları güncellenecek.
 
-### 2. `src/data/*.json` ne olacak?
-Seed referansı olarak repoda kalsın. Üretimde içerik artık PB'den. Yeni içerik için seed JSON'u güncelle → `npm run seed` çalıştır.
+### 2. Hikayeler İçeriği
+Peygamber hikayeleri seed data'sı henüz yok. Ethem referans verecek.
 
-### 3. Mevcut kullanıcı migration notu
-Eski kullanıcıların `unlocked_units`'i `["iman_1"]` olarak kalıyor. Yeni müfredatta bu ID yok. Mevcut kullanıcıları güncellemek için:
-```bash
-node --input-type=module -e "
-import PocketBase from 'pocketbase';
-const pb = new PocketBase('http://localhost:8090');
-await pb.collection('_superusers').authWithPassword('EMAIL', 'PASS');
-const users = await pb.collection('users').getFullList();
-for (const u of users) {
-  if (u.unlocked_units?.includes('iman_1')) {
-    await pb.collection('users').update(u.id, { unlocked_units: ['s1_islam_muslim'] });
-    console.log('Fixed:', u.email);
-  }
-}
-"
+### 3. Dualar — Seslendirme
+Ücretsiz Arapça seslendirme API'si araştırılacak. Her duaya `audioSrc` eklenecek.
+
+### 4. Dersler sekmesi — İçerik güncelleme
+Diğer sekmeler tamamlandıktan sonra dersler yeniden düzenlenecek.
+
+### 5. Aktivite/zaman/accuracy tracking
+Admin Dashboard placeholder'ları hala boş.
+
+---
+
+## Commit
+
 ```
+17ebded feat: 5 sekmeli yeni mimari — Kur'an elifbası (28 ders), Dualar (22), Namaz (17 adım), Hikayeler
+```
+
+1517 files changed, ~40MB elifba medyası.
 
 ---
 
 ## Hızlı Komutlar
 
 ```bash
-# Stack durumu
-docker compose ps
+cd "/Volumes/King/Vibe/Canım Dinim/Candin"
 
-# Logları izle
-docker logs -f candin-web
-docker logs -f candin-pb
+# Dev server
+npm run dev                # port 8765
 
-# Stack'i durdur (veri korunur)
-docker compose down
-
-# Sıfırdan başla (DİKKAT: pb_data volume'u siler, kullanıcılar gider)
-docker compose down -v
+# PocketBase (SSH tunnel üzerinden)
+# Port 8090 zaten tunnel'da
 
 # Typecheck
 npx tsc --noEmit
+
+# Seed (tüm PB içeriğini yeniden yükle)
+node scripts/seed-pb.mjs
 ```
-
----
-
-## Bilinen Riskler
-
-- **Colima VM reset:** `colima.yaml` mount kaybolursa container `package.json` bulamaz. Çözüm: yamlı tekrar düzenle + `colima restart`.
-- **pb_data volume silinirse:** Superuser + migration tekrar uygulanır (migration JS dosyası repoda) ama kullanıcı kayıtları gider.
-- **package.json değişikliği:** Yeni paket eklenirse `docker compose build --no-cache web` gerekir; sadece `up` cache'i kullanır.

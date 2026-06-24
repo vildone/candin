@@ -52,14 +52,3 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           provenance: false
-
-      - name: Set package visibility to public
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          sleep 5
-          curl -sS -X PATCH \
-            -H "Authorization: Bearer *** \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/user/packages/container/candin-web \
-            -d "{\"visibility\":\"public\"}" || true

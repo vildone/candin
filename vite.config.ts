@@ -7,8 +7,18 @@ import { defineConfig } from "vite"
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    port: 8765,
+    // Production container'da 0.0.0.0'dan erişim için
+    host: "0.0.0.0",
+    // VPS'te PORT env ile 8760, local'de 8765
+    port: parseInt(process.env.PORT || "8765"),
     strictPort: true,
+    allowedHosts: [".trycloudflare.com", "localhost", "mirac.app", ".hstgr.cloud"],
+    proxy: {
+      "/api": {
+        target: "http://localhost:8090",
+        changeOrigin: true,
+      },
+    },
   },
   resolve: {
     alias: {

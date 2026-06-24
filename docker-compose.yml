@@ -1,37 +1,52 @@
-# Canım Dinim — Geliştirme stack'i
-# macOS + Colima:  colima start && docker compose up --build
+# Candin — VPS production compose
+# CasaOS tarafından yönetilir (srv1296724.hstgr.cloud)
+# Domain: mirac.app → nginx-proxy-manager → 127.0.0.1:8760
+#
+# Notlar:
+# - web servisi image'sız: CasaOS package.json'ı görünce default Node.js image
+#   kullanır ve `npm run dev` çalıştırır. Vite dev server PORT=8760 ile başlar,
+#   /api proxy → pb:8090. (Production'da optimize değil ama çalışır.)
+# - pb servisi: ghcr.io/muchobien/pocketbase:latest
+# - Port 8090 VPS'te beszel tarafından kullanılıyor → PB host port 8095
+# - Port 8760 → nginx-proxy-manager proxy host ile mirac.app'a serve
 
 services:
   web:
-    build: .
     container_name: candin-web
     ports:
-      - "8765:8765"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    environment:
-      - VITE_PB_URL=http://127.0.0.1:8090
-      - CHOKIDAR_USEPOLLING=true
+      - "8760:8760"
     depends_on:
       pb:
         condition: service_healthy
+    environment:
+      - PORT=8760
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_PB_URL=http://pb:8090
+    volumes:
+      - .:/app
+      - /app/node_modules
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8760/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
 
   pb:
-    # PocketBase'in resmi Docker imajı yok; topluluk tarafından bakımı yapılan imajı kullanıyoruz.
     image: ghcr.io/muchobien/pocketbase:latest
     container_name: candin-pb
     ports:
-      - "8090:8090"
+      - "8095:8090"
     volumes:
       - pb_data:/pb_data
-      - ./pb_migrations:/pb_migrations
+      - ./pb_migrations:/pb_migrations:ro
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8090/api/health"]
-      interval: 5s
-      timeout: 3s
-      retries: 10
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8090/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
     restart: unless-stopped
 
 volumes:

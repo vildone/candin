@@ -11,6 +11,8 @@ import { DualarScreen } from "@/pages/student/Dualar"
 import { DuaDetailScreen } from "@/pages/student/DuaDetail"
 import { PeygamberlerScreen } from "@/pages/student/Peygamberler"
 import { PeygamberDetailScreen } from "@/pages/student/PeygamberDetail"
+import { KitaplarScreen } from "@/pages/student/Kitaplar"
+import { KitapDetailScreen } from "@/pages/student/KitapDetail"
 import { ProfilScreen } from "@/pages/student/Profil"
 import { AdminDashboard } from "@/pages/admin/Dashboard"
 import { ContentManagement } from "@/pages/admin/ContentManagement"
@@ -43,6 +45,9 @@ export function App() {
 
             {/* Peygamberler — detay sayfası StudentLayout DIŞINDA (tam ekran) */}
             <Route path="/peygamberler" element={<PeygamberlerScreen />} />
+
+            {/* Kitaplar */}
+            <Route path="/kitaplar" element={<KitaplarScreen />} />
 
             {/* Namaz */}
             <Route path="/namaz" element={<NamazScreen />} />
@@ -78,6 +83,16 @@ export function App() {
             element={
               <RequireAuth>
                 <PeygamberDetailScreen />
+              </RequireAuth>
+            }
+          />
+
+          {/* Kitap detay — tam ekran (PDF okuma) */}
+          <Route
+            path="/kitaplar/:kitapId"
+            element={
+              <RequireAuth>
+                <KitapDetailScreen />
               </RequireAuth>
             }
           />

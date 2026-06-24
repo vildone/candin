@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { Star, Lock, CircleCheck as CheckCircle, BookOpen, ChevronDown } from "lucide-react"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Lock, CircleCheck as CheckCircle, BookOpen, ChevronDown } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
 import { useProgress } from "@/hooks/useProgress"
-import { useAuth } from "@/lib/auth"
 import { fetchDiniUnits } from "@/lib/pbContent"
 import type { DiniUnit } from "@/types"
 
@@ -62,7 +60,6 @@ function groupByLevel(units: DiniUnit[]): Map<number, DiniUnit[]> {
 }
 
 export function StudentDashboard() {
-  const { user } = useAuth()
   const { xp, unlockedUnits, completedLessons, registerActivity } = useProgress()
   const [units, setUnits] = useState<DiniUnit[]>([])
   const [expandedLevel, setExpandedLevel] = useState<number | null>(null)
@@ -94,8 +91,6 @@ export function StudentDashboard() {
     setExpandedLevel(1)
   }, [units, unlockedUnits, completedLessons, expandedLevel])
 
-  const displayName = user?.name ?? "Kullanıcı"
-  const initial = displayName.slice(0, 1).toUpperCase() || "K"
   const playerLevel = Math.floor(xp / 250) + 1
   const xpInLevel = xp % 250
   const levelProgress = (xpInLevel / 250) * 100
@@ -105,30 +100,12 @@ export function StudentDashboard() {
 
   return (
     <div>
-      <div className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-md items-center justify-between px-4 py-3">
-          <div className="flex items-center gap-3">
-            <Avatar size="lg">
-              <AvatarFallback className="bg-primary text-primary-foreground font-bold text-lg">
-                {initial}
-              </AvatarFallback>
-            </Avatar>
-            <div>
-              <p className="text-sm font-bold text-foreground">{displayName}</p>
-              <p className="text-xs text-muted-foreground">Seviye {playerLevel}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <Star className="size-5 text-warning" fill="currentColor" />
-            <span className="text-sm font-bold text-foreground">{xp} Puan</span>
-          </div>
-        </div>
-        <div className="mx-auto max-w-md px-4 pb-3">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-medium text-muted-foreground">Seviye {playerLevel}</span>
-            <Progress value={levelProgress} className="h-3 flex-1 rounded-full" />
-            <span className="text-xs font-medium text-muted-foreground">Seviye {playerLevel + 1}</span>
-          </div>
+      {/* Seviye ilerleme çubuğu */}
+      <div className="mx-auto max-w-md px-4 pt-3 pb-1">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-medium text-muted-foreground">Seviye {playerLevel}</span>
+          <Progress value={levelProgress} className="h-3 flex-1 rounded-full" />
+          <span className="text-xs font-medium text-muted-foreground">Seviye {playerLevel + 1}</span>
         </div>
       </div>
 

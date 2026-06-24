@@ -66,6 +66,12 @@ export function PeygamberDetailScreen() {
   const touchStartY = useRef(0)
   const containerRef = useRef<HTMLDivElement>(null)
 
+  // Ekran genişliğine göre başlangıç ölçeğini ayarla
+  useEffect(() => {
+    const w = window.innerWidth
+    setScale(w < 480 ? 0.7 : w < 768 ? 0.85 : w < 1024 ? 1.0 : 1.15)
+  }, [])
+
   useEffect(() => {
     setCurrentPage(1)
     setShowHint(true)
@@ -128,7 +134,7 @@ export function PeygamberDetailScreen() {
             <span className="text-xl">{p.emoji}</span>
             <p className="text-sm font-bold text-foreground">{p.title}</p>
           </div>
-          <Button variant="ghost" size="sm" onClick={() => learned ? unmarkLearned("hikaye", p.id) : markLearned("hikaye", p.id)} className="text-[10px] h-7 px-2">
+          <Button variant="ghost" size="sm" onClick={() => learned ? unmarkLearned("hikaye", p.id) : markLearned("hikaye", p.id)} className="text-xs h-9 px-3 font-semibold">
             {learned ? "✓ Okundu" : "Okundu"}
           </Button>
         </div>
@@ -142,7 +148,7 @@ export function PeygamberDetailScreen() {
                 <button
                   key={i}
                   onClick={() => goToPage(bolum.sayfa, currentPage < bolum.sayfa ? 1 : -1)}
-                  className={`shrink-0 rounded-lg px-2.5 py-1.5 text-[11px] font-medium transition-all ${
+                  className={`shrink-0 rounded-lg px-3 py-2 text-xs font-medium transition-all ${
                     isActive ? "bg-primary text-primary-foreground"
                       : currentPage >= bolum.sayfa ? "bg-primary/10 text-primary"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
@@ -153,7 +159,7 @@ export function PeygamberDetailScreen() {
               )
             })}
             <div className="flex-1" />
-            <span className="text-[11px] font-medium text-muted-foreground whitespace-nowrap">
+            <span className="text-xs font-medium text-muted-foreground whitespace-nowrap">
               {currentPage}/{numPages || p.sayfa}
             </span>
           </div>
@@ -218,7 +224,7 @@ export function PeygamberDetailScreen() {
                   <MoveHorizontal className="size-8" />
                 </motion.span>
               </div>
-              <p className="text-[11px] text-muted-foreground/60 font-medium">
+              <p className="text-xs text-muted-foreground/60 font-medium">
                 Kaydırarak sayfayı çevir
               </p>
             </motion.div>
@@ -227,34 +233,39 @@ export function PeygamberDetailScreen() {
       </div>
 
       {/* Alt kontrol barı */}
-      <div className="sticky bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-4xl items-center justify-between px-3 py-2.5">
+      <div
+        className="sticky bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur-sm"
+        style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+      >
+        <div className="mx-auto flex max-w-4xl items-center justify-between gap-2 px-3 py-2.5 flex-wrap sm:flex-nowrap">
+          {/* Zoom */}
           <div className="flex items-center gap-1">
-            <Button variant="ghost" size="sm" onClick={() => setScale(s => Math.max(s - 0.15, 0.6))} disabled={scale <= 0.6} className="h-8 w-8 p-0">
-              <Minus className="size-3.5" />
+            <Button variant="ghost" size="sm" onClick={() => setScale(s => Math.max(s - 0.15, 0.6))} disabled={scale <= 0.6} className="h-10 w-10 p-0">
+              <Minus className="size-4" />
             </Button>
-            <span className="text-[10px] text-muted-foreground w-10 text-center">{Math.round(scale * 100)}%</span>
-            <Button variant="ghost" size="sm" onClick={() => setScale(s => Math.min(s + 0.15, 2.5))} disabled={scale >= 2.5} className="h-8 w-8 p-0">
-              <Plus className="size-3.5" />
+            <span className="text-xs text-muted-foreground w-10 text-center font-medium">{Math.round(scale * 100)}%</span>
+            <Button variant="ghost" size="sm" onClick={() => setScale(s => Math.min(s + 0.15, 2.5))} disabled={scale >= 2.5} className="h-10 w-10 p-0">
+              <Plus className="size-4" />
             </Button>
           </div>
 
-          <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" onClick={handlePrev} disabled={currentPage <= 1} className="h-8 rounded-lg text-xs font-bold gap-1">
-              <ChevronLeft className="size-3.5" /> Önceki
+          {/* Sayfa navigasyonu */}
+          <div className="flex items-center gap-2 order-3 sm:order-none w-full sm:w-auto justify-center sm:justify-start mt-1.5 sm:mt-0">
+            <Button variant="outline" size="sm" onClick={handlePrev} disabled={currentPage <= 1} className="h-10 rounded-lg text-xs font-bold gap-1 px-3">
+              <ChevronLeft className="size-4" /> Önceki
             </Button>
             <input
               type="number" min={1} max={numPages || p.sayfa}
               value={currentPage}
               onChange={(e) => { const v = parseInt(e.target.value); if (v >= 1 && v <= (numPages || p.sayfa)) goToPage(v, v > currentPage ? 1 : -1) }}
-              className="h-8 w-14 rounded-lg border-2 border-border bg-card text-center text-xs font-bold text-foreground focus:border-primary focus:outline-none"
+              className="h-10 w-16 rounded-lg border-2 border-border bg-card text-center text-sm font-bold text-foreground focus:border-primary focus:outline-none"
             />
-            <Button variant="outline" size="sm" onClick={handleNext} disabled={currentPage >= (numPages || p.sayfa)} className="h-8 rounded-lg text-xs font-bold gap-1">
-              Sonraki <ChevronRight className="size-3.5" />
+            <Button variant="outline" size="sm" onClick={handleNext} disabled={currentPage >= (numPages || p.sayfa)} className="h-10 rounded-lg text-xs font-bold gap-1 px-3">
+              Sonraki <ChevronRight className="size-4" />
             </Button>
           </div>
 
-          <span className="text-[10px] text-muted-foreground">{p.subtitle}</span>
+          <span className="hidden sm:inline text-xs text-muted-foreground whitespace-nowrap">{p.subtitle}</span>
         </div>
       </div>
     </div>

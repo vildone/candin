@@ -1,7 +1,8 @@
 import PocketBase, { type AuthRecord } from "pocketbase"
 
 // PocketBase backend URL'i. .env üzerinden override edilebilir.
-const PB_URL = import.meta.env.VITE_PB_URL ?? "http://127.0.0.1:8090"
+// Boş bırakılırsa Vite proxy üzerinden aynı origin'den bağlanır.
+const PB_URL = import.meta.env.VITE_PB_URL ?? "/"
 
 export const pb = new PocketBase(PB_URL)
 pb.autoCancellation(false)

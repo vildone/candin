@@ -235,7 +235,7 @@ export function DuaDetailScreen() {
                         {word.arabic}
                       </span>
                       {word.transliteration && (
-                        <span className="text-[10px] italic text-muted-foreground">
+                        <span className="text-xs italic text-muted-foreground">
                           {word.transliteration}
                         </span>
                       )}

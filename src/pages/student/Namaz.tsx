@@ -126,7 +126,7 @@ function VerticalStepper({ steps }: StepperProps) {
                   {/* Completion circle */}
                   <button
                     onClick={() => toggleComplete(step)}
-                    className="absolute left-3 top-4 z-10"
+                    className="absolute left-2.5 top-3 z-10"
                   >
                     {isCompleted ? (
                       <motion.div
@@ -135,12 +135,12 @@ function VerticalStepper({ steps }: StepperProps) {
                         transition={{ type: "spring", stiffness: 400 }}
                       >
                         <CheckCircle2
-                          className="size-7 text-primary"
+                          className="size-9 text-primary"
                           fill="currentColor"
                         />
                       </motion.div>
                     ) : (
-                      <Circle className="size-7 text-border" />
+                      <Circle className="size-9 text-border" />
                     )}
                   </button>
 

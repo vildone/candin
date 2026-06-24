@@ -1,148 +1,108 @@
 # Candin — Oturum Devri (Handoff)
 
-**Son güncelleme:** 2026-05-24
-**Durum:** 5 sekmeli yeni mimari tamamlandı — Kur'an elifbası (28 ders, lokal), Dualar (22), Namaz (17 adım, Hanefi), Hikayeler. PB'ye seed edildi.
+**Son güncelleme:** 2026-06-25
+**Durum:** VPS DEPLOY BAŞARILI — https://mirac.app yayında!
 
 ---
 
-## Çalışan Stack
+## 🚀 VPS Deploy — TAMAMLANDI
 
-```bash
-cd "/Volumes/King/Vibe/Canım Dinim/Candin"
-npm run dev        # Vite dev server (port 8765)
-```
+### Erişim
+- **Web:** https://mirac.app (HTTP 200 ✓)
+- **PB API:** https://mirac.app/api/* (healthy ✓)
+- **PB Admin:** http://76.13.14.41:8095/_/
+- **SSL:** Let's Encrypt (cert id=29, NPM)
 
-- **Web (Vite + React):** http://localhost:8765
-- **PocketBase API:** http://localhost:8090 (SSH tunnel üzerinden)
-- **PocketBase Admin UI:** http://localhost:8090/_/
+### Altyapı
+- **VPS:** srv1296724.hstgr.cloud (ID: 1296724, IP: 76.13.14.41, Ubuntu 24.04)
+- **Domain:** mirac.app → A record 76.13.14.41 (Hostinger DNS)
+- **Docker:** CasaOS compose (candin_default network)
+  - candin-web: ghcr.io/vildone/candin-web:latest → port 8760:8765 (Vite dev)
+  - candin-pb: ghcr.io/muchobien/pocketbase:latest → port 8095:8090
+- **Reverse Proxy:** nginx-proxy-manager (NPM)
+  - Proxy host id=13: mirac.app → 172.17.0.1:8760, cert id=29, ssl_forced=true
+- **CI/CD:** GitHub Actions → GHCR image build (ghcr.io/vildone/candin-web:latest)
 
-### Superuser
-- E-posta: `ethemkoklu@gmail.com`
-- Şifre: `Ek**123719`
+### GitHub
+- **Repo:** https://github.com/vildone/candin (public, master branch)
+- **Actions:** `.github/workflows/build.yml` — push'ta otomatik image build + GHCR push + public visibility
+- **Image:** ghcr.io/vildone/candin-web:latest (public, ~266MB)
 
----
+### CasaOS Kısıtları (ÖNEMLİ)
+1. `package.json` gördüğü için compose'daki `image:` direktifi yoksayılır — default Node.js image ile `npm run dev` çalıştırılır
+2. `volumes: .:/app` mount'u BOZAR — CasaOS compose'u temp dizininden çalıştırır, context silinir
+3. **Sonuç:** Vite dev server production'da çalışır (optimize değil ama çalışır). nginx + static build için sub-directory refactor veya SSH manual setup gerekir.
 
-## Önemli Gotcha'lar
+### Portlar
+| Servis | Host Port | Container Port | Açıklama |
+|--------|-----------|----------------|----------|
+| Web (Vite) | 8760 | 8765 | NPM → 172.17.0.1:8760 |
+| PB | 8095 | 8090 | Debug/admin (NPM /api proxy via web) |
 
-### 1. Vite port: 8765
-`vite.config.ts`'te `server.port: 8765, strictPort: true`. Değiştirme.
-
-### 2. Seed script
-```bash
-node scripts/seed-pb.mjs
-```
-Tüm content_items'ları siler, JSON'dan yeniden yükler. Idempotent.
-
-### 3. elifba_dersler.json — statik JSON'dan okunur
-Kur'an sekmesi `pbContent.fetchElifbaDersler()` ile `src/data/elifba_dersler.json`'dan okur, PocketBase'den değil. Medya dosyaları `public/elifba/dersN/` altında.
-
-### 4. Amiri font — index.html'de Google Fonts
-Arapça metinler için Amiri fontu `index.html`'de `<link>` ile yüklü. Kaldırma.
-
-### 5. Türkçe dosya yolu
-Proje yolu `/Volumes/King/Vibe/Canım Dinim/Candin` — path'leri tırnak içine al.
-
----
-
-## Kullanıcının KESİN Kuralları
-
-- **Türkçe:** Tüm UI metinleri Türkçe.
-- **Yasaklı isimlendirme:** "god-mode" ve türevleri kullanılamaz. Yerine "Yönetici Paneli" veya "Ebeveyn Paneli".
-- **Animasyon tonu:** Profil coşkulu, Yönetici Paneli sade.
+### PB Superuser
+- **Admin URL:** http://76.13.14.41:8095/_/
+- **İlk kurulum token'i log'da (expired olabilir, restart → yeni token)**
+- **Hesap:** ethemkoklu@gmail.com / Ek**123719
 
 ---
 
-## Tamamlanan İşler
+## Yapılması Gerekenler (Sonraki Oturum)
 
-### 5 Sekmeli Yeni Mimari (2026-05-24)
+### Kısa Vadeli
+1. **PB Superuser oluştur** — http://76.13.14.41:8095/_/ üzerinden
+2. **PB migrations çalıştır** — `pb_migrations/` mount edildi, ilk başlatmada otomatik
+3. **Seed data** — Öğrenci hesapları, ders içerikleri
+4. **Vite production build refactor** (sub-directory: `app/` + multi-stage Dockerfile nginx ile)
 
-Bottom nav: `📖 Dersler | 🤲 Dualar | 🌹 Hikayeler | 💬 Namaz | 🌙 Kur'an`
-
-**Dersler sekmesi** (mevcut Duolingo yapısı, hiç değişmedi):
-- 9 seviye, 28 ünite, her ünitede kart + quiz
-- Dashboard → seviye accordion → ünite kartları
-
-**Dualar sekmesi** (yeni):
-- 22 dua/sure listesi, kategori filtreleme, arama
-- Detay sayfası: Arapça (Amiri font), okunuş, anlam, kelime kelime analiz
-- Ses butonu (audioSrc varsa), "Öğrenildi" işaretleme (localStorage)
-- Dosyalar: `src/pages/student/Dualar.tsx`, `DuaDetail.tsx`
-
-**Hikayeler sekmesi** (yeni):
-- Liste: emoji, başlık, özet, okuma süresi
-- Detay: tam metin (paragraf), önemli dersler, "Öğrenildi"
-- Dosyalar: `src/pages/student/Hikayeler.tsx`, `HikayeDetail.tsx`
-
-**Namaz sekmesi** (yeniden yazıldı):
-- 17 adım: 9 abdest + 8 namaz kılınışı
-- Bölüm başlıkları: "💧 Abdest" / "🕌 Namaz Kılınışı"
-- Her adımda: detaylı açıklama + "Namazda Okunanlar" (Arapça + okunuş + anlam, Amiri font)
-- Hanefi mezhebine göre tüm dualar
-- Dosya: `src/pages/student/Namaz.tsx`
-
-**Kur'an sekmesi** (elifba — tamamen yeniden):
-- 28 elifba dersi (onderalkan.com'dan alındı)
-- Liste: 2 sütunlu grid, ders numarası + başlık + istatistik
-- Detay: harf grid (3/4/5 sütun responsive), tıkla → ses dinle, açıklamalar, yöntem
-- 745 ses + 745 görsel — hepsi `public/elifba/dersN/` altında LOKAL
-- Dosya: `src/pages/student/Kuran.tsx`
-
-### Veri Katmanı
-
-| Dosya | Açıklama |
-|---|---|
-| `src/types/index.ts` | Dua, Hikaye, NamazReading, ElifbaDers, LearnedItem tipleri |
-| `src/lib/pbContent.ts` | fetchDualar(), fetchHikayeler(), fetchElifbaDersler(), fetchNamazFlow() (tüm birimleri birleştirir) |
-| `src/hooks/useProgress.ts` | markLearned/unmarkLearned/isLearned/getLearnedCount (localStorage) |
-| `src/data/dualar.json` | 22 dua/sure seed data (PocketBase'ye yüklendi) |
-| `src/data/elifba_dersler.json` | 28 elifba dersi (statik JSON, PocketBase'den değil) |
-| `src/data/namaz.json` | 17 adım (9 abdest + 8 namaz) + her adımda readings |
-| `src/data/namaz_dualar_sureler.json` | PDF'den çıkarılan ham data (referans) |
-
-### PocketBase Seed
-
-```
-dini_bilgiler: 28
-elifba:        3
-namaz:         2
-sureler:       2
-peygamberler:  2
-dualar:       22
-Toplam:       59
-```
-
-### Font
-- **Amiri** (Google Fonts) — `index.html`'de yüklü
-- Arapça metinler: `style={{ fontFamily: "'Amiri', 'Traditional Arabic', serif" }}`
+### Orta Vadeli
+5. **www.mirac.app SSL** — NPM'de ayrı cert veya wildcard
+6. **PB admin proxy** — web vite config'e `/_/` proxy ekle
+7. **Code splitting** — JS bundle 1MB (react-pdf büyük), dynamic import ile böl
 
 ---
 
-## Sıradaki İşler (TODO)
+## Yeni Özellikler (Mevcut)
 
-### 1. Namaz/Abdest Görselleri
-Ethem PDF'den görsel temin edecek. `public/images/namaz/` klasörüne koyulacak, `namaz.json`'daki `image_src` alanları güncellenecek.
+### Responsive/Mobil
+- viewport-fit=cover, safe area, text-xs→12px, touch hedefleri 40px
+- PDF okuyucu mobil redesign, zoom/nav ayrıldı
+- Namaz stepper çemberi 28→36px
 
-### 2. Hikayeler İçeriği
-Peygamber hikayeleri seed data'sı henüz yok. Ethem referans verecek.
+### Header
+- `src/components/Header.tsx` — Logo + kullanıcı menüsü
+- StudentLayout'a entegre
 
-### 3. Dualar — Seslendirme
-Ücretsiz Arapça seslendirme API'si araştırılacak. Her duaya `audioSrc` eklenecek.
+### Kitaplar Sekmesi
+- `src/pages/student/Kitaplar.tsx` + `KitapDetail.tsx`
+- `public/kutlu-yolculuk.pdf` — Diyanet Çocuk, 52 sayfa
+- Route: `/kitaplar` ve `/kitaplar/:kitapId`
 
-### 4. Dersler sekmesi — İçerik güncelleme
-Diğer sekmeler tamamlandıktan sonra dersler yeniden düzenlenecek.
-
-### 5. Aktivite/zaman/accuracy tracking
-Admin Dashboard placeholder'ları hala boş.
+### Altyapı
+- vite.config.ts: host 0.0.0.0, PORT env, VITE_PB_PROXY env, allowedHosts
+- src/lib/pb.ts: PB_URL='/' (Vite proxy üzerinden)
+- docker-compose.yml: VPS production (image-based)
+- docker-compose.dev.yml: local development (PB only)
+- Dockerfile: multi-stage (nginx) — CasaOS kısıtı nedeniyle kullanılmıyor ama refactor sonrası aktif olacak
+- nginx.conf: PB reverse proxy + SPA fallback (refactor sonrası)
 
 ---
 
-## Commit
+## Hesap Bilgileri
 
-```
-17ebded feat: 5 sekmeli yeni mimari — Kur'an elifbası (28 ders), Dualar (22), Namaz (17 adım), Hikayeler
-```
+| Rol | E-posta | Şifre |
+|---|---|---|
+| Ebeveyn/Superuser | ethemkoklu@gmail.com | Ek**123719 |
+| Öğrenci | ogrenci@candin.app | Test1234 |
 
-1517 files changed, ~40MB elifba medyası.
+---
+
+## NPM Admin
+- **URL:** http://76.13.14.41:81
+- **Email:** ethemkoklu@gmail.com
+- **Şifre:** Ek**123719
+
+## Hostinger MCP
+- **Token:** ek06cNNInpI3WIb4K5znp6ZJWTC4FOXmVmgRfMWu460b255e
 
 ---
 
@@ -151,15 +111,19 @@ Admin Dashboard placeholder'ları hala boş.
 ```bash
 cd "/Volumes/King/Vibe/Canım Dinim/Candin"
 
-# Dev server
-npm run dev                # port 8765
+# Local dev
+docker compose -f docker-compose.dev.yml up -d pb  # PB only
+npm run dev                                          # port 8765
 
-# PocketBase (SSH tunnel üzerinden)
-# Port 8090 zaten tunnel'da
+# Build
+npx tsc --noEmit        # typecheck
+npx vite build          # production build → dist/
 
-# Typecheck
-npx tsc --noEmit
+# Deploy (push → GHCR build → MCP update)
+git push origin master
+# sonra MCP: deleteProject + createNewProject(GitHub URL)
 
-# Seed (tüm PB içeriğini yeniden yükle)
-node scripts/seed-pb.mjs
+# Test
+curl https://mirac.app/api/health
+curl http://76.13.14.41:8760/
 ```

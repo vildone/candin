@@ -98,11 +98,11 @@ export function HikayelerScreen() {
                         {hikaye.summary}
                       </p>
                       <div className="mt-2 flex items-center gap-3">
-                        <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-semibold text-primary">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
                           <Clock className="h-3 w-3" />
                           {hikaye.estimatedMinutes} dk
                         </span>
-                        <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-xs font-semibold text-muted-foreground">
                           <BookOpen className="h-3 w-3" />
                           Hikaye
                         </span>

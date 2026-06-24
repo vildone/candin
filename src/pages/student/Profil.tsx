@@ -39,7 +39,7 @@ export function ProfilScreen() {
   }
 
   return (
-    <div className="min-h-svh pb-24">
+    <div className="min-h-svh pb-20">
       {/* Avatar + ad + seviye */}
       <div className="mx-auto max-w-md px-4 pt-10">
         <motion.div

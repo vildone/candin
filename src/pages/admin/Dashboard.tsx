@@ -133,6 +133,7 @@ export function AdminDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0">
+              <div className="overflow-x-auto">
               <Table>
                 <TableHeader>
                   <TableRow>
@@ -175,7 +176,7 @@ export function AdminDashboard() {
                           <TableCell className="text-right">
                             <Badge
                               variant={isError ? "destructive" : "default"}
-                              className="text-[10px] font-semibold uppercase"
+                              className="text-xs font-semibold uppercase"
                             >
                               {isError ? "Hata" : "Başarılı"}
                             </Badge>
@@ -186,6 +187,7 @@ export function AdminDashboard() {
                   )}
                 </TableBody>
               </Table>
+              </div>
             </CardContent>
           </Card>
 

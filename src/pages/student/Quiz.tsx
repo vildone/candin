@@ -221,6 +221,7 @@ export function QuizScreen() {
             fixed inset-x-0 bottom-0 p-4
             ${answerState === "correct" ? "bg-primary" : "bg-destructive"}
           `}
+          style={{ paddingBottom: "calc(1rem + env(safe-area-inset-bottom, 0px))" }}
         >
           <div className="mx-auto flex max-w-md items-center gap-3">
             {answerState === "correct" ? (

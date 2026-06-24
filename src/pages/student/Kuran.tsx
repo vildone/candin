@@ -267,7 +267,7 @@ export function KuranScreen() {
                   <p className="text-xs sm:text-sm font-bold text-foreground truncate">
                     {ders.title}
                   </p>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground mt-0.5">
+                  <p className="text-xs sm:text-xs text-muted-foreground mt-0.5">
                     {ders.sesler.length} ses · {ders.gorseller.length} görsel
                     {ders.descriptions.length > 0 && ` · ${ders.descriptions.length} açıklama`}
                   </p>

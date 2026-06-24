@@ -51,7 +51,7 @@ export function PeygamberlerScreen() {
                 </div>
                 <div className="flex flex-col items-center shrink-0 rounded-xl bg-primary/10 px-3 py-2">
                   <span className="text-sm font-bold text-primary">{p.sayfa}</span>
-                  <span className="text-[10px] text-muted-foreground">sayfa</span>
+                  <span className="text-xs text-muted-foreground">sayfa</span>
                 </div>
               </Link>
             </motion.div>

@@ -173,7 +173,7 @@ export function DualarScreen() {
                             {dua.turkish}
                           </p>
                           <span
-                            className={`mt-1.5 inline-block rounded-lg border px-2 py-0.5 text-[10px] font-bold ${catColor}`}
+                            className={`mt-1.5 inline-block rounded-lg border px-2 py-0.5 text-xs font-bold ${catColor}`}
                           >
                             {dua.category}
                           </span>

@@ -1,7 +1,28 @@
 node_modules
 dist
+dist-ssr
 .git
 .bolt
+.claude
 .DS_Store
 *.log
+*.local
+.env
+.env.*
 pb_data
+
+# Büyük PDF dosyaları (sadece public/kutlu-yolculuk.pdf kullanılıyor)
+Diyanet*
+v2Diyanet*
+
+# IDE
+.vscode/
+.idea/
+
+# Backups
+*.bak
+*.tmp
+*.swp
+
+# Build artifacts
+*.tsbuildinfo

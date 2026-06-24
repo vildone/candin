@@ -1,39 +1,30 @@
 # Candin — VPS production compose
 # CasaOS tarafından yönetilir (srv1296724.hstgr.cloud)
-# Domain: mirac.app → nginx-proxy-manager → 127.0.0.1:8760
+# Domain: mirac.app → nginx-proxy-manager → 172.17.0.1:8760
 #
-# ⚠️ CasaOS kısıtları (deneylerle doğrulandı):
-#   1. package.json gördüğü için image: direktifi ne olursa olsun default
-#      Node.js image kullanır, `npm run dev` çalıştırır (nginx değil).
-#   2. volumes: .:/app mount'u BOZAR — CasaOS compose'u geçici temp dizininden
-#      çalıştırır, `.` context temp'i silinir, container /app'i boş kalır.
-#      → package.json ENOENT, restart loop.
-#   Çözüm: image'ın kendi içeriği (GHCR'de node_modules dahil) kullanılır,
-#   hiçbir volume mount edilmez. VITE_PB_PROXY env ile PB'ye bağlanır.
+# Artık nginx static serve! CasaOS root'ta package.json görmüyor,
+# image: direktifini kullanıyor. GHCR'deki multi-stage nginx image.
 #
 # Portlar:
-# - 8760: web (Vite dev server) → nginx-proxy-manager proxy host mirac.app'a
-# - 8095: PB admin/debug
+# - 8760: web (nginx 80) → NPM proxy mirac.app
+# - 8095: PB admin/debug → NPM proxy panel.mirac.app
 
 services:
   web:
     image: ghcr.io/vildone/candin-web:latest
     container_name: candin-web
     ports:
-      - "8760:8765"   # Vite dev server'ın gerçek portu
+      - "8760:80"
     depends_on:
       pb:
         condition: service_healthy
-    environment:
-      - PORT=8765
-      - VITE_PB_PROXY=http://candin-pb:8090
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8765/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 60s
+      start_period: 10s
 
   pb:
     image: ghcr.io/muchobien/pocketbase:latest
@@ -42,13 +33,12 @@ services:
       - "8095:8090"
     volumes:
       - pb_data:/pb_data
-      - ./pb_migrations:/pb_migrations:ro
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8090/api/health"]
       interval: 10s
       timeout: 5s
       retries: 5
-      start_period: 15s
+      start_period: 10s
     restart: unless-stopped
 
 volumes:

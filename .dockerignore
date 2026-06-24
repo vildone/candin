@@ -1,5 +1,7 @@
 node_modules
+**/node_modules
 dist
+**/dist
 dist-ssr
 .git
 .bolt
@@ -10,10 +12,11 @@ dist-ssr
 .env
 .env.*
 pb_data
+**/pb_data
 
-# Büyük PDF dosyaları (sadece public/kutlu-yolculuk.pdf kullanılıyor)
-Diyanet*
-v2Diyanet*
+# Büyük PDF dosyaları (root'ta, kaynak olarak kullanılmıyor)
+*.pdf
+!app/public/**/*.pdf
 
 # IDE
 .vscode/
@@ -23,6 +26,7 @@ v2Diyanet*
 *.bak
 *.tmp
 *.swp
-
-# Build artifacts
 *.tsbuildinfo
+
+# HANDOFF
+HANDOFF.md

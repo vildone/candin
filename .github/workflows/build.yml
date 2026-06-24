@@ -62,4 +62,4 @@ jobs:
             -H "Authorization: Bearer *** \
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/user/packages/container/candin-web \
-            -d '{"visibility":"public"}' || true
+            -d "{\"visibility\":\"public\"}" || true

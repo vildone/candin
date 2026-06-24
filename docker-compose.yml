@@ -5,28 +5,38 @@
 # Image stratejisi:
 # - web: ghcr.io/vildone/candin-web:latest (GitHub Actions build eder, public GHCR)
 # - pb:  ghcr.io/muchobien/pocketbase:latest (resmi community image)
-# CasaOS image-based compose'u destekler, package.json'a rağmen image: direktifi kullanılır.
+#
+# ⚠️ CasaOS kısıtı: package.json gördüğü için image: direktifi ne olursa olsun
+# default Node.js image kullanır ve `npm run dev` çalıştırır. Bu yüzden Vite dev
+# server production'da çalışıyor (port 8765). Compose'da buna göre publish ediyoruz.
 #
 # Portlar:
-# - 8760: web (Vite/nginx → nginx-proxy-manager proxy host)
-# - 8095: PB admin (debug, /_ ve /api proxy nginx-proxy-manager üzerinden)
+# - 8760: web (Vite dev server) → nginx-proxy-manager proxy host mirac.app'a serve
+# - 8095: PB admin/debug (PB API nginx-proxy-manager üzerinden /api/* olarak)
 
 services:
   web:
     image: ghcr.io/vildone/candin-web:latest
     container_name: candin-web
     ports:
-      - "8760:80"
+      - "8760:8765"   # Vite dev server'ın gerçek portu (CasaOS kısıtı)
     depends_on:
       pb:
         condition: service_healthy
+    environment:
+      - PORT=8765
+      - VITE_PB_PROXY=http://candin-pb:8090
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - .:/app
+      - /app/node_modules
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8765/"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 30s
+      start_period: 60s
 
   pb:
     image: ghcr.io/muchobien/pocketbase:latest

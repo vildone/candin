@@ -2,36 +2,31 @@
 # CasaOS tarafından yönetilir (srv1296724.hstgr.cloud)
 # Domain: mirac.app → nginx-proxy-manager → 127.0.0.1:8760
 #
-# Notlar:
-# - web servisi image'sız: CasaOS package.json'ı görünce default Node.js image
-#   kullanır ve `npm run dev` çalıştırır. Vite dev server PORT=8760 ile başlar,
-#   /api proxy → pb:8090. (Production'da optimize değil ama çalışır.)
-# - pb servisi: ghcr.io/muchobien/pocketbase:latest
-# - Port 8090 VPS'te beszel tarafından kullanılıyor → PB host port 8095
-# - Port 8760 → nginx-proxy-manager proxy host ile mirac.app'a serve
+# Image stratejisi:
+# - web: ghcr.io/vildone/candin-web:latest (GitHub Actions build eder, public GHCR)
+# - pb:  ghcr.io/muchobien/pocketbase:latest (resmi community image)
+# CasaOS image-based compose'u destekler, package.json'a rağmen image: direktifi kullanılır.
+#
+# Portlar:
+# - 8760: web (Vite/nginx → nginx-proxy-manager proxy host)
+# - 8095: PB admin (debug, /_ ve /api proxy nginx-proxy-manager üzerinden)
 
 services:
   web:
+    image: ghcr.io/vildone/candin-web:latest
     container_name: candin-web
     ports:
-      - "8760:8760"
+      - "8760:80"
     depends_on:
       pb:
         condition: service_healthy
-    environment:
-      - PORT=8760
-      - CHOKIDAR_USEPOLLING=true
-      - VITE_PB_URL=http://pb:8090
-    volumes:
-      - .:/app
-      - /app/node_modules
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8760/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 60s
+      start_period: 30s
 
   pb:
     image: ghcr.io/muchobien/pocketbase:latest

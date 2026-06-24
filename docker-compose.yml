@@ -3,7 +3,7 @@
 # Domain: mirac.app → nginx-proxy-manager → 172.17.0.1:8760
 #
 # Artık nginx static serve! CasaOS root'ta package.json görmüyor,
-# image: direktifini kullanıyor. GHCR'deki multi-stage nginx image.
+# image: directive'ını kullanıyor. GHCR'deki multi-stage nginx image.
 #
 # Portlar:
 # - 8760: web (nginx 80) → NPM proxy mirac.app
@@ -27,7 +27,7 @@ services:
       start_period: 10s
 
   pb:
-    image: ghcr.io/muchobien/pocketbase:latest
+    image: ghcr.io/vildone/candin-pb:latest
     container_name: candin-pb
     ports:
       - "8095:8090"

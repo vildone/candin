@@ -1,57 +1,46 @@
 #!/bin/sh
-# PocketBase başlangıç scripti — superuser yoksa oluştur
-# PB başlamadan önce çalışır
+# PocketBase otomatik superuser script
+set -e
 
-PB_DATA_DIR="/pb_data"
-SUPERUSER_EMAIL="${PB_SUPERUSER_EMAIL:-ethemkoklu@gmail.com}"
-SUPERUSER_PASSWORD="${PB_SUPERUSER_PASSWORD:-Ek**123719}"
+DATA_DIR="/pb_data"
+EMAIL="${PB_SUPERUSER_EMAIL:-ethemkoklu@gmail.com}"
+PASSWORD="${PB...n
 
-# PocketBase binary'sini başlat (arka planda)
-/pb/pocketbase serve --http=0.0.0.0:8090 --dir="$PB_DATA_DIR" &
+echo ">>> PB Init: checking superuser..."
+
+# PB'yi başlat
+/pb/pocketbase serve --http=0.0.0.0:8090 --dir="$DATA_DIR" &
 PB_PID=$!
 
-# PB'nin hazır olmasını bekle
-sleep 3
-
-# Superuser var mı kontrol et
-ATTEMPT=0
-MAX_ATTEMPTS=30
-while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
-  RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8090/api/health 2>/dev/null)
-  if [ "$RESPONSE" = "200" ]; then
+# PB hazır olana kadar bekle
+for i in $(seq 1 30); do
+  if curl -s -o /dev/null -w "%{http_code}" http://localhost:8090/api/health 2>/dev/null | grep -q 200; then
+    echo ">>> PB is ready"
     break
   fi
-  ATTEMPT=$((ATTEMPT + 1))
   sleep 1
 done
 
-# Superuser oluşturmayı dene (ilk çalıştırmada)
-# sqlite3 ile doğrudan ekle
-if [ -f "$PB_DATA_DIR/data.db" ]; then
-  EXISTING=$(sqlite3 "$PB_DATA_DIR/data.db" "SELECT COUNT(*) FROM _superusers;" 2>/dev/null)
-  if [ "$EXISTING" = "0" ] || [ -z "$EXISTING" ]; then
-    echo ">>> Creating superuser: $SUPERUSER_EMAIL"
-    
-    # PB'nin hash fonksiyonunu kullanmak için API'yi dene
-    curl -s -X POST http://localhost:8090/api/admins \
+# Superuser oluşturmayı dene - CLI ile
+/pb/pocketbase superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" 2>&1 || true
+
+# Alternatif: SQLite ile kontrol et ve ekle
+if [ -f "$DATA_DIR/data.db" ]; then
+  COUNT=$(sqlite3 "$DATA_DIR/data.db" "SELECT COUNT(*) FROM _superusers;" 2>/dev/null || echo "0")
+  echo ">>> Superuser count: $COUNT"
+  if [ "$COUNT" = "0" ]; then
+    echo ">>> Creating superuser via CLI..."
+    /pb/pocketbase superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" || echo ">>> CLI failed, trying API..."
+    # Eğer CLI çalışmazsa API'yi dene
+    curl -s -X POST http://localhost:8090/api/collections/_superusers/records \
       -H "Content-Type: application/json" \
-      -d "{\"email\":\"$SUPERUSER_EMAIL\",\"password\":\"$SUPERUSER_PASSWORD\",\"passwordConfirm\":\"$SUPERUSER_PASSWORD\"}" \
-      > /dev/null 2>&1
-    
-    echo ">>> Superuser creation attempted"
-  else
-    echo ">>> Superuser already exists ($EXISTING records)"
+      -d "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\",\"passwordConfirm\":\"$PASSWORD\"}" 2>/dev/null || true
   fi
 else
-  echo ">>> PB data directory not ready yet, will retry..."
-  # PB henüz db oluşturmadı, biraz daha bekle
-  sleep 5
-  # Tekrar dene
-  curl -s -X POST http://localhost:8090/api/admins \
-    -H "Content-Type: application/json" \
-    -d "{\"email\":\"$SUPERUSER_EMAIL\",\"password\":\"$SUPERUSER_PASSWORD\",\"passwordConfirm\":\"$SUPERUSER_PASSWORD\"}" \
-    > /dev/null 2>&1
+  echo ">>> DB not ready, waiting..."
+  sleep 3
+  /pb/pocketbase superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" 2>&1 || true
 fi
 
-# Ana PB process'ini bekle
+echo ">>> Init complete, waiting for PB process..."
 wait $PB_PID

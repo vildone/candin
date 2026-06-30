@@ -35,7 +35,7 @@ services:
       - pb_v3:/pb_data
     environment:
       - PB_SUPERUSER_EMAIL=ethemkoklu@gmail.com
-      - PB_SUPERUSER_PASSWORD=Ek**123719
+      - "PB_SUPERUSER_PASSWORD=Ek**123719"
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8090/api/health"]
       interval: 10s

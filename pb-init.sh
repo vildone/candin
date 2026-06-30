@@ -1,12 +1,13 @@
 #!/bin/sh
-set -e
+# set -e (hata durumunda durma - init script'inde kontrollü olalım)
 
 DATA_DIR="/pb_data"
 MIGRATIONS_DIR="/pb/pb_migrations"
 PB_BIN="/pb/pocketbase"
 
 EMAIL="${PB_SUPERUSER_EMAIL:-ethemkoklu@gmail.com}"
-PASSWORD="${PB...echo "=== Miraç PB Init ==="
+PASSWORD="${PB_SUPERUSER_PASSWORD:-Ek**123719}"
+echo "=== Miraç PB Init ==="
 echo "DATA_DIR=$DATA_DIR"
 
 # Migration'ları kopyala (ilk çalıştırma için)

@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
-  Moon,
   Star,
   User,
   LogOut,
@@ -51,11 +50,11 @@ export function Header() {
       <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-2.5">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <div className="flex size-9 items-center justify-center rounded-xl bg-primary/15">
-            <Moon className="size-5 text-primary" />
+          <div className="flex size-9 items-center justify-center rounded-xl bg-primary/15 overflow-hidden">
+            <img src="/mirac-32.png" alt="Miraç" className="size-7 object-contain" />
           </div>
           <span className="text-base font-bold text-foreground hidden sm:inline">
-            Canım Dinim
+            Miraç
           </span>
         </Link>
 

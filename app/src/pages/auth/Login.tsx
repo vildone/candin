@@ -43,7 +43,7 @@ export function LoginScreen() {
           <div className="flex size-14 items-center justify-center rounded-2xl bg-primary/15">
             <Sparkles className="size-7 text-primary" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Canım Dinim</h1>
+          <h1 className="text-2xl font-bold text-foreground">Miraç</h1>
           <p className="text-sm text-muted-foreground">Hoş geldin, tekrar görüştük!</p>
         </div>
 

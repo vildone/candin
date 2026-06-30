@@ -12,7 +12,7 @@
 services:
   web:
     image: ghcr.io/vildone/candin-web:latest
-    container_name: candin-web
+    container_name: mirac-web
     ports:
       - "8760:80"
     depends_on:
@@ -28,7 +28,7 @@ services:
 
   pb:
     image: ghcr.io/vildone/candin-pb:latest
-    container_name: candin-pb
+    container_name: mirac-pb
     ports:
       - "8095:8090"
     volumes:

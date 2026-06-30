@@ -1,9 +1,9 @@
 # Candin — Oturum Devri (Handoff)
 
-**Son güncelleme:** 2026-06-25
-**Durum:** VPS DEPLOY TAMAMLANDI — https://mirac.app + https://panel.mirac.app yayında!
+# Miraç — Oturum Devri (Handoff)
 
----
+**Son güncelleme:** 2026-06-30
+**Durum:** VPS DEPLOY TAMAMLANDI — https://mirac.app + https://panel.mirac.app yayında! Miraç rebranding tamam.
 
 ## Erişim
 - **Web:** https://mirac.app (nginx static serve, HTTP 200 ✓)
@@ -33,8 +33,8 @@
   - A: panel → 76.13.14.41
   - CNAME: www → mirac.app
 - **Docker:** CasaOS compose (candin_default network)
-  - candin-web: ghcr.io/vildone/candin-web:latest → port 8760:80 (nginx static)
-  - candin-pb: ghcr.io/vildone/candin-pb:latest → port 8095:8090 (+ migrations)
+  - mirac-web: ghcr.io/vildone/candin-web:latest → port 8760:80 (nginx static, curl health check)
+  - mirac-pb: ghcr.io/vildone/candin-pb:latest → port 8095:8090 (+ migrations, wget health check)
 - **NPM Proxy Hosts:**
   - mirac.app → 172.17.0.1:8760 (cert id=29, ssl_forced)
   - panel.mirac.app → 172.17.0.1:8095 (cert id=30, ssl_forced)
@@ -47,9 +47,9 @@
 candin/
 ├── docker-compose.yml      # CasaOS okur (image-based, port 8760:80)
 ├── docker-compose.dev.yml  # Local dev (PB only)
-├── Dockerfile              # Multi-stage: node build + nginx static
+├── Dockerfile              # Multi-stage: node build + nginx static (curl health check)
 ├── Dockerfile.pb           # PocketBase + migrations image
-├── nginx.conf              # PB reverse proxy + SPA fallback
+├── nginx.conf              # PB reverse proxy (mirac-pb:8090) + SPA fallback
 ├── .github/workflows/
 │   ├── build-web.yml       # candin-web image build
 │   └── build-pb.yml        # candin-pb image build
@@ -61,6 +61,9 @@ candin/
     │   ├── data/           # Seed data JSON'ları
     │   └── types/
     ├── public/
+    │   ├── mirac-32.png    # Favicon 32×32
+    │   ├── mirac-192.png   # Favicon 192×192
+    │   └── mirac-512.png   # Apple touch icon + OG image
     ├── pb_migrations/      # PB schema migrations
     ├── scripts/
     │   └── seed-pb.mjs     # Seed data yükleme scripti
@@ -68,6 +71,14 @@ candin/
     ├── tsconfig*.json
     └── index.html
 ```
+
+## Son Değişiklikler (2026-06-30)
+
+1. **Health check fix:** busybox wget → curl (Alpine nginx'te GNU wget yok)
+2. **Miraç rebranding:** Tüm "Candin"/"Canım Dinim" → "Miraç"
+3. **Logo:** mirac.png'den 32/192/512px favicon'lar
+4. **Container isimleri:** candin-web/pb → mirac-web/pb
+5. **nginx.conf:** proxy_pass candin-pb → mirac-pb
 
 **Neden app/?** CasaOS root'ta `package.json` gördüğü için `image:` directive'ını yoksayıp default Node.js image ile `npm run dev` çalıştırıyor. Root'ta package.json olmaması → image: kullanılır → nginx static serve çalışır.
 

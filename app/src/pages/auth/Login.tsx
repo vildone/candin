@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { motion } from "framer-motion"
-import { Sparkles, Eye, EyeOff } from "lucide-react"
+import { Eye, EyeOff } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -39,11 +39,18 @@ export function LoginScreen() {
         transition={{ type: "spring", stiffness: 200 }}
         className="w-full max-w-sm"
       >
-        <div className="mb-6 flex flex-col items-center gap-2">
-          <div className="flex size-14 items-center justify-center rounded-2xl bg-primary/15">
-            <Sparkles className="size-7 text-primary" />
-          </div>
-          <h1 className="text-2xl font-bold text-foreground">Miraç</h1>
+        <div className="mb-8 flex flex-col items-center gap-4">
+          <img 
+            src="/mirac-192.png" 
+            alt="Miraç" 
+            className="size-24 object-contain drop-shadow-lg"
+          />
+          <h1 
+            className="text-3xl font-bold text-foreground tracking-wide"
+            style={{ fontFamily: "'Amiri', serif" }}
+          >
+            Miraç
+          </h1>
           <p className="text-sm text-muted-foreground">Hoş geldin, tekrar görüştük!</p>
         </div>
 

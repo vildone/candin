@@ -1,46 +1,67 @@
 #!/bin/sh
 # PocketBase otomatik superuser script
-set -e
+# Hata durumunda durma — debug için
 
 DATA_DIR="/pb_data"
-EMAIL="${PB_SUPERUSER_EMAIL:-ethemkoklu@gmail.com}"
-PASSWORD="${PB...n
+EMAIL="${PB_SU...@gmail.com}"
+PASSWORD="${PB_SUPERUSER_PASSWORD:-Ek**123719}"
 
-echo ">>> PB Init: checking superuser..."
+echo ">>> PB Init starting..."
+echo ">>> DATA_DIR=$DATA_DIR"
+echo ">>> EMAIL=$EMAIL"
+
+# PB binary'sini bul
+if [ -f "/pb/pocketbase" ]; then
+  PB_BIN="/pb/pocketbase"
+elif [ -f "/usr/local/bin/pocketbase" ]; then
+  PB_BIN="/usr/local/bin/pocketbase"
+else
+  PB_BIN=$(which pocketbase 2>/dev/null || echo "")
+fi
+
+if [ -z "$PB_BIN" ]; then
+  echo ">>> ERROR: pocketbase binary not found!"
+  ls -la /pb/ 2>/dev/null || true
+  ls -la /usr/local/bin/ 2>/dev/null || true
+  exit 1
+fi
+
+echo ">>> PB binary: $PB_BIN"
 
 # PB'yi başlat
-/pb/pocketbase serve --http=0.0.0.0:8090 --dir="$DATA_DIR" &
+$PB_BIN serve --http=0.0.0.0:8090 --dir="$DATA_DIR" &
 PB_PID=$!
 
-# PB hazır olana kadar bekle
-for i in $(seq 1 30); do
-  if curl -s -o /dev/null -w "%{http_code}" http://localhost:8090/api/health 2>/dev/null | grep -q 200; then
-    echo ">>> PB is ready"
+# PB hazır olana kadar bekle (max 15 sn)
+for i in $(seq 1 15); do
+  if curl -s -o /dev/null http://localhost:8090/api/health 2>/dev/null; then
+    echo ">>> PB is ready (${i}s)"
     break
   fi
   sleep 1
 done
 
-# Superuser oluşturmayı dene - CLI ile
-/pb/pocketbase superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" 2>&1 || true
-
-# Alternatif: SQLite ile kontrol et ve ekle
+# Superuser kontrol et ve oluştur
+echo ">>> Checking superuser..."
 if [ -f "$DATA_DIR/data.db" ]; then
   COUNT=$(sqlite3 "$DATA_DIR/data.db" "SELECT COUNT(*) FROM _superusers;" 2>/dev/null || echo "0")
-  echo ">>> Superuser count: $COUNT"
+  echo ">>> Current superuser count: $COUNT"
+  
   if [ "$COUNT" = "0" ]; then
-    echo ">>> Creating superuser via CLI..."
-    /pb/pocketbase superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" || echo ">>> CLI failed, trying API..."
-    # Eğer CLI çalışmazsa API'yi dene
-    curl -s -X POST http://localhost:8090/api/collections/_superusers/records \
-      -H "Content-Type: application/json" \
-      -d "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\",\"passwordConfirm\":\"$PASSWORD\"}" 2>/dev/null || true
+    echo ">>> Creating superuser: $EMAIL"
+    $PB_BIN superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" 2>&1
+    RET=$?
+    echo ">>> Superuser create exit code: $RET"
+  else
+    echo ">>> Superuser already exists, skipping creation"
   fi
 else
-  echo ">>> DB not ready, waiting..."
-  sleep 3
-  /pb/pocketbase superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" 2>&1 || true
+  echo ">>> DB not found at $DATA_DIR/data.db, waiting..."
+  sleep 5
+  if [ -f "$DATA_DIR/data.db" ]; then
+    $PB_BIN superuser create "$EMAIL" "$PASSWORD" --dir="$DATA_DIR" 2>&1 || echo ">>> CLI failed, but continuing..."
+  fi
 fi
 
-echo ">>> Init complete, waiting for PB process..."
+echo ">>> Init done. PB PID=$PB_PID"
 wait $PB_PID

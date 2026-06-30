@@ -32,7 +32,7 @@ services:
     ports:
       - "8095:8090"
     volumes:
-      - pb_data_v2:/pb_data
+      - pb_v3:/pb_data
     environment:
       - PB_SUPERUSER_EMAIL=ethemkoklu@gmail.com
       - PB_SUPERUSER_PASSWORD=Ek**123719
@@ -45,4 +45,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  pb_data_v2:
+  pb_v3:

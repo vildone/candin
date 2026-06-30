@@ -51,7 +51,7 @@ export function LoginScreen() {
           >
             Miraç
           </h1>
-          <p className="text-sm text-muted-foreground">Hoş geldin, tekrar görüştük!</p>
+          <p className="text-sm text-muted-foreground">Bu yolculuk senin Mirac'ın olsun.</p>
         </div>
 
         <Card className="rounded-3xl">

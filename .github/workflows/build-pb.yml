@@ -6,6 +6,7 @@ on:
     paths:
       - "app/pb_migrations/**"
       - "Dockerfile.pb"
+      - "pb-init.sh"
       - ".github/workflows/build-pb.yml"
   workflow_dispatch:
 

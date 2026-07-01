@@ -1,165 +1,143 @@
 # Miraç — Oturum Devri (Handoff)
 
-**Son güncelleme:** 2026-07-01
-**Durum:** VPS DEPLOY TAMAMLANDI — https://mirac.app + https://panel.mirac.app yayında! Superuser çözüldü.
+**Son güncelleme:** 2026-07-01 16:00
+**Durum:** KARARLI — Tüm içerik yüklü, superuser aktif, dersler açık.
 
 ---
 
-## ⚠️ Superuser Yönetimi (KRİTİK)
-
-PB imajı (`ghcr.io/muchobien/pocketbase`) varsayılan superuser ile gelir: `__pbinstaller@example.com`. Bu superuser'ı değiştirmek için SSH gerekir.
-
-**İlk kurulumda superuser oluşturma:**
-```bash
-# 1. Root şifresi ayarla (MCP ile)
-VPS_setRootPasswordV1({virtualMachineId: 1296724, password: "MiracAdmin-2026"})
-
-# 2. SSH ile superuser oluştur
-sshpass -f /tmp/vps_pw.txt ssh root@76.13.14.41 \
-  "docker exec mirac-pb /usr/local/bin/pocketbase superuser create ethemkoklu@gmail.com 'Ek**123719' --dir=/pb_data"
-```
-
-**Not:** `updateProject` deploy'da superuser KORUNUR. Sadece `deleteProject` + `createNewProject` ile yeni volume oluşursa superuser tekrar oluşturulmalı.
-
 ## Erişim
-- **Web:** https://mirac.app (nginx static serve, HTTP 200 ✓)
-- **PB Admin:** https://panel.mirac.app/_/ (PocketBase admin UI)
-- **PB API:** https://mirac.app/api/* (healthy ✓)
-- **Skill:** `candin-deploy` (devops kategorisi)
 
-## Hesap Bilgileri
+| Servis | URL | Kimlik |
+|--------|-----|--------|
+| Web | https://mirac.app | — |
+| Admin Panel | https://panel.mirac.app/_/ | `ethemkoklu@gmail.com` / `Ek**123719` |
+| API | https://mirac.app/api/health | — |
+| NPM | http://76.13.14.41:81 | `ethemkoklu@gmail.com` / `Ek**123719` |
 
-| Rol | E-posta | Şifre |
-|---|---|---|
-| PB Superuser / Ebeveyn | ethemkoklu@gmail.com | Ek**123719 |
-| Öğrenci | ogrenci@candin.app | Test1234 |
-
-## NPM Admin
-- **URL:** http://76.13.14.41:81
-- **Email:** ethemkoklu@gmail.com
-- **Şifre:** Ek**123719
+**Test hesabı (öğrenci):** `ethem@mirac.app` / `Test1234`
 
 ---
 
 ## Altyapı
 
-- **VPS:** srv1296724.hstgr.cloud (IP: 76.13.14.41, Ubuntu 24.04, 2 CPU / 8GB RAM)
-- **Domain:** mirac.app (Hostinger DNS)
-  - A: @ → 76.13.14.41
-  - A: panel → 76.13.14.41
-  - CNAME: www → mirac.app
-- **Docker:** CasaOS compose (candin_default network)
-  - mirac-web: ghcr.io/vildone/candin-web:latest → port 8760:80 (nginx static, curl health check)
-  - mirac-pb: ghcr.io/vildone/candin-pb:latest → port 8095:8090 (+ migrations, wget health check)
-- **NPM Proxy Hosts:**
-  - mirac.app → 172.17.0.1:8760 (cert id=29, ssl_forced)
-  - panel.mirac.app → 172.17.0.1:8095 (cert id=30, ssl_forced)
-- **CI/CD:** GitHub Actions → GHCR (2 workflow: web + pb)
+- **VPS:** srv1296724.hstgr.cloud (76.13.14.41, 2 CPU / 8 GB / 100 GB)
+- **VPS Root:** `ssh root@76.13.14.41` şifre: `MiracAdmin-2026` (dosya: `/tmp/vps_pw.txt`)
+- **Container:** mirac-web (nginx, port 8760:80), mirac-pb (PocketBase v0.39.5, port 8095:8090)
+- **PB Volume:** `pb_data` (Docker named volume)
+- **NPM:** mirac.app → 172.17.0.1:8760, panel.mirac.app → 172.17.0.1:8095
+- **DNS (Hostinger):** @ A → 76.13.14.41, panel A → 76.13.14.41, www CNAME → mirac.app
+- **CI/CD:** GitHub Actions → GHCR (build-web-image, build-pb-image)
 - **Repo:** https://github.com/vildone/candin (public, master)
 
-## Repo Yapısı (CasaOS Bypass)
+---
+
+## Repo Yapısı
 
 ```
 candin/
-├── docker-compose.yml      # CasaOS okur (image-based, port 8760:80)
-├── docker-compose.dev.yml  # Local dev (PB only)
-├── Dockerfile              # Multi-stage: node build + nginx static (curl health check)
-├── Dockerfile.pb           # PocketBase + migrations image
-├── nginx.conf              # PB reverse proxy (mirac-pb:8090) + SPA fallback
+├── docker-compose.yml      # ghcr.io/vildone/candin-web + ghcr.io/muchobien/pocketbase
+├── Dockerfile              # Multi-stage: node:22-alpine build → nginx:1.27-alpine (curl health check)
+├── nginx.conf              # SPA fallback + /api/* → mirac-pb:8090 proxy
+├── Dockerfile.pb           # muchobien/pocketbase + migrations
+├── pb-init.sh              # (kullanılmıyor - PB v0.39.5 JS migration desteklemez)
 ├── .github/workflows/
-│   ├── build-web.yml       # candin-web image build
-│   └── build-pb.yml        # candin-pb image build
-└── app/                    # Tüm uygulama kodu burada
-    ├── package.json
+│   ├── build-web.yml       # app/** trigger
+│   └── build-pb.yml        # Dockerfile.pb + pb-init.sh trigger
+└── app/
+    ├── package.json        # React 19 + Vite 7 + TypeScript 5.9 + Tailwind 4
     ├── src/
-    │   ├── pages/
-    │   ├── components/
-    │   ├── data/           # Seed data JSON'ları
-    │   └── types/
-    ├── public/
-    │   ├── mirac-32.png    # Favicon 32×32
-    │   ├── mirac-192.png   # Favicon 192×192
-    │   └── mirac-512.png   # Apple touch icon + OG image
-    ├── pb_migrations/      # PB schema migrations
-    ├── scripts/
-    │   └── seed-pb.mjs     # Seed data yükleme scripti
-    ├── vite.config.ts
-    ├── tsconfig*.json
-    └── index.html
+    │   ├── lib/pb.ts       # PocketBase client (VITE_PB_URL ?? "/")
+    │   ├── lib/auth.tsx    # AuthProvider (login "users", register "users")
+    │   ├── lib/pbContent.ts # PB API helpers (fetchDiniUnits, fetchDualar, vb.)
+    │   ├── hooks/useProgress.ts
+    │   ├── pages/auth/     # Login, Register
+    │   ├── pages/student/  # Dashboard, Lesson, Dualar, Kuran, Namaz, vb.
+    │   └── data/           # elifba_dersler.json + PB seed JSON'ları
+    ├── public/             # mirac-*.png favicon'lar
+    ├── pb_migrations/      # .js formatında (PB v0.23+ çalıştırmaz!)
+    └── scripts/seed-pb.mjs # PB seed script
 ```
-
-## Son Değişiklikler (2026-06-30)
-
-1. **Health check fix:** busybox wget → curl (Alpine nginx'te GNU wget yok)
-2. **Miraç rebranding:** Tüm "Candin"/"Canım Dinim" → "Miraç"
-3. **Logo:** mirac.png'den 32/192/512px favicon'lar
-4. **Container isimleri:** candin-web/pb → mirac-web/pb
-5. **nginx.conf:** proxy_pass candin-pb → mirac-pb
-
-**Neden app/?** CasaOS root'ta `package.json` gördüğü için `image:` directive'ını yoksayıp default Node.js image ile `npm run dev` çalıştırıyor. Root'ta package.json olmaması → image: kullanılır → nginx static serve çalışır.
 
 ---
 
-## Canlı Düzenleme Workflow'u
+## Kritik Bilgiler
 
-**ÖNEMLİ:** Bundan sonra tüm düzenlemeler canlıda Hostinger MCP ile yapılacak.
+### 1. PocketBase v0.39.5 — JS Migration YOK
 
-### Adımlar:
-1. **Kodu değiştir** → `app/` altında dosya düzenle
-2. **Typecheck** → `cd app && npx tsc --noEmit`
-3. **Commit + Push** → `git push origin master`
-4. **GHCR Build** → GitHub Actions otomatik tetiklenir (~2 dk)
-5. **VPS Deploy** → MCP ile deleteProject + createNewProject
-6. **Test** → `curl https://mirac.app/api/health`
+PB v0.23+ sadece `.go` migration kabul eder. Eski `.js` migration'lar ÇALIŞMAZ.
+**Yapılan:** Koleksiyonlar API ile manuel oluşturuldu.
 
-### MCP Komutları:
+### 2. content_items Koleksiyonu
+
+53 kayıt, 6 modül. Schema: `module` (text), `item_id` (text), `order_index` (number), `data` (json).
+Oluşturma komutu (gerektiğinde):
+```js
+await pb.collections.create({
+    name: 'content_items', type: 'base',
+    fields: [
+        {name: 'module', type: 'text', required: true},
+        {name: 'item_id', type: 'text', required: true},
+        {name: 'order_index', type: 'number', required: true},
+        {name: 'data', type: 'json', required: true},
+    ],
+});
 ```
-mcp_hostinger_VPS_deleteProjectV1(candin, 1296724)
-# 20s bekle
-mcp_hostinger_VPS_createNewProjectV1(https://github.com/vildone/candin, candin, 1296724)
-# 75s bekle
-mcp_hostinger_VPS_getProjectContainersV1(candin, 1296724)
-```
 
-### Seed Data:
+### 3. Users Koleksiyonu — 6 Özel Alan
+
+Eklenen alanlar: `xp` (number), `streak` (number), `last_active_date` (text), `completed_lessons` (json), `unlocked_units` (json), `badges` (json).
+
+**Bu alanlar olmadan dersler kilitli kalır!**
+
+### 4. Superuser
+
+`muchobien/pocketbase` imajı varsayılan `__pbinstaller@example.com` superuser'ı ile gelir.
+Değiştirmek için SSH ile:
 ```bash
-PB_URL=https://panel.mirac.app PB_EMAIL=ethemkoklu@gmail.com PB_PASSWORD=*** \
-  node app/scripts/seed-pb.mjs
+sshpass -f /tmp/vps_pw.txt ssh root@76.13.14.41 \
+  "docker exec mirac-pb /usr/local/bin/pocketbase superuser create ethemkoklu@gmail.com 'Ek**123719' --dir=/pb_data"
 ```
 
+### 5. Deploy
+
+**Standart (veri korur):**
+```python
+mcp.call("VPS_updateProjectV1", {"projectName": "candin", "virtualMachineId": 1296724})
+```
+
+**Sıfırdan (veri SİLİNİR):**
+```python
+mcp.call("VPS_deleteProjectV1", {"projectName": "candin", "virtualMachineId": 1296724})
+time.sleep(30)
+mcp.call("VPS_createNewProjectV1", {"virtualMachineId": 1296724, "project_name": "candin", "content": compose_yaml})
+# Sonra: SSH ile superuser oluştur, API ile koleksiyon oluştur, seed çalıştır
+```
+
+### 6. MCP Araçları
+
+Token: `ek06cN...` (~/.hermes/config.yaml → mcp_servers.hostinger.env.API_TOKEN)
+Kullanım: Python subprocess ile `npx hostinger-api-mcp@latest` JSON-RPC.
+
+**Parametre dikkat:** `deleteProject`/`getProjectContainers` → `projectName` (camelCase). `createNewProject` → `project_name` (snake_case). VM ID her yerde `virtualMachineId` (camelCase, integer).
+
+### 7. GitHub Push
+
+Repo `vildone/candin`. `gh auth switch --user vildone` gerekebilir.
+Push komutu: `git push "https://vildone:$(gh auth token)@github.com/vildone/candin.git" master`
+
 ---
 
-## Bilinen Sorunlar ve Çözümleri
+## Yapılan Değişiklikler (Bu Oturum)
 
-### CasaOS Package.json Sorunu ✅ Çözüldü
-Root'ta package.json → image: yoksayılır → Vite dev server çalışır.
-**Çözüm:** app/ alt dizinine taşı.
-
-### CasaOS Volume Mount Sorunu ✅ Çözüldü
-volumes: .:/app → temp context silinir → container /app boş kalır.
-**Çözüm:** Volume kaldır, image kendi içeriğini kullansın.
-
-### NPM LE Sertifika Sorunu ✅ Çözüldü
-Cert API'sinde meta'da letsencrypt_email/letsencrypt_agree kabul edilmez.
-**Çözüm:** Cert oluştururken sadece dns_challenge: false, PUT'ta letsencrypt_agree.
-
-### GitHub Actions Visibility Step ✅ Çözüldü
-Visibility step curl quoting hatası veriyor.
-**Çözüm:** Step kaldırıldı, image zaten public.
-
----
-
-## Yapılacaklar
-
-### Kısa Vadeli
-1. ~~PB migrations~~ ✅ (ghcr.io/vildone/candin-pb image'ında)
-2. ~~Seed data~~ ✅ (59 kayıt yüklendi)
-3. www.mirac.app SSL → NPM'de ayrı cert veya wildcard
-
-### Orta Vadeli
-4. Code splitting → JS bundle 1MB (react-pdf büyük), dynamic import
-5. PB admin UI nginx proxy → mirac.app/_/ yolundan erişim (opsiyonel)
-6. Yeni öğrenci hesabı oluşturma flow'u
+1. Health check: wget → curl (Alpine busybox uyumsuzluğu)
+2. Miraç rebranding: logo, isim, container isimleri
+3. Login placeholder: `isim@mailadresiniz.com`
+4. Kuran görselleri: `h-20 w-20 sm:h-24 sm:w-24`
+5. Kuran Arapça metin: `text-3xl sm:text-5xl`
+6. Superuser: SSH ile oluşturma yöntemi
+7. content_items koleksiyonu: schema düzeltildi + 53 kayıt seed
+8. Users koleksiyonu: 6 özel alan eklendi
+9. `unlocked_units` fix: kayıt sırasında 3 seviye-1 ünitesi açılıyor
 
 ---
 
@@ -169,25 +147,37 @@ Visibility step curl quoting hatası veriyor.
 cd "/Volumes/King/Vibe/Canım Dinim/Candin"
 
 # Local dev
-docker compose -f docker-compose.dev.yml up -d pb
-cd app && npm install && npm run dev    # port 8765
+cd app && npm install && npm run dev
 
 # Typecheck
 cd app && npx tsc --noEmit
 
-# Production build test
-cd app && npx vite build
+# Deploy zinciri
+git add -A && git commit -m "feat: ..."
+git push "https://vildone:$(gh auth token)@github.com/vildone/candin.git" master
+# Build bekle (130s), sonra:
+python3 -c "
+import subprocess,json,os,time
+env=os.environ.copy()
+env['API_TOKEN']='ek06cN...'
+# MCP updateProject çağrısı
+"
 
-# Deploy (push → GHCR build → MCP update)
-git add -A && git commit -m "feat: ..." && git push origin master
-# Sonra MCP ile VPS deploy (yukarıdaki adımlar)
-
-# Seed data
-PB_URL=https://panel.mirac.app PB_EMAIL=ethemkoklu@gmail.com PB_PASSWORD=*** \
-  node app/scripts/seed-pb.mjs
+# Seed (superuser auth ile)
+cd app && PB_URL=https://panel.mirac.app PB_EMAIL=ethemkoklu@gmail.com PB_PASSWORD='Ek**123719' node scripts/seed-pb.mjs
 
 # Test
-curl -o /dev/null -w "%{http_code}" https://mirac.app/
 curl https://mirac.app/api/health
-curl -o /dev/null -w "%{http_code}" https://panel.mirac.app/_/
+curl https://panel.mirac.app/_/
 ```
+
+---
+
+## Bilinen Sorunlar
+
+- PB v0.39.5 `.js` migration çalıştırmaz → API ile manuel şema yönetimi gerek
+- `deleteProject` + `createNewProject` tüm veriyi siler → `updateProject` kullan
+- CasaOS `package.json` görünce `image:` yoksayar → `app/` alt dizin yapısı
+- NPM forward_host `127.0.0.1` değil `172.17.0.1` olmalı
+- `VPS_attachPublicKeyV1` güvenilmez → şifreli SSH kullan
+- `docker-compose.yml` volume mount'ları CasaOS temp dir temizliğinde bozulabilir

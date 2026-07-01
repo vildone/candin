@@ -1,9 +1,25 @@
-# Candin — Oturum Devri (Handoff)
-
 # Miraç — Oturum Devri (Handoff)
 
-**Son güncelleme:** 2026-06-30
-**Durum:** VPS DEPLOY TAMAMLANDI — https://mirac.app + https://panel.mirac.app yayında! Miraç rebranding tamam.
+**Son güncelleme:** 2026-07-01
+**Durum:** VPS DEPLOY TAMAMLANDI — https://mirac.app + https://panel.mirac.app yayında! Superuser çözüldü.
+
+---
+
+## ⚠️ Superuser Yönetimi (KRİTİK)
+
+PB imajı (`ghcr.io/muchobien/pocketbase`) varsayılan superuser ile gelir: `__pbinstaller@example.com`. Bu superuser'ı değiştirmek için SSH gerekir.
+
+**İlk kurulumda superuser oluşturma:**
+```bash
+# 1. Root şifresi ayarla (MCP ile)
+VPS_setRootPasswordV1({virtualMachineId: 1296724, password: "MiracAdmin-2026"})
+
+# 2. SSH ile superuser oluştur
+sshpass -f /tmp/vps_pw.txt ssh root@76.13.14.41 \
+  "docker exec mirac-pb /usr/local/bin/pocketbase superuser create ethemkoklu@gmail.com 'Ek**123719' --dir=/pb_data"
+```
+
+**Not:** `updateProject` deploy'da superuser KORUNUR. Sadece `deleteProject` + `createNewProject` ile yeni volume oluşursa superuser tekrar oluşturulmalı.
 
 ## Erişim
 - **Web:** https://mirac.app (nginx static serve, HTTP 200 ✓)

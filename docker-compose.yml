@@ -1,14 +1,5 @@
-# Candin — VPS production compose
+# Miraç — VPS production compose
 # CasaOS tarafından yönetilir (srv1296724.hstgr.cloud)
-# Domain: mirac.app → nginx-proxy-manager → 172.17.0.1:8760
-#
-# Artık nginx static serve! CasaOS root'ta package.json görmüyor,
-# image: directive'ını kullanıyor. GHCR'deki multi-stage nginx image.
-#
-# Portlar:
-# - 8760: web (nginx 80) → NPM proxy mirac.app
-# - 8095: PB admin/debug → NPM proxy panel.mirac.app
-
 services:
   web:
     image: ghcr.io/vildone/candin-web:latest
@@ -27,15 +18,12 @@ services:
       start_period: 10s
 
   pb:
-    image: ghcr.io/vildone/candin-pb:latest
+    image: ghcr.io/muchobien/pocketbase:latest
     container_name: mirac-pb
     ports:
       - "8095:8090"
     volumes:
-      - pb_v3:/pb_data
-    environment:
-      - PB_SUPERUSER_EMAIL=ethemkoklu@gmail.com
-      - "PB_SUPERUSER_PASSWORD=Ek**123719"
+      - pb_data:/pb_data
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8090/api/health"]
       interval: 10s
@@ -45,4 +33,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  pb_v3:
+  pb_data:

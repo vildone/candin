@@ -30,7 +30,7 @@ function HarfCard({ ses, gorsel, onPlay, isPlaying }: {
           loading="lazy"
         />
       ) : (
-        <span className="text-2xl sm:text-4xl font-bold text-foreground" style={{ fontFamily: "serif" }}>
+        <span className="text-3xl sm:text-5xl font-bold text-foreground" style={{ fontFamily: "serif" }}>
           {ses.label}
         </span>
       )}

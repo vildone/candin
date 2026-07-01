@@ -46,7 +46,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       xp: 0,
       streak: 0,
       completed_lessons: [],
-      unlocked_units: ["s1_islam_muslim"],
+      unlocked_units: ["s1_allah_sevgisi", "s1_gunluk_ifadeler", "s1_rahman_rahim"],
       badges: [],
     })
     await pb.collection("users").authWithPassword(data.email, data.password)

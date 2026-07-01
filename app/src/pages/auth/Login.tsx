@@ -65,7 +65,7 @@ export function LoginScreen() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="ornek@candin.app"
+                  placeholder="isim@mailadresiniz.com"
                   autoComplete="email"
                 />
               </div>

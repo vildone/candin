@@ -26,7 +26,7 @@ function HarfCard({ ses, gorsel, onPlay, isPlaying }: {
         <img
           src={gorsel.url}
           alt={gorsel.alt}
-          className="h-12 w-12 sm:h-16 sm:w-16 object-contain"
+          className="h-20 w-20 sm:h-24 sm:w-24 object-contain"
           loading="lazy"
         />
       ) : (

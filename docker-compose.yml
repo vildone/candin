@@ -18,12 +18,13 @@ services:
       start_period: 10s
 
   pb:
-    image: ghcr.io/muchobien/pocketbase:latest
+    image: ghcr.io/vildone/candin-pb:latest
     container_name: mirac-pb
     ports:
       - "8095:8090"
     volumes:
       - pb_data:/pb_data
+      - ./app/pb_migrations:/pb_data/pb_migrations:ro
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8090/api/health"]
       interval: 10s
